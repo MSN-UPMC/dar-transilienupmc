@@ -30,6 +30,18 @@ public class Gares {
 		return gares;
 	}
 
+	public Gare findGareByCode(String codeUIC) {
+		List<Gare> gares = ofy().load().type(Gare.class)
+				.filter("codeUIC =", codeUIC).list();
+		return (gares.isEmpty() ? null : gares.get(0));
+	}
+
+	public Gare findGareByName(String name) {
+		List<Gare> gares = ofy().load().type(Gare.class).filter("nom =", name)
+				.list();
+		return (gares.isEmpty() ? null : gares.get(0));
+	}
+
 	public Gare create(Gare gare) {
 		ofy().save().entity(gare).now();
 		return gare;
