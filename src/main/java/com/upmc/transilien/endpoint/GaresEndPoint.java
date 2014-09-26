@@ -1,0 +1,35 @@
+package com.upmc.transilien.endpoint;
+
+import java.util.Collection;
+
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.Named;
+import com.upmc.transilien.model.gare.Gare;
+import com.upmc.transilien.model.gare.Gares;
+
+@Api(name = "gares", version = "v1")
+public class GaresEndPoint {
+
+	@ApiMethod(name = "list", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
+	public Collection<Gare> getTrains() {
+		return Gares.getInstance().findGares();
+	}
+
+	@ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
+	public Gare create(Gare gare) {
+		return Gares.getInstance().create(gare);
+	}
+
+	// TODO a voir si on modifie les gares
+	// @ApiMethod(name = "update", httpMethod = ApiMethod.HttpMethod.PUT, path =
+	// "update")
+	// public Gare update(Gare editedGare) {
+	// return Gares.getInstance().update(editedGare);
+	// }
+
+	@ApiMethod(name = "remove", httpMethod = ApiMethod.HttpMethod.DELETE, path = "remove")
+	public void remove(@Named("id") Long id) {
+		Gares.getInstance().remove(id);
+	}
+}

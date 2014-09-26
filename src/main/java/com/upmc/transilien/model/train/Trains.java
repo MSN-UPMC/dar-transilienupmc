@@ -1,0 +1,83 @@
+package com.upmc.transilien.model.train;
+
+import static com.googlecode.objectify.ObjectifyService.ofy;
+
+import java.util.Collection;
+import java.util.List;
+
+import com.googlecode.objectify.ObjectifyService;
+
+public class Trains {
+
+	// public Trains(int i) {
+	// Gare jussieu = new Gare("jussieu", "16544");
+	// Gare chatelet = new Gare("chatelet", "67986");
+	//
+	// Train t1 = new Train(jussieu, chatelet, 16545, "VERI",
+	// "26/09/2014 00:20", EtatTrain.RAS);
+	// Train t2 = new Train(jussieu, chatelet, 19955, "VERI",
+	// "26/09/2014 00:20", EtatTrain.SUP);
+	// Train t3 = new Train(jussieu, chatelet, 30648, "VERI",
+	// "26/09/2014 00:20", EtatTrain.RETARD);
+	//
+	// add(t1);
+	// add(t2);
+	// add(t3);
+	// }
+	//
+	// public String toHTML() {
+	// String result = "";
+	// for (Train tmp : this) {
+	// result += tmp + "<br>";
+	// }
+	// return result;
+	// }
+
+	private static Trains trains = null;
+
+	static {
+		ObjectifyService.register(Train.class);
+	}
+
+	private Trains() {
+	}
+
+	public static synchronized Trains getInstance() {
+		if (null == trains) {
+			trains = new Trains();
+		}
+		return trains;
+	}
+
+	public Collection<Train> findTrains() {
+		List<Train> trains = ofy().load().type(Train.class).list();
+		return trains;
+	}
+
+	public Train create(Train train) {
+		ofy().save().entity(train).now();
+		return train;
+	}
+
+	// TODO voir si on peut modifier un train et si oui quelles propriétés
+	// public Train update(Todo editedTrain) {
+	// if (editedTrain.getId() == null) {
+	// return null;
+	// }
+	//
+	// Train train = ofy().load()
+	// .key(Key.create(Train.class, editedTrain.getId())).now();
+	// train.setCompleted(editedTrain.isCompleted());
+	// train.setTitle(editedTrain.getTitle());
+	// ofy().save().entity(train).now();
+	//
+	// return train;
+	// }
+
+	public void remove(Long id) {
+		if (id == null) {
+			return;
+		}
+		ofy().delete().type(Train.class).id(id).now();
+	}
+}
