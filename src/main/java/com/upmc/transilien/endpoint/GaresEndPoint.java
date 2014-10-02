@@ -11,9 +11,19 @@ import com.upmc.transilien.model.gare.Gares;
 @Api(name = "gares", version = "v1")
 public class GaresEndPoint {
 
-	@ApiMethod(name = "list", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
-	public Collection<Gare> getTrains() {
+	@ApiMethod(name = "getGares", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
+	public Collection<Gare> getGares() {
 		return Gares.getInstance().findGares();
+	}
+
+	@ApiMethod(name = "getGareByCode", httpMethod = ApiMethod.HttpMethod.GET, path = "getGareByCode")
+	public Gare getGareByCode(@Named("codeUIC") String codeUIC) {
+		return Gares.getInstance().findGareByCode(codeUIC);
+	}
+
+	@ApiMethod(name = "getGareByName", httpMethod = ApiMethod.HttpMethod.GET, path = "getGareByName")
+	public Gare getGareByName(@Named("name") String name) {
+		return Gares.getInstance().findGareByName(name);
 	}
 
 	@ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")

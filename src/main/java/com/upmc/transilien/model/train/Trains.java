@@ -54,10 +54,38 @@ public class Trains {
 		return trains;
 	}
 
+	public Collection<Train> findTrainsByDepart(int depart) {
+		List<Train> trains = ofy().load().type(Train.class).filter("depart = ", depart).list();
+		return trains;
+	}
+
+	public Collection<Train> findTrainsByTerminus(int terminus) {
+		List<Train> trains = ofy().load().type(Train.class).filter("terminus = ", terminus).list();
+		return trains;
+	}
+
+	public Collection<Train> findTrainsByNumero(int numero) {
+		List<Train> trains = ofy().load().type(Train.class).filter("numero = ", numero).list();
+		return trains;
+	}
+
+	public Collection<Train> findTrainsByMission(String codeMission) {
+		List<Train> trains = ofy().load().type(Train.class).filter("codeMission = ", codeMission).list();
+		return trains;
+	}
+
+	public Collection<Train> findTrainsByEtat(EtatTrain etat) {
+		List<Train> trains = ofy().load().type(Train.class).filter("etat = ", etat).list();
+		return trains;
+	}
+
 	public Train create(Train train) {
-		ofy().save().entity(train).now();
+		if (ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
+			ofy().save().entity(train).now();
+		else
+			throw new Error("Un train possède déjà ce numéro.");
 		return train;
-	} 
+	}
 
 	// TODO voir si on peut modifier un train et si oui quelles propriétés
 	// public Train update(Todo editedTrain) {

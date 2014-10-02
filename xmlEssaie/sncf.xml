@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<passages gare="87113001">
+<train><date mode="R">02/10/2014 22:51</date>
+<num>117181</num>
+<miss>ZIMO</miss>
+<term>87116582</term>
+</train>
+<train><date mode="R">02/10/2014 23:01</date>
+<num>113687</num>
+<miss>MICI</miss>
+<term>87116103</term>
+</train>
+</passages>

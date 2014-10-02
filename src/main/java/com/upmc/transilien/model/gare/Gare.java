@@ -12,16 +12,14 @@ public class Gare {
 	private String codeUIC;
 	private Integer longitude, lattitude;
 
-	public Gare(String nom, String codeUIC) {
-		super();
-		this.nom = nom;
-		this.codeUIC = codeUIC;
-		this.longitude = null;
-		this.lattitude = null;
+	// nécessaire pour la conversion automatique JSON
+	public Gare() {
 	}
 
 	public Gare(String nom, String codeUIC, int longitude, int lattitude) {
-		this(nom, codeUIC);
+		super();
+		this.nom = nom;
+		this.codeUIC = codeUIC;
 		this.longitude = longitude;
 		this.lattitude = lattitude;
 	}

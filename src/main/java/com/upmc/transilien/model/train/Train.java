@@ -1,10 +1,9 @@
 package com.upmc.transilien.model.train;
 
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Id;
-
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
 import com.upmc.transilien.model.gare.Gare;
 
 @Entity
@@ -17,6 +16,10 @@ public class Train {
 	private String codeMission;
 	private String date;
 	private EtatTrain etat;
+
+	// nécessaire pour la conversion automatique JSON
+	public Train() {
+	}
 
 	public Train(long depart, long terminus, int numero, String codeMission, String date, EtatTrain etat) {
 		super();
