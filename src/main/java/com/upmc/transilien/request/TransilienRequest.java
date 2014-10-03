@@ -7,7 +7,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.upmc.transilien.model.gare.Gares;
+import com.upmc.transilien.v1.repository.Gares;
 
 public class TransilienRequest {
 	private final static String USER_AGENT = "Mozilla/5.0";
