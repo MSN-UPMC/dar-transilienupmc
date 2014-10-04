@@ -4,16 +4,21 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 
 @Entity
 public class Train {
 	@Id
 	private Long id; // @Id sur Long => si null un identifiant unique sera auto
 						// généré lors d'une insertion
+	@Index
 	private long depart, terminus;
+	@Index
 	private int numero;
+	@Index
 	private String codeMission;
 	private String date;
+	@Index
 	private EtatTrain etat;
 
 	// nécessaire pour la conversion automatique JSON

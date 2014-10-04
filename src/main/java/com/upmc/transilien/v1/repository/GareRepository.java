@@ -2,6 +2,7 @@ package com.upmc.transilien.v1.repository;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -68,5 +69,15 @@ public class GareRepository {
 			return;
 		}
 		ofy().delete().type(Gare.class).id(id).now();
+	}
+
+	public List<String> findGareName() {
+		List<Gare> gares = ofy().load().type(Gare.class).order("nom").list();
+		List<String> nomGares = new ArrayList<String>();
+
+		for (Gare gare : gares) {
+			nomGares.add(gare.getNom());
+		}
+		return nomGares;
 	}
 }

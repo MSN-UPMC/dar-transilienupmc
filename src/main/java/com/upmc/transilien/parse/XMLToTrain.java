@@ -1,6 +1,6 @@
 package com.upmc.transilien.parse;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,12 +15,12 @@ public class XMLToTrain {
 	static Document document;
 	static Element racine;
 
-	public static List<Train> parseTrain(String filename) {
+	public static List<Train> parseTrain(InputStream reponse) {
 		// On crée une instance de SAXBuilder
 		SAXBuilder sxb = new SAXBuilder();
 		List<Train> trains = new ArrayList<Train>();
 		try {
-			document = sxb.build(new File(filename));
+			document = sxb.build(reponse);
 			racine = document.getRootElement();
 			System.out.println(racine);
 

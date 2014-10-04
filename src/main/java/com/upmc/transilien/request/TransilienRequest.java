@@ -7,18 +7,12 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.upmc.transilien.v1.repository.GareRepository;
-
 public class TransilienRequest {
 	private final static String USER_AGENT = "Mozilla/5.0";
+	private static String urlBase = "http://tnhtn175:cgP479kW@api.transilien.com/gare/";
 
 	public static InputStream prochainDepart(String codeUIC) throws Exception {
-		GareRepository gares = GareRepository.getInstance();
-		if (gares.findGareByCode(codeUIC) == null) {
-			throw new Exception("Le numero UIC de la gare n'est pas valide.");
-		}
-
-		String url = "http://api.transilien.com/gare/" + codeUIC + "/depart/";
+		String url = urlBase + codeUIC + "/depart/";
 
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);
@@ -31,15 +25,7 @@ public class TransilienRequest {
 	}
 
 	public static InputStream prochainDepart(String departcodeUIC, String destinatationCodeUIC) throws Exception {
-		GareRepository gares = GareRepository.getInstance();
-		if (gares.findGareByCode(departcodeUIC) == null) {
-			throw new Exception("Le numero UIC de la gare de départ n'est pas valide.");
-		}
-		if (gares.findGareByCode(destinatationCodeUIC) == null) {
-			throw new Exception("Le numero UIC de la gare de destination n'est pas valide.");
-		}
-
-		String url = "http://api.transilien.com/gare/" + departcodeUIC + "/depart/" + destinatationCodeUIC + "/";
+		String url = urlBase + departcodeUIC + "/depart/" + destinatationCodeUIC + "/";
 
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet(url);

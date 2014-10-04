@@ -2,13 +2,16 @@ package com.upmc.transilien.v1.model;
 
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
+import com.googlecode.objectify.annotation.Index;
 
 @Entity
 public class Gare {
 	@Id
 	/* @Id sur Long => si null un identifiant unique sera auto généré lors d'une insertion */
 	private Long id;
+	@Index
 	private String nom;
+	@Index
 	private String codeUIC;
 	private Integer longitude, lattitude;
 

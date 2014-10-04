@@ -1,6 +1,7 @@
 package com.upmc.transilien.v1;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
@@ -24,6 +25,11 @@ public class GaresEndPoint {
 	@ApiMethod(name = "getGareByName", httpMethod = ApiMethod.HttpMethod.GET, path = "getGareByName")
 	public Gare getGareByName(@Named("name") String name) {
 		return GareRepository.getInstance().findGareByName(name);
+	}
+
+	@ApiMethod(name = "getGareName", httpMethod = ApiMethod.HttpMethod.GET, path = "getGareName")
+	public List<String> getGareName() {
+		return GareRepository.getInstance().findGareName();
 	}
 
 	@ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
