@@ -8,19 +8,19 @@ import java.util.List;
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.v1.model.Gare;
 
-public class Gares {
-	private static Gares gares = null;
+public class GareRepository {
+	private static GareRepository gares = null;
 
 	static {
 		ObjectifyService.register(Gare.class);
 	}
 
-	private Gares() {
+	private GareRepository() {
 	}
 
-	public static synchronized Gares getInstance() {
+	public static synchronized GareRepository getInstance() {
 		if (null == gares) {
-			gares = new Gares();
+			gares = new GareRepository();
 		}
 		return gares;
 	}

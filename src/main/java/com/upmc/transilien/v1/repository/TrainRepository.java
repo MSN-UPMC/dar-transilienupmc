@@ -9,7 +9,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.v1.model.EtatTrain;
 import com.upmc.transilien.v1.model.Train;
 
-public class Trains {
+public class TrainRepository {
 
 	// public Trains(int i) {
 	// Gare jussieu = new Gare("jussieu", "16544");
@@ -35,18 +35,18 @@ public class Trains {
 	// return result;
 	// }
 
-	private static Trains trains = null;
+	private static TrainRepository trains = null;
 
 	static {
 		ObjectifyService.register(Train.class);
 	}
 
-	private Trains() {
+	private TrainRepository() {
 	}
 
-	public static synchronized Trains getInstance() {
+	public static synchronized TrainRepository getInstance() {
 		if (null == trains) {
-			trains = new Trains();
+			trains = new TrainRepository();
 		}
 		return trains;
 	}

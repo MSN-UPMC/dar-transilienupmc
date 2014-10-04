@@ -6,19 +6,19 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 import com.upmc.transilien.v1.model.Train;
-import com.upmc.transilien.v1.repository.Trains;
+import com.upmc.transilien.v1.repository.TrainRepository;
 
 @Api(name = "trains", version = "v1")
 public class TrainsEndPoint {
 
 	@ApiMethod(name = "list", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
 	public Collection<Train> getTrains() {
-		return Trains.getInstance().findTrains();
+		return TrainRepository.getInstance().findTrains();
 	}
 
 	@ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
 	public Train create(Train train) {
-		return Trains.getInstance().create(train);
+		return TrainRepository.getInstance().create(train);
 	}
 
 	// TODO a voir si on modifie les trains
@@ -30,6 +30,6 @@ public class TrainsEndPoint {
 
 	@ApiMethod(name = "remove", httpMethod = ApiMethod.HttpMethod.DELETE, path = "remove")
 	public void remove(@Named("id") Long id) {
-		Trains.getInstance().remove(id);
+		TrainRepository.getInstance().remove(id);
 	}
 }

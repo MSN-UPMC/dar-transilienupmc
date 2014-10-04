@@ -30,6 +30,10 @@ public class Train {
 		this.etat = etat;
 	}
 
+	public Train(long depart, String terminus, String numero, String codeMision, String date, String etat) {
+		this(depart, Long.parseLong(terminus), Integer.parseInt(numero), codeMision, date, EtatTrain.stringToEtat(etat));
+	}
+
 	public Gare getDepart() {
 		return ofy().load().type(Gare.class).filter("id =", depart).list().get(0);
 	}
@@ -74,4 +78,27 @@ public class Train {
 		return result;
 	}
 
+	public void setDepart(long depart) {
+		this.depart = depart;
+	}
+
+	public void setTerminus(long terminus) {
+		this.terminus = terminus;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public void setCodeMission(String codeMission) {
+		this.codeMission = codeMission;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public void setEtat(EtatTrain etat) {
+		this.etat = etat;
+	}
 }

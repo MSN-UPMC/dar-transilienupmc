@@ -7,13 +7,13 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.upmc.transilien.v1.repository.Gares;
+import com.upmc.transilien.v1.repository.GareRepository;
 
 public class TransilienRequest {
 	private final static String USER_AGENT = "Mozilla/5.0";
 
 	public static InputStream prochainDepart(String codeUIC) throws Exception {
-		Gares gares = Gares.getInstance();
+		GareRepository gares = GareRepository.getInstance();
 		if (gares.findGareByCode(codeUIC) == null) {
 			throw new Exception("Le numero UIC de la gare n'est pas valide.");
 		}
@@ -31,7 +31,7 @@ public class TransilienRequest {
 	}
 
 	public static InputStream prochainDepart(String departcodeUIC, String destinatationCodeUIC) throws Exception {
-		Gares gares = Gares.getInstance();
+		GareRepository gares = GareRepository.getInstance();
 		if (gares.findGareByCode(departcodeUIC) == null) {
 			throw new Exception("Le numero UIC de la gare de départ n'est pas valide.");
 		}
