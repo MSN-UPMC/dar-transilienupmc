@@ -10,7 +10,6 @@ import com.upmc.transilien.v1.repository.TrainRepository;
 
 @Api(name = "trains", version = "v1")
 public class TrainsEndPoint {
-
 	@ApiMethod(name = "list", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
 	public Collection<Train> getTrains() {
 		return TrainRepository.getInstance().findTrains();
@@ -31,5 +30,10 @@ public class TrainsEndPoint {
 	@ApiMethod(name = "remove", httpMethod = ApiMethod.HttpMethod.DELETE, path = "remove")
 	public void remove(@Named("id") Long id) {
 		TrainRepository.getInstance().remove(id);
+	}
+
+	@ApiMethod(name = "prochainDepart", httpMethod = ApiMethod.HttpMethod.GET, path = "prochainDepart")
+	public Collection<Train> getGareByCode(@Named("codeUIC") String codeUIC) throws Exception {
+		return TrainRepository.getInstance().prochainDepart(codeUIC);
 	}
 }

@@ -2,39 +2,17 @@ package com.upmc.transilien.v1.repository;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
 
 import com.googlecode.objectify.ObjectifyService;
+import com.upmc.transilien.parse.XMLToTrain;
+import com.upmc.transilien.request.TransilienRequest;
 import com.upmc.transilien.v1.model.EtatTrain;
 import com.upmc.transilien.v1.model.Train;
 
 public class TrainRepository {
-
-	// public Trains(int i) {
-	// Gare jussieu = new Gare("jussieu", "16544");
-	// Gare chatelet = new Gare("chatelet", "67986");
-	//
-	// Train t1 = new Train(jussieu, chatelet, 16545, "VERI",
-	// "26/09/2014 00:20", EtatTrain.RAS);
-	// Train t2 = new Train(jussieu, chatelet, 19955, "VERI",
-	// "26/09/2014 00:20", EtatTrain.SUP);
-	// Train t3 = new Train(jussieu, chatelet, 30648, "VERI",
-	// "26/09/2014 00:20", EtatTrain.RETARD);
-	//
-	// add(t1);
-	// add(t2);
-	// add(t3);
-	// }
-	//
-	// public String toHTML() {
-	// String result = "";
-	// for (Train tmp : this) {
-	// result += tmp + "<br>";
-	// }
-	// return result;
-	// }
-
 	private static TrainRepository trains = null;
 
 	static {
@@ -109,5 +87,15 @@ public class TrainRepository {
 			return;
 		}
 		ofy().delete().type(Train.class).id(id).now();
+	}
+
+	public Collection<Train> prochainDepart(String codeUIC) throws Exception {
+		InputStream reponse = TransilienRequest.prochainDepart(codeUIC);
+		List<Train> trains = XMLToTrain.parseTrain(reponse);
+
+		for (Train t : trains) {
+			ofy().save().entities(t).now();
+		}
+		return trains;
 	}
 }

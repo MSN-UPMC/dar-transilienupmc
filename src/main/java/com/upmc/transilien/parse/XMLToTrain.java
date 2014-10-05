@@ -22,19 +22,13 @@ public class XMLToTrain {
 		try {
 			document = sxb.build(reponse);
 			racine = document.getRootElement();
-			System.out.println(racine);
 
-			long depart = racine.getAttribute("gare").getLongValue();
-			System.out.println(depart);
+			Long depart = racine.getAttribute("gare").getLongValue();
 			List<Element> listTrains = racine.getChildren("train");
-			System.out.println(listTrains.isEmpty());
 
 			for (Element elt : listTrains) {
-				System.out.println(depart + ", " + elt.getChildText("term") + ", " + elt.getChildText("num") + ", " + elt.getChildText("miss") + ", "
-						+ elt.getChildText("date") + ", " + elt.getChildText("etat"));
 				Train t = new Train(depart, elt.getChildText("term"), elt.getChildText("num"), elt.getChildText("miss"), elt.getChildText("date"),
 						elt.getChildText("etat"));
-				System.out.println("'" + t + "'");
 				trains.add(t);
 			}
 

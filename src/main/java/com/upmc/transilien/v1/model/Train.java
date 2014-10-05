@@ -12,7 +12,7 @@ public class Train {
 	private Long id; // @Id sur Long => si null un identifiant unique sera auto
 						// généré lors d'une insertion
 	@Index
-	private long depart, terminus;
+	private Long depart, terminus;
 	@Index
 	private int numero;
 	@Index
@@ -25,7 +25,7 @@ public class Train {
 	public Train() {
 	}
 
-	public Train(long depart, long terminus, int numero, String codeMission, String date, EtatTrain etat) {
+	public Train(Long depart, Long terminus, int numero, String codeMission, String date, EtatTrain etat) {
 		super();
 		this.depart = depart;
 		this.terminus = terminus;
@@ -35,7 +35,7 @@ public class Train {
 		this.etat = etat;
 	}
 
-	public Train(long depart, String terminus, String numero, String codeMision, String date, String etat) {
+	public Train(Long depart, String terminus, String numero, String codeMision, String date, String etat) {
 		this(depart, Long.parseLong(terminus), Integer.parseInt(numero), codeMision, date, EtatTrain.stringToEtat(etat));
 	}
 
@@ -83,11 +83,11 @@ public class Train {
 		return result;
 	}
 
-	public void setDepart(long depart) {
+	public void setDepart(Long depart) {
 		this.depart = depart;
 	}
 
-	public void setTerminus(long terminus) {
+	public void setTerminus(Long terminus) {
 		this.terminus = terminus;
 	}
 
