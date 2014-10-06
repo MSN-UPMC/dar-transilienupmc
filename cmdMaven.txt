@@ -1,0 +1,8 @@
+mvn clean install
+Nettoie et installe les dépendances.
+
+mvn appengine:devserveur
+Déploiement local
+
+mvn appengine:update
+Déploiement sur google.
