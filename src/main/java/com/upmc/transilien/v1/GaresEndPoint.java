@@ -1,11 +1,16 @@
 package com.upmc.transilien.v1;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
+
+import org.json.simple.parser.ParseException;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
+import com.google.appengine.api.datastore.Text;
+import com.upmc.transilien.parse.JsonToGare;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.repository.GareRepository;
 
@@ -35,6 +40,16 @@ public class GaresEndPoint {
 	@ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
 	public Gare create(Gare gare) {
 		return GareRepository.getInstance().create(gare);
+	}
+
+	@ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.POST, path = "loadGare")
+	public Text loadGare() {
+		try {
+			JsonToGare.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
+			return new Text("OK");
+		} catch (IOException | ParseException e) {
+			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+		}
 	}
 
 	// TODO a voir si on modifie les gares

@@ -13,13 +13,13 @@ public class Gare {
 	private String nom;
 	@Index
 	private String codeUIC;
-	private Integer longitude, lattitude;
+	private Double longitude, lattitude;
 
 	// nécessaire pour la conversion automatique JSON
 	public Gare() {
 	}
 
-	public Gare(String nom, String codeUIC, int longitude, int lattitude) {
+	public Gare(String nom, String codeUIC, Double longitude, Double lattitude) {
 		super();
 		this.nom = nom;
 		this.codeUIC = codeUIC;
@@ -35,17 +35,17 @@ public class Gare {
 		return codeUIC;
 	}
 
-	public int getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public int getLattitude() {
+	public Double getLattitude() {
 		return lattitude;
 	}
 
 	@Override
 	public String toString() {
-		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + lattitude + "]";
+		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + lattitude + "]\n";
 	}
 
 }
