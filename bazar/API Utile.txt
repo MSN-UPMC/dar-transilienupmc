@@ -1,0 +1,16 @@
+== Liste API utile ==
+
+- Recuperer toutes les gares :
+	- API : http://ressources.data.sncf.com/explore/dataset/sncf-gares-et-arrets-transilien-ile-de-france/?tab=table
+
+- Recuperer les trains qui passent dans chaque gare (Utile pour faire des statistiques) :
+	Exemple : http://api.transilien.com/gare/87393009/depart/ 
+	
+- Savoir quels sont les trains présent dans chaque gare (utile pour afficher information quand on cliquera sur une gare) :
+	API : http://ressources.data.sncf.com/explore/dataset/sncf-lignes-par-gares-idf/?tab=table
+
+- Equipement dans une gare (utile pour afficher information quand on cliquera sur une gare) :
+	API : http://ressources.data.sncf.com/explore/dataset/sncf-accessibilite-des-gares-equipements/?tab=table
+	
+- Couleur des Lignes SNCF (Utile pour affichage) :
+	API : http://ressources.data.sncf.com/explore/dataset/codes-couleur-des-lignes-transilien/?tab=table

@@ -9,6 +9,13 @@ import java.util.List;
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.v1.model.Gare;
 
+/**
+ * Répertorie les gares<br>
+ * <b>Singleton</b>
+ * 
+ * @author Kevin Coquart && Mag-Stellon Nadarajah
+ *
+ */
 public class GareRepository {
 	private static GareRepository gares = null;
 
@@ -19,6 +26,10 @@ public class GareRepository {
 	private GareRepository() {
 	}
 
+	/**
+	 * 
+	 * @return le singleton
+	 */
 	public static synchronized GareRepository getInstance() {
 		if (null == gares) {
 			gares = new GareRepository();
@@ -26,21 +37,61 @@ public class GareRepository {
 		return gares;
 	}
 
+	/**
+	 * 
+	 * @return toutes les gares disponibles
+	 */
 	public Collection<Gare> findGares() {
-		List<Gare> gares = ofy().load().type(Gare.class).list();
-		return gares;
+		return ofy().load().type(Gare.class).list();
 	}
 
-	public Gare findGareByCode(String codeUIC) {
+	/**
+	 * Recherche une gare par son codeUIC
+	 * 
+	 * @param codeUIC
+	 *            le codeUIC de la gare
+	 * @return la gare
+	 */
+	public Gare findGareByCode(int codeUIC) {
 		List<Gare> gares = ofy().load().type(Gare.class).filter("codeUIC =", codeUIC).list();
 		return (gares.isEmpty() ? null : gares.get(0));
 	}
 
-	public Gare findGareByName(String name) {
-		List<Gare> gares = ofy().load().type(Gare.class).filter("nom =", name).list();
+	/**
+	 * Recherche une gare par son nom
+	 * 
+	 * @param nom
+	 *            son nom
+	 * @return la gare
+	 */
+	public Gare findGareByName(String nom) {
+		List<Gare> gares = ofy().load().type(Gare.class).filter("nom =", nom).list();
 		return (gares.isEmpty() ? null : gares.get(0));
 	}
 
+	/**
+	 * Recherche le nom de toutes les gares.<br>
+	 * Facile la recherche d'une gare précise.
+	 * 
+	 * @return le noms de toutes les gares
+	 */
+	public List<String> findGaresName() {
+		List<Gare> gares = ofy().load().type(Gare.class).order("nom").list();
+		List<String> nomGares = new ArrayList<String>();
+
+		for (Gare gare : gares) {
+			nomGares.add(gare.getNom());
+		}
+		return nomGares;
+	}
+
+	/**
+	 * Créer une gare dans le système de persistance
+	 * 
+	 * @param gare
+	 *            la gare à sauvegardé
+	 * @return la gare
+	 */
 	public Gare create(Gare gare) {
 		if (ofy().load().type(Gare.class).filter("codeUIC =", gare.getCodeUIC()).list().isEmpty())
 			ofy().save().entity(gare).now();
@@ -64,20 +115,11 @@ public class GareRepository {
 	// return gare;
 	// }
 
-	public void remove(Long id) {
-		if (id == null) {
-			return;
-		}
-		ofy().delete().type(Gare.class).id(id).now();
-	}
-
-	public List<String> findGareName() {
-		List<Gare> gares = ofy().load().type(Gare.class).order("nom").list();
-		List<String> nomGares = new ArrayList<String>();
-
-		for (Gare gare : gares) {
-			nomGares.add(gare.getNom());
-		}
-		return nomGares;
-	}
+	// TODO les gares sont fixes, on n'a pas besoin de les supprimers
+	// public void remove(Long id) {
+	// if (id == null) {
+	// return;
+	// }
+	// ofy().delete().type(Gare.class).id(id).now();
+	// }
 }

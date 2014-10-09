@@ -1,20 +1,22 @@
 package com.upmc.transilien.v1.model;
 
-import static com.googlecode.objectify.ObjectifyService.ofy;
-
+import com.googlecode.objectify.annotation.AlsoLoad;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
-import com.googlecode.objectify.annotation.Unindex;
 
 @Entity
-@Unindex
+/**
+ * Un train
+ * @author Kevin Coquart && Mag-Stellon Nadarajah
+ *
+ */
 public class Train {
 	@Id
 	private Long id; // @Id sur Long => si null un identifiant unique sera auto
 						// généré lors d'une insertion
-//	@Index
-//	private Long depart, terminus;
+	@Index
+	private int depart, terminus;
 	@Index
 	private int numero;
 	@Index
@@ -23,44 +25,76 @@ public class Train {
 	@Index
 	private EtatTrain etat;
 
-	// nécessaire pour la conversion automatique JSON
+	/**
+	 * nécessaire pour la conversion automatique JSON
+	 */
 	public Train() {
 	}
 
-	public Train(/*Long depart, Long terminus, */int numero, String codeMission, String date, EtatTrain etat) {
+	/**
+	 * Construit un train
+	 * 
+	 * @param depart
+	 *            codeUIC de la gare de départ
+	 * @param terminus
+	 *            codeUIC du terminus
+	 * @param numero
+	 *            son numéro
+	 * @param codeMission
+	 *            son code Mission
+	 * @param date
+	 *            la date du départ
+	 * @param etat
+	 *            l'état du train
+	 */
+	public Train(int depart, int terminus, int numero, String codeMission, String date, @AlsoLoad("etat") String etat) {
 		super();
-//		this.depart = depart;
-//		this.terminus = terminus;
+		this.depart = depart;
+		this.terminus = terminus;
 		this.numero = numero;
 		this.codeMission = codeMission;
 		this.date = date;
-		this.etat = etat;
+		this.etat = EtatTrain.stringToEtat(etat);
 	}
 
-	public Train(/*Long depart, String terminus, */String numero, String codeMision, String date, String etat) {
-		this(/*depart, Long.parseLong(terminus), */Integer.parseInt(numero), codeMision, date, EtatTrain.stringToEtat(etat));
+	/**
+	 * @return le codeUIC de la gare de départ
+	 */
+	public int getDepart() {
+		return depart;
 	}
 
-	public Gare getDepart() {
-		return ofy().load().type(Gare.class)./*filter("id =", depart).*/list().get(0);
+	/**
+	 * @return le codeUIC du terminus
+	 */
+	public int getTerminus() {
+		return terminus;
 	}
 
-	public Gare getTerminus() {
-		return ofy().load().type(Gare.class)./*filter("id =", terminus).*/list().get(0);
-	}
-
+	/**
+	 * @return son numéro
+	 */
 	public int getNumero() {
 		return numero;
 	}
 
+	/**
+	 * @return son code mission
+	 */
 	public String getCodeMission() {
 		return codeMission;
 	}
 
+	/**
+	 * @return son horaire de départ
+	 */
 	public String getDate() {
 		return date;
 	}
 
+	/**
+	 * @return son état
+	 */
 	public EtatTrain getEtat() {
 		return etat;
 	}
@@ -70,43 +104,36 @@ public class Train {
 		String result = "";
 		// switch (etat) {
 		// case RAS:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + ofy().load().type(Gare.class).filter("id =", terminus).list().get(0).getNom()
-		// + " partira de " + ofy().load().type(Gare.class).filter("id =", depart).list().get(0).getNom() + " à " + date + ".";
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " partira de " + getDepart().getNom() + " à " + date
+		// + ".";
 		// break;
 		// case RETARD:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + ofy().load().type(Gare.class).filter("id =", terminus).list().get(0).getNom()
-		// + " et départ " + ofy().load().type(Gare.class).filter("id =", depart).list().get(0).getNom() + " à " + date + " est retardé.";
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ " + getDepart().getNom() + " à " + date
+		// + " est retardé.";
 		// break;
 		// case SUP:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + ofy().load().type(Gare.class).filter("id =", terminus).list().get(0).getNom()
-		// + " et départ " + ofy().load().type(Gare.class).filter("id =", depart).list().get(0).getNom() + " à " + date + " est supprimé.";
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ " + getDepart().getNom() + " à " + date
+		// + " est supprimé.";
 		// break;
 		// }
-		result = "Le train " + codeMission + "n°" + numero + /*" terminus : " + terminus + " partira de " + depart + */" à " + date + ".";
-		return result+"\n";
+		result = "Le train " + codeMission + "n°" + numero + " terminus : " + terminus + " partira de " + depart + " à " + date + ".";
+		return result + "\n";
 	}
 
-//	public void setDepart(Long depart) {
-//		this.depart = depart;
-//	}
-//
-//	public void setTerminus(Long terminus) {
-//		this.terminus = terminus;
-//	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	public void setCodeMission(String codeMission) {
-		this.codeMission = codeMission;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public void setEtat(EtatTrain etat) {
-		this.etat = etat;
-	}
+	// TODO nécessaire plus tard dans le cas ou l'on suive l'avancement du train
+	// public void setDepart(int depart) {
+	// this.depart = depart;
+	// }
+	//
+	// public void setTerminus(int terminus) {
+	// this.terminus = terminus;
+	// }
+	//
+	// public void setDate(String date) {
+	// this.date = date;
+	// }
+	//
+	// public void setEtat(EtatTrain etat) {
+	// this.etat = etat;
+	// }
 }
