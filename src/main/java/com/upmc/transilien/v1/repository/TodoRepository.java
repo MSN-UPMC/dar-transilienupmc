@@ -1,5 +1,6 @@
 package com.upmc.transilien.v1.repository;
 
+
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
 import java.util.Collection;
@@ -11,49 +12,50 @@ import com.upmc.transilien.v1.model.Todo;
 
 public class TodoRepository {
 
-	private static TodoRepository todoRepository = null;
+    private static TodoRepository todoRepository = null;
 
-	static {
-		ObjectifyService.register(Todo.class);
-	}
 
-	private TodoRepository() {
-	}
+    static {
+        ObjectifyService.register(Todo.class);
+    }
 
-	public static synchronized TodoRepository getInstance() {
-		if (null == todoRepository) {
-			todoRepository = new TodoRepository();
-		}
-		return todoRepository;
-	}
+    private TodoRepository() {
+    }
 
-	public Collection<Todo> findTodos() {
-		List<Todo> todos = ofy().load().type(Todo.class).list();
-		return todos;
-	}
+    public static synchronized TodoRepository getInstance() {
+        if (null == todoRepository) {
+            todoRepository = new TodoRepository();
+        }
+        return todoRepository;
+    }
 
-	public Todo create(Todo todo) {
-		ofy().save().entity(todo).now();
-		return todo;
-	}
+    public Collection<Todo> findTodos() {
+        List<Todo> todos = ofy().load().type(Todo.class).list();
+        return todos;
+    }
 
-	public Todo update(Todo editedTodo) {
-		if (editedTodo.getId() == null) {
-			return null;
-		}
+    public Todo create(Todo todo) {
+        ofy().save().entity(todo).now();
+        return todo;
+    }
 
-		Todo todo = ofy().load().key(Key.create(Todo.class, editedTodo.getId())).now();
-		todo.setCompleted(editedTodo.isCompleted());
-		todo.setTitle(editedTodo.getTitle());
-		ofy().save().entity(todo).now();
+    public Todo update(Todo editedTodo) {
+        if (editedTodo.getId() == null) {
+            return null;
+        }
 
-		return todo;
-	}
+        Todo todo = ofy().load().key(Key.create(Todo.class, editedTodo.getId())).now();
+        todo.setCompleted(editedTodo.isCompleted());
+        todo.setTitle(editedTodo.getTitle());
+        ofy().save().entity(todo).now();
 
-	public void remove(Long id) {
-		if (id == null) {
-			return;
-		}
-		ofy().delete().type(Todo.class).id(id).now();
-	}
+        return todo;
+    }
+
+    public void remove(Long id) {
+        if (id == null) {
+            return;
+        }
+        ofy().delete().type(Todo.class).id(id).now();
+    }
 }

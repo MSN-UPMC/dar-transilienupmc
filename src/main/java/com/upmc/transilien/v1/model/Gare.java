@@ -5,6 +5,11 @@ import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
 @Entity
+/**
+ * Description d'un objet gare
+ * @author Kevin Coquart && Mag-Stellon Nadarajah
+ *
+ */
 public class Gare {
 	@Id
 	/* @Id sur Long => si null un identifiant unique sera auto généré lors d'une insertion */
@@ -12,40 +17,66 @@ public class Gare {
 	@Index
 	private String nom;
 	@Index
-	private String codeUIC;
-	private Integer longitude, lattitude;
+	private int codeUIC;
+	private Double longitude, latitude;
 
-	// nécessaire pour la conversion automatique JSON
+	/**
+	 * nécessaire pour la conversion automatique JSON
+	 */
 	public Gare() {
 	}
 
-	public Gare(String nom, String codeUIC, int longitude, int lattitude) {
+	/**
+	 * construit une gare
+	 * 
+	 * @param nom
+	 *            son nom
+	 * @param codeUIC
+	 *            son codeUIC
+	 * @param longitude
+	 *            sa longitude
+	 * @param latitude
+	 *            sa latitude
+	 */
+	public Gare(String nom, int codeUIC, Double longitude, Double latitude) {
 		super();
 		this.nom = nom;
 		this.codeUIC = codeUIC;
 		this.longitude = longitude;
-		this.lattitude = lattitude;
+		this.latitude = latitude;
 	}
 
+	/**
+	 * @return son nom
+	 */
 	public String getNom() {
 		return nom;
 	}
 
-	public String getCodeUIC() {
+	/**
+	 * @return son codeUIC
+	 */
+	public int getCodeUIC() {
 		return codeUIC;
 	}
 
-	public int getLongitude() {
+	/**
+	 * @return sa longitude
+	 */
+	public Double getLongitude() {
 		return longitude;
 	}
 
-	public int getLattitude() {
-		return lattitude;
+	/**
+	 * @return sa latitude
+	 */
+	public Double getLatitude() {
+		return latitude;
 	}
 
 	@Override
 	public String toString() {
-		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + lattitude + "]";
+		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude + "]\n";
 	}
 
 }

@@ -7,11 +7,25 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+/**
+ * Requête sur l'API transilien prochainDepart
+ * 
+ * @author Kevin Coquart && Mag-Stellon Nadarajah
+ *
+ */
 public class TransilienRequest {
 	private final static String USER_AGENT = "Mozilla/5.0";
 	private static String urlBase = "http://tnhtn175:cgP479kW@api.transilien.com/gare/";
 
-	public static InputStream prochainDepart(String codeUIC) throws Exception {
+	/**
+	 * Récupère le retour d'une demande à l'API prochain départ
+	 * 
+	 * @param codeUIC
+	 *            le codeUIC de la gare de départ
+	 * @return le flux renvoyé par l'API transilien (du xml)
+	 * @throws Exception
+	 */
+	public static InputStream prochainDepart(int codeUIC) throws Exception {
 		String url = urlBase + codeUIC + "/depart/";
 
 		HttpClient client = new DefaultHttpClient();
@@ -24,7 +38,17 @@ public class TransilienRequest {
 		return response.getEntity().getContent();
 	}
 
-	public static InputStream prochainDepart(String departcodeUIC, String destinatationCodeUIC) throws Exception {
+	/**
+	 * Récupère le retour d'une demande à l'API prochain départ avec une destination
+	 * 
+	 * @param departcodeUIC
+	 *            le codeUIC de la gare de départ
+	 * @param destinatationCodeUIC
+	 *            le codeUIC de la destination
+	 * @return le flux renvoyé par l'API transilien (du xml)
+	 * @throws Exception
+	 */
+	public static InputStream prochainDepart(int departcodeUIC, int destinatationCodeUIC) throws Exception {
 		String url = urlBase + departcodeUIC + "/depart/" + destinatationCodeUIC + "/";
 
 		HttpClient client = new DefaultHttpClient();

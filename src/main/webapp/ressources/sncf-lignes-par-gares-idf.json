@@ -1,0 +1,5657 @@
+[
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3436367a45d8523ae1a34e3858a4d93f90e3f3cf",
+			"fields" : {
+				"code_uic" : "87381491",
+				"train" : 1,
+				"libelle_point_arret" : "ANDRESY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "beb187a6057c6563d2fe71fac0419aa45f3a5f8e",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545251",
+				"libelle_point_arret" : "ATHIS MONS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "297337f1cff457087657531c7c984840dbf9c417",
+			"fields" : {
+				"code_uic" : "87393116",
+				"train" : 1,
+				"libelle_point_arret" : "BELLEVUE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "045283bbb499038140267caacbb63de166ac1387",
+			"fields" : {
+				"libelle_point_arret" : "BONDY",
+				"tram" : 1,
+				"t4" : 1,
+				"rer" : 1,
+				"code_uic" : "87113407",
+				"e" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a35f4fe58320c0d8e2cb38bb2dba665bcb0e2609",
+			"fields" : {
+				"code_uic" : "87382440",
+				"train" : 1,
+				"libelle_point_arret" : "BOUGIVAL",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "87b37335569337f4b0f5fe6bdefc7ceea027da14",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87543181",
+				"libelle_point_arret" : "BOULAINVILLIERS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d9fa79ff6652d4b0ccc2d929b284c914f84a7ce4",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682138",
+				"libelle_point_arret" : "BOUSSY SAINT-ANTOINE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4dcdd166c4ba00baf38cd0c0128a419301908a61",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681478",
+				"libelle_point_arret" : "BOUTIGNY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2fafa527398b80c1ac0c025fd3b70db61eded38f",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276451",
+				"train" : 1,
+				"libelle_point_arret" : "BRUYERES SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "956b77d5389c89f64f77f650a0d84dce812914e6",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87754986",
+				"libelle_point_arret" : "BUSSY SAINT-GEORGES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "11ccbe5d122be67d239b0b278e9aac5b312029f9",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "CERNAY",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276063",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7d39e6fc60d781481b1dbe35f9543d994e9836ef",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758177",
+				"libelle_point_arret" : "CHAMPIGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d3ac5131ee53e03471ab158a741e0c6114e3ce7a",
+			"fields" : {
+				"code_uic" : "87683128",
+				"train" : 1,
+				"libelle_point_arret" : "CHAMPIGNY SUR YONNE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "809c8c8ca2135bb57bac86ec351311833a2d15e0",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276162",
+				"train" : 1,
+				"libelle_point_arret" : "CHAPONVAL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "96c92d0902187f7f5e9df2bc4cbc7e331e29a091",
+			"fields" : {
+				"code_uic" : "87381194",
+				"train" : 1,
+				"libelle_point_arret" : "CHARS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "84eca4d22ce7916e68845285c0023a63b2ea8d99",
+			"fields" : {
+				"libelle_point_arret" : "CHARTRETTES",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682419"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a16a504949fbdbd001b85f70f5abd7c60652419b",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116582",
+				"train" : 1,
+				"libelle_point_arret" : "CHATEAU THIERRY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "170486d4f87c7c6ec960fe8f8ffcef030a3a8df2",
+			"fields" : {
+				"code_uic" : "87545756",
+				"train" : 1,
+				"libelle_point_arret" : "CHATEAUDUN",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "03de9029c2a8c7721076615875354020aa06b463",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87116350",
+				"libelle_point_arret" : "CHAUFFRY",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a70333847310f00ed8af99b31d7316a29a6bf41c",
+			"fields" : {
+				"rer" : 1,
+				"tram" : 1,
+				"libelle_point_arret" : "CITE UNIVERSITAIRE",
+				"code_uic" : "87758649",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8d8db2c93e8d7f895680702968fbe28b4aa1090a",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87332965",
+				"libelle_point_arret" : "CREDIT AGRICOLE (DOMMERVILLE)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "71e5ea9d0a1e6f5cd71d54c0d992fbc97af269e6",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276345",
+				"train" : 1,
+				"libelle_point_arret" : "DEUIL MONTMAGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a0a075c5d462e8fd2737761d5cdead40f57eadae",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87540179",
+				"libelle_point_arret" : "DOURDAN LA FORET"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eab554e08a9d79094d025b884f392daaab9c90cc",
+			"fields" : {
+				"code_uic" : "87394114",
+				"train" : 1,
+				"libelle_point_arret" : "EPERNON",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0912d52d09d9e792619a30d9f98a2aaee8bea6b7",
+			"fields" : {
+				"code_uic" : "87683201",
+				"train" : 1,
+				"libelle_point_arret" : "ETIGNY VERON",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0cb43346d2f3cac4bad9fac42199bfeed795e770",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116277",
+				"train" : 1,
+				"libelle_point_arret" : "FAREMOUTIERS POMMEUSE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "64121f9fc045c1ed970dfe27b8ad9a76e38323d7",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "FONTAINE MICHALON",
+				"code_uic" : "87758763",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "de2070f563ed77c239f489b0037d70737aa05e48",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758128",
+				"libelle_point_arret" : "FONTENAY SOUS BOIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "118d8f68d3adabfa214b3ed5426ea96d66421193",
+			"fields" : {
+				"code_uic" : "87381566",
+				"train" : 1,
+				"libelle_point_arret" : "GARGENVILLE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ec4783da8b2e3e1c68632c697c67d7bafb1d63cc",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87271205",
+				"libelle_point_arret" : "GENNEVILLIERS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "75cf3fae334fab0ffbd34021b5b93f7882c27255",
+			"fields" : {
+				"code_uic" : "87381244",
+				"train" : 1,
+				"libelle_point_arret" : "GISORS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "943e1a6e893e4d3a849a7d12a38f827df3ca2ac7",
+			"fields" : {
+				"e" : 1,
+				"rer" : 1,
+				"p" : 1,
+				"code_uic" : "87116012",
+				"train" : 1,
+				"libelle_point_arret" : "GRETZ ARMAINVILLIERS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b44e0d03e661a17d1dc7f3b8e8d5bd71664fd780",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393561",
+				"libelle_point_arret" : "IGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "963b32af27d1e180e2baaa819e620e8f04fe2a6d",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758144",
+				"libelle_point_arret" : "JOINVILLE LE PONT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f772070489f42c0d98520e948634a36b419604fa",
+			"fields" : {
+				"code_uic" : "87394155",
+				"train" : 1,
+				"libelle_point_arret" : "JOUY",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1dbdb19b6e64a8a041cc6891a8f9ecdfe0392e88",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87430918",
+				"libelle_point_arret" : "JOUY SUR MORIN CHAMPGOULIN",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "63e9dd7ca668a8fa2867a54dee7ba9186fcd73d3",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87271171",
+				"train" : 1,
+				"libelle_point_arret" : "LA BARRE ORMESSON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "efc5305e145917e4021ea14539f62b5713e35641",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681452",
+				"libelle_point_arret" : "LA FERTE ALAIS",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8c81bf62734cc0c8e75dca4a3b369d31dc438230",
+			"fields" : {
+				"libelle_point_arret" : "LE PLESSIS BELLEVILLE",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87271551"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f3f2e7faf38912ba0be735562e34c4f38f23e98b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681627",
+				"libelle_point_arret" : "LE PLESSIS CHENET",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eca307d7a0ea4d2a16e94e0d21ae6b065b750fe9",
+			"fields" : {
+				"code_uic" : "87381095",
+				"train" : 1,
+				"libelle_point_arret" : "LE STADE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e4f3fdf294c8b1b482304f96228d6f3eba2a8e57",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758078",
+				"libelle_point_arret" : "LE VESINET CENTRE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "de8b7e93121223558710d1ddd4baca7d064cdd32",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758086",
+				"libelle_point_arret" : "LE VESINET LE PECQ"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3467302d395b6bdf2fd3970c17a4a49e13c33a32",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LES BACONNETS",
+				"code_uic" : "87758771",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0f8ee78b515d9f9288633214dc0cebaf95e56b9a",
+			"fields" : {
+				"libelle_point_arret" : "LIVRY SUR SEINE",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682401"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a38e939237216dee16e69df3cddc8fbebe8431bf",
+			"fields" : {
+				"code_uic" : "87382457",
+				"train" : 1,
+				"libelle_point_arret" : "LOUVECIENNES",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "65ed1d71e5f9301588e1ab7a3658cb90ddc74af6",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87988717",
+				"libelle_point_arret" : "LYCEE HENRI SELLIER (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "317250b6b7a05ec4ad27c6028e55661caab72051",
+			"fields" : {
+				"code_uic" : "87394130",
+				"train" : 1,
+				"libelle_point_arret" : "MAINTENON",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7ed76985441dcfc4ddde22d683ec274853182342",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681155",
+				"libelle_point_arret" : "MAISONS ALFORT ALFORTVILLE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f7d9b0463e6d343268d89ce5b4a2a26675b76929",
+			"fields" : {
+				"code_uic" : "87393470",
+				"train" : 1,
+				"libelle_point_arret" : "MARCHEZAIS BROUE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "63a49d4d2b0726baca787a8882cbfb60b38e3523",
+			"fields" : {
+				"libelle_point_arret" : "MELUN",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682005",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "886876b83d58f76d04bf88166d55b7f2e2f95730",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681411",
+				"libelle_point_arret" : "MENNECY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "18732b34d97f3d75e7650843c6c0bd3fab162e66",
+			"fields" : {
+				"b" : 1,
+				"libelle_point_arret" : "MITRY CLAYE",
+				"rer" : 1,
+				"train" : 1,
+				"k" : 1,
+				"code_uic" : "87271528"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c102466ac82f1c0ee534383a1149fc67845f0e08",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87332940",
+				"libelle_point_arret" : "MONNERVILLE CENTRE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "02b575f51a346eea8026116c28bfa7ab519fb1ad",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682104",
+				"libelle_point_arret" : "MONTGERON CROSNE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "16be63976140e5f14716f45579feeb54b01cbf69",
+			"fields" : {
+				"code_uic" : "87382879",
+				"train" : 1,
+				"libelle_point_arret" : "MONTREUIL",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9f19b0e63d200adc260569bbaf4235b5dc8f440b",
+			"fields" : {
+				"libelle_point_arret" : "MORET VENEUX LES SABLONS",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682278"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "35c99527af8fdd1ee07f7ba5b3bce5c330c24620",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87386318",
+				"libelle_point_arret" : "NANTERRE UNIVERSITE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2bde7641cd0894ba314757851dbd45d9d0e8df8b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276279",
+				"libelle_point_arret" : "ORRY LA VILLE COYE LA FORET",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "27a4ec2239418439b2602b6c1d32a6d12fda21b6",
+			"fields" : {
+				"code_uic" : "87384008",
+				"train" : 1,
+				"libelle_point_arret" : "PARIS SAINT-LAZARE (GARE SAINT-LAZARE)",
+				"l" : 1,
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2b0b7ebc39f2b26405f85a335c166756c278af61",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276469",
+				"train" : 1,
+				"libelle_point_arret" : "PERSAN BEAUMONT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8631cb7c0b20af1ac093a08ae06a6de8b22787df",
+			"fields" : {
+				"code_uic" : "87393421",
+				"train" : 1,
+				"libelle_point_arret" : "PLAISIR GRIGNON",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8e0a2283247f0e7a4272c562107b6a86ca35343e",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "POISSY",
+				"rer" : 1,
+				"train" : 1,
+				"j" : 1,
+				"code_uic" : "87386573"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "997778ca0965730f34c016f4ea29df72bbf973ee",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276154",
+				"train" : 1,
+				"libelle_point_arret" : "PONT PETIT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2abfbcdaf9f648ecf4f445f88d0a09a441415fdb",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "PORT ROYAL",
+				"code_uic" : "87758623",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "97340afaa0a2c035d64cad0b5ec794faed88d9a8",
+			"fields" : {
+				"code_uic" : "87393314",
+				"train" : 1,
+				"libelle_point_arret" : "RAMBOUILLET",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f7cb62f0213c317a15840edeffa29ed1ab47812d",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87988709",
+				"libelle_point_arret" : "REMISE A JORELLE (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6396e8cbf7a603fcf9486ec08a6e3318edeb253a",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87546291",
+				"libelle_point_arret" : "RUNGIS LA FRATERNELLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2e6b8723793fc2df5936adeec02c28678df25b0f",
+			"fields" : {
+				"code_uic" : "87394148",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT PIAT",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "13021fa78c40d9c512ef2b6813647ca879384a02",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116178",
+				"train" : 1,
+				"libelle_point_arret" : "SAINTE-COLOMBE SEPTVEILLES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "566251648fb1c74a89933d273e77eea645b31d81",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758094",
+				"libelle_point_arret" : "SAINT-GERMAIN EN LAYE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d3ede4ddcc9edc9e2192b2a16c242c992e1d3345",
+			"fields" : {
+				"code_uic" : "87382804",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-GERMAIN EN LAYE GRANDE CEINTURE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "69cb4090e40646fb46fece02c465a49a19c7c1fd",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545202",
+				"libelle_point_arret" : "SAINT-MICHEL SUR ORGE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fd429933e6bf206d705f292637fcb537b53cedc5",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "SAINT-OUEN L'AUMONE",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276105",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6361500d31ae59b365cef939a7c356c75405fe82",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87116376",
+				"libelle_point_arret" : "SAINT-REMY LA VANNE",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "999e1f6942587e1b3bf424abe096ca6c8a9c1fb9",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87116368",
+				"libelle_point_arret" : "SAINT-SIMEON",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "efe848c89dad3e0cc62afdbdd7e7e876a33ca461",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87332973",
+				"libelle_point_arret" : "SALLE DES FETES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b50a39fcf1e037ef7e03c2b3a970863a3788072b",
+			"fields" : {
+				"code_uic" : "87381186",
+				"train" : 1,
+				"libelle_point_arret" : "SANTEUIL LE PERCHAY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4654bc4cba4e96c795d9284f4689bd3bb683ec46",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "SCEAUX",
+				"code_uic" : "87758706",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "56572aee2a80ab2248758bd9d1afd29cf88f1447",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "SEVRAN LIVRY",
+				"code_uic" : "87271429",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a11978c49477d353665c27a132244aa1961f018f",
+			"fields" : {
+				"code_uic" : "87381814",
+				"train" : 1,
+				"libelle_point_arret" : "VAUX SUR SEINE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4d1e1b5b3e3bbfbcc0014c71418914ac9146d4fa",
+			"fields" : {
+				"libelle_point_arret" : "VERNOU SUR SEINE",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682468"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d4c58d5feda5c5b3fb171b3d4a7c01ec3eb8e5f2",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "VERSAILLES CHANTIERS",
+				"rer" : 1,
+				"train" : 1,
+				"n" : 1,
+				"code_uic" : "87393009",
+				"u" : "1"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1bebf79648bfb806982762a80322dfed04aeae69",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113795",
+				"libelle_point_arret" : "VILLIERS SUR MARNE PLESSIS TREVISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "08a79dbf3d18878263351e385e3f31394d3736bf",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545293",
+				"libelle_point_arret" : "VITRY SUR SEINE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d65fe359d283c17227111f32a7c93be205fb75dd",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682500",
+				"libelle_point_arret" : "VOSVES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0edb17f3bba3552d6e5cb6684f0751c426fc3029",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682161",
+				"libelle_point_arret" : "CESSON",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d59871eee409bbf6c3e3cd34a034b2de50d95d6f",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87116343",
+				"libelle_point_arret" : "CHAILLY BOISSY LE CHATEL",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9eb96918f79c72735a1e8708a1ca72e062489c55",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393058",
+				"libelle_point_arret" : "CHAMP DE MARS TOUR EIFFEL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "52d11a366b5e19b6eccb3da1b49baad335c9cbe4",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87115873",
+				"train" : 1,
+				"libelle_point_arret" : "CHAMPBENOIST POIGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4b1579f05f4fbc8838a5def813c4ad4b84d1930a",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116509",
+				"train" : 1,
+				"libelle_point_arret" : "CHANGIS SAINT-JEAN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "db1b4363789137fc48d64deef378d4b56cb0d0fd",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276113",
+				"libelle_point_arret" : "CHANTILLY GOUVIEUX",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ad4ee835cbabeecc8f287ce12ccdcd5403c26be3",
+			"fields" : {
+				"code_uic" : "87394007",
+				"train" : 1,
+				"libelle_point_arret" : "CHARTRES",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cf7371f52aad038ac088904189e863217f8972cb",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393173",
+				"libelle_point_arret" : "CHAVILLE VELIZY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "47080c9c9b7ff746b49e2713f27280beeb363571",
+			"fields" : {
+				"e" : 1,
+				"rer" : 1,
+				"p" : 1,
+				"code_uic" : "87116111",
+				"train" : 1,
+				"libelle_point_arret" : "CHELLES GOURNAY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5ff48df8a381ed6d3c772907bf27d6e0d6e5ae10",
+			"fields" : {
+				"libelle_point_arret" : "COMPANS",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87272047"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "caaf3929eed4acd83cc055f4fa9f6399b0c7e61d",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "CONFLANS FIN D'OISE",
+				"rer" : 1,
+				"j" : 1,
+				"l" : 1,
+				"code_uic" : "87381459",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e073468702d6aaa43d5408026fa1db90552fcca8",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681007",
+				"libelle_point_arret" : "CORBEIL ESSONNES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "97f9f11d3516858b3be29220827c53892d329f31",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116772",
+				"train" : 1,
+				"libelle_point_arret" : "CRECY LA CHAPELLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "edc14cc14f89f302ba303b0585fffcd5e8734f08",
+			"fields" : {
+				"libelle_point_arret" : "CREPY EN VALOIS",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87271593"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c516b6362c9e1b6cd79895c24fea4edb356bed59",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545475",
+				"libelle_point_arret" : "EGLY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "871210f56c723be65d088e8d0641b0b1889acecf",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87116046",
+				"libelle_point_arret" : "EMERAINVILLE - PONTAULT COMBAULT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "15ea3a9c1176400f156d888217a788a17ee6ef06",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276022",
+				"train" : 1,
+				"libelle_point_arret" : "ENGHIEN LES BAINS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e005501b13fc462bc3f1f6e4fc9eb8e222c84905",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87271148",
+				"libelle_point_arret" : "EPINAY SUR SEINE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7ea93f58ede42a32d93fb17e8813f0e9c64960ff",
+			"fields" : {
+				"n" : 1,
+				"code_uic" : "87386763",
+				"train" : 1,
+				"libelle_point_arret" : "EPONE MEZIERES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7ca6318d990a5c064440f20084c3ebe4552598c1",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276584",
+				"train" : 1,
+				"libelle_point_arret" : "ERMONT HALTE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "24e377f20e2ce055e949534f012b3b20975a1ae7",
+			"fields" : {
+				"code_uic" : "87387001",
+				"train" : 1,
+				"libelle_point_arret" : "EVREUX",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b64956f87e9f41ffb06b5811d9173320e37ba0fe",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681361",
+				"libelle_point_arret" : "EVRY - Val de Seine",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "dc6779beb9cef38c21b3b9259cf7f74fa1722ed7",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681387",
+				"libelle_point_arret" : "EVRY COURCOURONNES - Centre",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f5851a0ca67c301bde15063a730e7f33555feed8",
+			"fields" : {
+				"libelle_point_arret" : "FERRIERES FONTENAY",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684241"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1477d2f0a9d7d9a85ff5c44777b19d8ffc0f6967",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113894",
+				"libelle_point_arret" : "FREINVILLE SEVRAN (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "371bcfc354476f06f20af01d43ad7bb236453b7d",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113514",
+				"libelle_point_arret" : "GAGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fc6b3a9963a27e65e4afe7091001e75a8ce93897",
+			"fields" : {
+				"code_uic" : "87382259",
+				"train" : 1,
+				"libelle_point_arret" : "GARCHES MARNES LA COQUETTE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f27926d735ce2e597a36c53d37ce23d97c81ef9b",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758029",
+				"libelle_point_arret" : "GARE DE NANTERRE PREFECTURE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a23b8746a77911abdb25f091f34fd2f889072d07",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758037",
+				"libelle_point_arret" : "GARE DE NANTERRE UNIVERSITE RER A"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "074ef91624d776f14893eab925b0c0b2730c1b28",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276196",
+				"libelle_point_arret" : "GARGES SARCELLES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b9b7a95c3dccfca6191d78a2603bb4ec79a2d992",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "GENTILLY",
+				"code_uic" : "87758656",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "bdb1e38e95881bf5c856b206d92eeabf985c7ec2",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393645",
+				"libelle_point_arret" : "GRAVIGNY BALIZY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f9299404f6dec0e814e332774f8abb5549634177",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276592",
+				"train" : 1,
+				"libelle_point_arret" : "GROS NOYER SAINT-PRIX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f99013223deee92d4c6444a9236ee9dd138bb398",
+			"fields" : {
+				"code_uic" : "87683243",
+				"train" : 1,
+				"libelle_point_arret" : "JOIGNY",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e951c7a468bf6ded3bdc289a9de6d6f36889f8ad",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87430884",
+				"libelle_point_arret" : "JOUY SUR MORIN MONUMENT",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "337ad869cc42e292de526ca572f637491ddf0a13",
+			"fields" : {
+				"code_uic" : "87382432",
+				"train" : 1,
+				"libelle_point_arret" : "LA CELLE SAINT-CLOUD",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4c7e1178004d54dfcb8d2748f3caa14c85f02495",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LA CROIX DE BERNY",
+				"code_uic" : "87758748",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a84f57238e562518cc1f6718c80fa37b6d84c3f3",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116673",
+				"train" : 1,
+				"libelle_point_arret" : "LA FERTE MILON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c273e301ea30f2d8890b81ffb66f81646b64063c",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116517",
+				"train" : 1,
+				"libelle_point_arret" : "LA FERTE SOUS JOUARRE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "367be052d50133e4f0a731dc81e607cb4b3910e4",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LA HACQUINIERE",
+				"code_uic" : "87758862",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "41c8c929ecacd6954c85ac6b1fbf365480a3005e",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545459",
+				"libelle_point_arret" : "LA NORVILLE SAINT-GERMAIN LES ARPAJON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8b58f346e045877bb0b37a149234420faedb579e",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LAPLACE",
+				"code_uic" : "87758664",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "29be314ad0af5716bf2c8621505e0f11d82d4d54",
+			"fields" : {
+				"code_uic" : "87683268",
+				"train" : 1,
+				"libelle_point_arret" : "LAROCHE MIGENNES",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eba4d93e1c3cecffc6003d399530abfe90da8664",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LE BLANC MESNIL",
+				"code_uic" : "87271478",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "91b905eb213f221c1785aab1d26cb4f97795846b",
+			"fields" : {
+				"code_uic" : "87393280",
+				"train" : 1,
+				"libelle_point_arret" : "LES ESSARTS LE ROI",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "93fc8d5c6ccfb6b4e7a955e411e3aab262990160",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87546226",
+				"libelle_point_arret" : "LES SAULES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "342bf80a24605b36ef2e80e7234dbee2160a302a",
+			"fields" : {
+				"code_uic" : "87382473",
+				"train" : 1,
+				"libelle_point_arret" : "L'ETANG LA VILLE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "50001560c096876be9f93aff9bfd6ce8fb2280d3",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276527",
+				"train" : 1,
+				"libelle_point_arret" : "L'ISLE ADAM PARMAIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cd02ff9698a0ffa7ba93b619ca1e25987b145d18",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116137",
+				"train" : 1,
+				"libelle_point_arret" : "LONGUEVILLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cba1638b56c038f684b4af1f81a3b200e4786f88",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276253",
+				"libelle_point_arret" : "LOUVRES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "260a16c2e6aa1054d1016b9d95e780d40341f1b3",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LOZERE",
+				"code_uic" : "87758821",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ad5826f9873d961e829f4ccdbe26263ef57e0544",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276576",
+				"train" : 1,
+				"libelle_point_arret" : "LUZARCHES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "388ecb38e4e441e5360ab85a7ed4d2ed22249bf4",
+			"fields" : {
+				"n" : 1,
+				"code_uic" : "87381509",
+				"train" : 1,
+				"libelle_point_arret" : "MANTES LA JOLIE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "44b82f2e874ad3cc643d53d2ef3a8684db44f2b3",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545186",
+				"libelle_point_arret" : "MAROLLES EN HUREPOIX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2207e2941a104eefbac85a750f786067c80a5214",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87393579",
+				"c" : 1,
+				"b" : 1,
+				"libelle_point_arret" : "MASSY PALAISEAU"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8c20ac8ceef6ac424195b3047355b058c2541494",
+			"fields" : {
+				"code_uic" : "87381483",
+				"train" : 1,
+				"libelle_point_arret" : "MAURECOURT",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "793a32129bdc19843797aa637c4126c6a1bee692",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116103",
+				"train" : 1,
+				"libelle_point_arret" : "MEAUX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c4d4a6352b5b98120df41746b815b21b3bc55a5e",
+			"fields" : {
+				"code_uic" : "87393108",
+				"train" : 1,
+				"libelle_point_arret" : "MEUDON",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f33bed3c527403b1e880b69238dc4290405818f8",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87332932",
+				"libelle_point_arret" : "MONDESIR"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "afcc0e603c18ad59cdfd5bd6c19c19418c1c57e6",
+			"fields" : {
+				"libelle_point_arret" : "MONTEREAU",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682302"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "19e70d9faa17d8c6487bcbea15428f7945d4f722",
+			"fields" : {
+				"code_uic" : "87393892",
+				"train" : 1,
+				"libelle_point_arret" : "MONTFORT L'AMAURY MERE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6d2cce7716af76b90f5b22d94d5e0010bd70cedb",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "MONTIGNY BEAUCHAMP",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276089",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "327631ecb9d6a01544cb957529b42c2d4eaf1200",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116087",
+				"train" : 1,
+				"libelle_point_arret" : "MORMANT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e780771cc2bbda92aa979e6e600040ec2c85d9d0",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116244",
+				"train" : 1,
+				"libelle_point_arret" : "MORTCERF"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "12c1e9a4e760c20c08b5a91a878bf9134ca72c40",
+			"fields" : {
+				"libelle_point_arret" : "NEMOURS SAINT-PIERRE",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684126"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "01efd3692dc454ec73e5ed8d1006494bc7ba19a6",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758318",
+				"libelle_point_arret" : "NEUILLY PLAISANCE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e90c9fb867de0b5cd92adf2207bf456d987cf55f",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "NEUVILLE UNIVERSITE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87334482",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5b64a0411ecc9db71af75db3d54c14b3ae9808da",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116566",
+				"train" : 1,
+				"libelle_point_arret" : "NOGENT L'ARTAUD CHARLY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e9e5df985990012de970f0de823afc26dec93654",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758136",
+				"libelle_point_arret" : "NOGENT SUR MARNE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fefdcf87b03efa1b89c4f75220f214f37249fc9c",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758334",
+				"libelle_point_arret" : "NOISY LE GRAND MONT D'EST"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c7753e0753324ea491bb78449cd7161539d5e7e7",
+			"fields" : {
+				"code_uic" : "87393876",
+				"train" : 1,
+				"libelle_point_arret" : "NOISY LE ROI",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "dc99b9358351fcc74ecf5233f25f332bbe3dcdbf",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "ORSAY VILLE",
+				"code_uic" : "87758847",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0d2aa5ccb886e5f1901c6d4a5e46c298a2aa3314",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "PALAISEAU",
+				"code_uic" : "87758805",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ff88aed151b01694587ebed61eb307f7a1c59d0b",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "PARC DE SCEAUX",
+				"code_uic" : "87758730",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a59d41989e4a074369e8441f608777dd63ba6146",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "PARC DES EXPOSITIONS",
+				"code_uic" : "87271486",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f8e90fc6a02a10e1af037f61eb5e3a81b6bde856",
+			"fields" : {
+				"code_uic" : "87391003",
+				"train" : 1,
+				"libelle_point_arret" : "PARIS MONTPARNASSE (GARE MONTPARNASSE)",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7e7217b1b20522c55cf5dd4fd08cd86912bc1e4b",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393504",
+				"libelle_point_arret" : "PETIT JOUY LES LOGES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "316fa6ed158c4801257540d924b47797d2f6346d",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87271163",
+				"libelle_point_arret" : "PIERREFITTE STAINS",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "03e78455ba3f8bc3fcb6194068da25a204b5a481",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "PIERRELAYE",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276097",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cfd49567b4d076e4f65f1ed18926f2e09c001b4b",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393041",
+				"libelle_point_arret" : "PONT DE L'ALMA"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e3631a0abc372193964d556f4487f49c7e390979",
+			"fields" : {
+				"code_uic" : "87683136",
+				"train" : 1,
+				"libelle_point_arret" : "PONT SUR YONNE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5d9cb1e5e819ddd1ae4e14057b71a91b926216cf",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276501",
+				"train" : 1,
+				"libelle_point_arret" : "PRESLES COURCELLES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f616884d5d714a046f522b9a1825f7330c2700d6",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116160",
+				"train" : 1,
+				"libelle_point_arret" : "PROVINS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "98a8244f32127e8cf061b4ba2dbee19a5c700ae8",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "ROBINSON",
+				"code_uic" : "87758722",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c0438751b0f493840e673b043161beaed1f208b5",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113704",
+				"libelle_point_arret" : "ROSNY SOUS BOIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0e9567baab26d2c05e8e9d1d6b17527773e85f8e",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87431791",
+				"libelle_point_arret" : "ROUGEMONT CHANTELOUP (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4b3c48a6bbc51a6e5ea6604aef42d051512473f6",
+			"fields" : {
+				"libelle_point_arret" : "SAINT-MAMMES",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682294"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8bfbc43eced4943f395eff06488a821acfd08cf3",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545350",
+				"libelle_point_arret" : "SAINT-MARTIN D ETAMPES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "382931e5e6cffed31676848c9cc49e44ded41c2d",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758151",
+				"libelle_point_arret" : "SAINT-MAUR CRETEIL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2e3385a5617c9e3f900c947cc49178f5ce323dd8",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87271247",
+				"libelle_point_arret" : "SAINT-OUEN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "71334391b37e5edba8bcd827276b59ad9681a0de",
+			"fields" : {
+				"code_uic" : "87276188",
+				"train" : 1,
+				"libelle_point_arret" : "SANNOIS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "69bd032d92b708b02913c2049c8863079d07021d",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "SARTROUVILLE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87386417",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8f610c0494ce57ed4ba487a4c2047d715b0d5e75",
+			"fields" : {
+				"u" : "1",
+				"code_uic" : "87393835",
+				"train" : 1,
+				"libelle_point_arret" : "TRAPPES",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "33f5535f37963f8977273b1af2366a5c864d0446",
+			"fields" : {
+				"code_uic" : "87381798",
+				"train" : 1,
+				"libelle_point_arret" : "VAL D'ARGENTEUIL",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2f5ddf9a6cd6429a19cc7061f3368796b6fb24fd",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87113712",
+				"libelle_point_arret" : "VAL DE FONTENAY",
+				"e" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "39e1dcfb788fe5823ec4b115c0ad82d4c075aa78",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116079",
+				"train" : 1,
+				"libelle_point_arret" : "VERNEUIL L'ETANG"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "aaccff33ddd175a32c83d0a5841b6c7803b88be5",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87272021",
+				"train" : 1,
+				"libelle_point_arret" : "VILLAINES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e1b15aaca66718dbeb2a121c3d270ea92f88268a",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681858",
+				"libelle_point_arret" : "VILLENEUVE PRAIRIE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e79fe7f2ea2c25d696f8f7293f6ae70d524530bc",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681809",
+				"libelle_point_arret" : "VILLENEUVE TRIAGE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "80aaa374aaeff406538c6b047930029f47db6d3e",
+			"fields" : {
+				"code_uic" : "87393413",
+				"train" : 1,
+				"libelle_point_arret" : "VILLEPREUX LES CLAYES",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d89b94a3dc9ec3429a10b2beb25167a7f2bb5a5f",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "ACHERES VILLE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87381657",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "08fc291910847059354dd472da8d6a6947c012d7",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "AEROPORT CHARLES DE GAULLE  1 - Roissy",
+				"code_uic" : "87271460",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "97de54e015ce9710dda33521eef425df4880f484",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87543090",
+				"libelle_point_arret" : "ANGERVILLE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f759d444ab2fd8c0fb1ecb70474e77b67cf2b06d",
+			"fields" : {
+				"code_uic" : "87381137",
+				"train" : 1,
+				"libelle_point_arret" : "ASNIERES SUR SEINE",
+				"l" : 1,
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c7deb832af573ff8da39606d9c04bef16b1c39eb",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276543",
+				"train" : 1,
+				"libelle_point_arret" : "AUVERS SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d55878107efc0a332b1b47be6641eae41cb561fa",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87543207",
+				"libelle_point_arret" : "AVENUE DU PRESIDENT KENNEDY - Maison de Radio France"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "02917ae458a73c31b687aafcba65d31b61aa3f6f",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87381038",
+				"libelle_point_arret" : "AVENUE FOCH"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1ceeb77f04aa98225b3cdee86f889828369df43a",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87381046",
+				"libelle_point_arret" : "AVENUE HENRI MARTIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c09ab874c6cfdef2695b035ef5abb160c7d7a104",
+			"fields" : {
+				"libelle_point_arret" : "BAGNEAUX SUR LOING",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684191"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8ace9bd5bf09b4a1821cddd47de34b406e936b1c",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276550",
+				"train" : 1,
+				"libelle_point_arret" : "BELLOY SAINT-MARTIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "650689998d19e4866cdc45bf63586c9b73abaff1",
+			"fields" : {
+				"code_uic" : "87393363",
+				"train" : 1,
+				"libelle_point_arret" : "BEYNES",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6296421e0e0aa1c7868d9c1bb4300c94ae01d83b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87684407",
+				"libelle_point_arret" : "BOIGNEVILLE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "041bba8288d91d0c3fe86035d52e3aaf2e525db7",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276485",
+				"train" : 1,
+				"libelle_point_arret" : "BOUFFEMONT MOISSELLES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e6489cbfbef6bebe8aee588a510bf4bccedba256",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545194",
+				"libelle_point_arret" : "BRETIGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "965e96acf7702b316d459771ea459d0b0c6debf9",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545483",
+				"libelle_point_arret" : "BREUILLET BRUYERES LE CHATEL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c831b2816990e23f1bd50e43b5805b85bfe16c82",
+			"fields" : {
+				"code_uic" : "87387092",
+				"train" : 1,
+				"libelle_point_arret" : "BUEIL",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "733bd7f026cd695bb331138eff153ed643af75c9",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "CERGY LE HAUT",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87382655",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "906c0ff1c1315faed6ffc25bb1df5923b000f442",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "CERGY PREFECTURE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87381905",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ec0cc96080246e58ece2c2e81a91ff353c68ca5c",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545152",
+				"libelle_point_arret" : "CHAMARANDE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e13e2ff10ad12faa65cb036d46231d5cc32c1891",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276030",
+				"train" : 1,
+				"libelle_point_arret" : "CHAMP DE COURSES D'ENGHIEN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ada1080d15c3009ff7088ced233b1c4d3a1b41bc",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276519",
+				"train" : 1,
+				"libelle_point_arret" : "CHAMPAGNE SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e704289f8d1dd487ff74d19a81515c69a7430a16",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758003",
+				"libelle_point_arret" : "CHARLES DE GAULLE ETOILE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3024d12392c796e746e7d22245eea34d13fddeea",
+			"fields" : {
+				"code_uic" : "87381228",
+				"train" : 1,
+				"libelle_point_arret" : "CHAUMONT EN VEXIN",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "82ee9281348bb481084dd195481b28cabd944a05",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87546317",
+				"libelle_point_arret" : "CHEMIN D'ANTONY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "951644dc22d8fe4d545619c6b13cb22c794eb951",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393637",
+				"libelle_point_arret" : "CHILLY MAZARIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ccbd671a375cb167d0a9435f931a66ae24ddf922",
+			"fields" : {
+				"code_uic" : "87391565",
+				"train" : 1,
+				"libelle_point_arret" : "CLAMART",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "050330d03518be6dd531779e35566a63ee53e866",
+			"fields" : {
+				"code_uic" : "87381129",
+				"train" : 1,
+				"libelle_point_arret" : "CLICHY LEVALLOIS",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cd3d693c8cba46582d1cbb4fa38af97fe908e6af",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116731",
+				"train" : 1,
+				"libelle_point_arret" : "COUILLY SAINT-GERMAIN QUINCY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "456873fc0857a33fb7db401455c658d5feebeef8",
+			"fields" : {
+				"code_uic" : "87382200",
+				"train" : 1,
+				"libelle_point_arret" : "COURBEVOIE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6fa5e0017903ebc0984270133806872b7a245503",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "COURCELLE SUR YVETTE",
+				"code_uic" : "87758888",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "550b594083db99c264e05dbfce073d47f94ba6cd",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "DENFERT ROCHEREAU",
+				"code_uic" : "87758631",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fac740dff514577b5b2ef3aee0d8102ac377f68f",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545228",
+				"libelle_point_arret" : "EPINAY SUR ORGE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e9066dd916d6ce638a256b0f863c1c1208e7d9cc",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87271122",
+				"train" : 1,
+				"libelle_point_arret" : "EPINAY VILLETANEUSE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "28b15a768102dbbd2c9173b18c46724ef5f578ab",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116327",
+				"train" : 1,
+				"libelle_point_arret" : "ESBLY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cbe820d89d56bf5bde8d1922cca63abf7ebab4f3",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "FONTENAY AUX ROSES",
+				"code_uic" : "87758714",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1a45ad8ef33b80730eae52afb3b4e7d999fd3d15",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276659",
+				"train" : 1,
+				"libelle_point_arret" : "FREPILLON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ff6d4ebcbd51666293c0e85b6676e80ee529eb5e",
+			"fields" : {
+				"code_uic" : "87393439",
+				"train" : 1,
+				"libelle_point_arret" : "GARANCIERES LA QUEUE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f0e6af1e51ca233140a8e349a236922bc87aaec7",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758011",
+				"libelle_point_arret" : "GARE DE LA DEFENSE RER A"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c226d7bf9d523a3439b17e8cfbc8e2e1981cd1d6",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "GARE DU NORD RER",
+				"code_uic" : "87271023",
+				"b" : 1,
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1c3ab2f09babb9b66babb8738d16b6ffef92cde1",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276246",
+				"libelle_point_arret" : "GOUSSAINVILLE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "070eab3b1f01837fd4e1ba6f6d9ed3e6825fc546",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681379",
+				"libelle_point_arret" : "GRIGNY CENTRE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b476b04c7076363b091f2d2f81829401a6464a75",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116269",
+				"train" : 1,
+				"libelle_point_arret" : "GUERARD LA CELLE SUR MORIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a9c231b93b73c9c9a4dc5cef4dc3ae2defdd4231",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87281899",
+				"libelle_point_arret" : "HAUSSMANN SAINT-LAZARE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d05a5506e1df0cec9ffcba69af71d38cefbb1850",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "HOUILLES CARRIERES SUR SEINE",
+				"rer" : 1,
+				"j" : 1,
+				"l" : 1,
+				"code_uic" : "87386409",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "52204c18950f40d8f4da31761a5c8d9e724918ae",
+			"fields" : {
+				"rer" : 1,
+				"tram" : 1,
+				"c" : 1,
+				"code_uic" : "87393306",
+				"libelle_point_arret" : "ISSY VAL DE SEINE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "06ef3d3591a9f799c1c66477dbac3a5e26c1eb23",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545301",
+				"libelle_point_arret" : "IVRY SUR SEINE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0221de320a880ca417b37f0e0d0f6e587bb11b42",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393066",
+				"libelle_point_arret" : "JAVEL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "93efc4fdd233d01437a8e046638eb26531e20772",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276287",
+				"libelle_point_arret" : "LA BORNE BLANCHE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "710628639f58f793e10ab7494875a22decd4cf15",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87430819",
+				"libelle_point_arret" : "LA FERTE GAUCHER CENTRE",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "53ab00cd81425bd87c50b8b26fa401aee9c1f0f4",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LA PLAINE STADE DE FRANCE - Saint-Denis Aubervilliers",
+				"code_uic" : "87164798",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "73e64402d1e17196cbc13fbca9a11cd5453c4e71",
+			"fields" : {
+				"u" : "1",
+				"code_uic" : "87393256",
+				"train" : 1,
+				"libelle_point_arret" : "LA VERRIERE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1932e797b8eda5d5e6ebdc95a8276eb61487bdfe",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116319",
+				"train" : 1,
+				"libelle_point_arret" : "LAGNY THORIGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5df99bd73d45a100d8d7190423c365d466754737",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LE BOURGET",
+				"code_uic" : "87271395",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0074bd787f0b93e951fa50715664af45ecb97394",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681635",
+				"libelle_point_arret" : "LE COUDRAY MONTCEAUX",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d09a0f5b7e5096cbe5ec129cd512af281eadd2ec",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758169",
+				"libelle_point_arret" : "LE PARC DE SAINT-MAUR"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "115ed270f91207929c418784d31156fb1a1ef0f0",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113472",
+				"libelle_point_arret" : "LE RAINCY VILLEMONBLE MONTFERMEIL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b767756ddd96c75af0dea0f23c7ed74c4a6f022a",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87272146",
+				"libelle_point_arret" : "LES GRESILLONS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4b19d316edc2ae70a90d7a8b975e7dab80c5e64d",
+			"fields" : {
+				"code_uic" : "87386680",
+				"train" : 1,
+				"libelle_point_arret" : "LES MUREAUX",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "27e1398655b3a9abe60051180d535e02deeaf6fa",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116632",
+				"train" : 1,
+				"libelle_point_arret" : "LIZY SUR OURCQ"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "778ea0e1ceadc17e34d623c2e9c4fcba4c79028d",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393611",
+				"libelle_point_arret" : "LONGJUMEAU"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "482c9adb89944409bc816e391047ef8e2bf959d8",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87281873",
+				"libelle_point_arret" : "MAGENTA"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9c7aa6d40c694b0728b0630234e1676530a28726",
+			"fields" : {
+				"code_uic" : "87382465",
+				"train" : 1,
+				"libelle_point_arret" : "MARLY LE ROI",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2fa45448e88b71b79207826fd4cf9ca67b6da9b4",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87754994",
+				"libelle_point_arret" : "MARNE LA VALLEE CHESSY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8d3bf9ba1d564c0074e97d97451a8e37becaa7fc",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87383281",
+				"c" : 1,
+				"b" : 1,
+				"libelle_point_arret" : "MASSY VERRIERES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4ed6e8ba55c232fe13abf535c20356ee9928badc",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276675",
+				"train" : 1,
+				"libelle_point_arret" : "MERIEL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ee5e9d52573664036f0ca5d4c3f1c2ccc4fbedb2",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393082",
+				"libelle_point_arret" : "MEUDON VAL FLEURY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eb9259d8158d19952265724b0443a966275d8d63",
+			"fields" : {
+				"code_uic" : "87545111",
+				"train" : 1,
+				"libelle_point_arret" : "MONNERVILLE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b82e2b46f756cd45a77c8039fa042c762a5a2e6b",
+			"fields" : {
+				"libelle_point_arret" : "MONTARGIS",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684001"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9f374948ccd653e819b317d05bcfe802411f79e8",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116400",
+				"train" : 1,
+				"libelle_point_arret" : "MONTRY CONDE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ce999f65f15235abd482a7afddf574367ff5fdf7",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276493",
+				"train" : 1,
+				"libelle_point_arret" : "MONTSOULT MAFFLIERS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2579fb0fa510c79f7c2f16888cef99b5f7b6ad47",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116095",
+				"train" : 1,
+				"libelle_point_arret" : "NANGIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8bf4c31cc3456ed4948bf74f646cc7f5e858b584",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758102",
+				"libelle_point_arret" : "NATION"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f6d1a9cb3d49e7b863f5d1ea166ccc0a66d38fd5",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87381020",
+				"libelle_point_arret" : "NEUILLY PORTE MAILLOT - Palais des Congr\u00e8s"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9d2c21d44e8a502f81d390e21da79f0ead615aeb",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113746",
+				"libelle_point_arret" : "NOGENT LE PERREUX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8d84b234c9ae5f759f3410579055e60201452238",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758359",
+				"libelle_point_arret" : "NOISIEL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e514051d7803fc04e685e521250e1567dd832e00",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "PALAISEAU VILLEBON",
+				"code_uic" : "87758813",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "92f13239034445898e347525089438afc4c77b64",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113209",
+				"libelle_point_arret" : "PANTIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d9a5488ea5bbed3e0f9d75c4524c8f403441ae1f",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "PARIS - GARE DE LYON",
+				"d" : 1,
+				"rer" : 1,
+				"train" : 1,
+				"code_uic" : "87686030",
+				"r" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "33ef15082bae40fa5ac22e95542f5a99d67c40bd",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87547026",
+				"libelle_point_arret" : "PARIS AUSTERLITZ (GARE D'AUSTERLITZ)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3de6c1f9924127fd7c7e1c37543ab3f4f1f335ec",
+			"fields" : {
+				"libelle_point_arret" : "PARIS BERCY (GARE DE BERCY)",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87686667"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a72503df0949c0c29c9613b394455c6996bb0c82",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87113001",
+				"train" : 1,
+				"libelle_point_arret" : "PARIS EST (GARE DE L'EST)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "275b07f29a4f606a345b931f50e4e531f403479f",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393652",
+				"libelle_point_arret" : "PETIT VAUX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "bfd5f6d927183ef06282fbce961d34b671e9a2d4",
+			"fields" : {
+				"code_uic" : "87393629",
+				"train" : 1,
+				"libelle_point_arret" : "PLAISIR LES CLAYES",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "813149c2c24570ac95930a776eec156f80a0c91e",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682526",
+				"libelle_point_arret" : "PONTHIERRY PRINGY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fd8bb4646f3b3252bda69b318e38e099f2438210",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276410",
+				"train" : 1,
+				"libelle_point_arret" : "PRECY SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eb98c1bd8678d64f71bbff7fd31eddba430a95e2",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87116038",
+				"libelle_point_arret" : "ROISSY EN BRIE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1b33899ba1ca9c969a33a89fd931e0125366d561",
+			"fields" : {
+				"bus" : 1,
+				"c" : 1,
+				"code_uic" : "87332957",
+				"libelle_point_arret" : "ROUTE DE MONNERVILLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "01f5d1ec6d5d2797d236b6012d93062d808faa27",
+			"fields" : {
+				"libelle_point_arret" : "SAINT-DENIS",
+				"d" : 1,
+				"rer" : 1,
+				"h" : 1,
+				"train" : 1,
+				"tram" : 1,
+				"code_uic" : "87271015"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "41ed75397bad2133bf16abd12e9dcbac8403eeaa",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545210",
+				"libelle_point_arret" : "SAINTE-GENEVIEVE DES BOIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "628abda5c4d4535b0c501db65c4271e393373cd2",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "SAINT-REMY LES CHEVREUSE",
+				"code_uic" : "87758896",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f52bfbc111d776538ac34f37156ebe6c514a062c",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276386",
+				"train" : 1,
+				"libelle_point_arret" : "SARCELLES SAINT-BRICE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e51d446c0071ce1e1af7d31185abc8adb60db161",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545236",
+				"libelle_point_arret" : "SAVIGNY SUR ORGE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5caa7a540457a6fe940343e753b733871e8c9266",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545517",
+				"libelle_point_arret" : "SERMAISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "65890b97226a84f4310321f2b9f4a3ac279247f4",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87272039",
+				"train" : 1,
+				"libelle_point_arret" : "SEUGY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3f5eb5a83f6c83969c25989d1f12fe916b1f6b9d",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "SEVRAN BEAUDOTTES",
+				"code_uic" : "87271445",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9c813563c64b5a0787ea9cfc801337d030519b03",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87547315",
+				"libelle_point_arret" : "SAINT MICHEL NOTRE DAME RER C"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6f55f9d26deb615e4524f117a07ac7bdb580416b",
+			"fields" : {
+				"code_uic" : "87381822",
+				"train" : 1,
+				"libelle_point_arret" : "THUN LE PARADIS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a152731a8a3018b527d7e11d5f30a04b19b983f8",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758375",
+				"libelle_point_arret" : "TORCY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f556f95b2751ee6ed84d7431eaf94a14cfcf70a8",
+			"fields" : {
+				"code_uic" : "87381806",
+				"train" : 1,
+				"libelle_point_arret" : "TRIEL SUR SEINE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5047d50e81d5bd2d58790e8760d8d79629e39c21",
+			"fields" : {
+				"code_uic" : "87381178",
+				"train" : 1,
+				"libelle_point_arret" : "US",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "63ad695eec97eb32638d77ae255c08d6139f6410",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545269",
+				"libelle_point_arret" : "ABLON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c79ec0fcc4c0b15fcb8d4510810df328b79f61eb",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113878",
+				"libelle_point_arret" : "ALLEE DE LA TOUR RENDEZ VOUS (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c22e34d5fa18a41aadbd32121c438cd145b10c97",
+			"fields" : {
+				"code_uic" : "87381848",
+				"train" : 1,
+				"libelle_point_arret" : "ARGENTEUIL",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5fb567b814e7307ce6bb2ab5890a7b766786595a",
+			"fields" : {
+				"code_uic" : "87386730",
+				"train" : 1,
+				"libelle_point_arret" : "AUBERGENVILLE ELISABETHVILLE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a835dc5c60d46b773eaa562738c9bc5115060e3e",
+			"fields" : {
+				"b" : 1,
+				"libelle_point_arret" : "AULNAY SOUS BOIS",
+				"rer" : 1,
+				"k" : 1,
+				"tram" : 1,
+				"code_uic" : "87271411",
+				"train" : 1,
+				"t4" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "990a3aae895a450dc69a10164bcdadb96522db8e",
+			"fields" : {
+				"code_uic" : "87382002",
+				"train" : 1,
+				"libelle_point_arret" : "BECON LES BRUYERES",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "015303e24cf271f131f2b541ce3a369ada30789e",
+			"fields" : {
+				"libelle_point_arret" : "BOIS LE ROI",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682203"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3e566bb06a1a2db74964b27c62633d920323e9a9",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682518",
+				"libelle_point_arret" : "BOISSISE LE ROI",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "504b0a3b1f69125ce6f9baf74280caa3fb3f781c",
+			"fields" : {
+				"code_uic" : "87545731",
+				"train" : 1,
+				"libelle_point_arret" : "BONNEVAL",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "72f65baeec172ad673bd3427f1e6a6644542ef80",
+			"fields" : {
+				"libelle_point_arret" : "BOURRON MARLOTTE GREZ",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684118"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "93c1052442ffdb36a16cc5aaed487f4871486b1a",
+			"fields" : {
+				"code_uic" : "87381624",
+				"train" : 1,
+				"libelle_point_arret" : "BREVAL",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "acc9226450eda0c459ba3cb4a261889f8eca6e8c",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "BURES SUR YVETTE",
+				"code_uic" : "87758854",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "97634cc5668e20fe8fa85444df0ce0a02c9373e5",
+			"fields" : {
+				"code_uic" : "87381475",
+				"train" : 1,
+				"libelle_point_arret" : "CHANTELOUP LES VIGNES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d9bbdd574f18721105ef0f1bd41a6d7fd1b926ca",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758060",
+				"libelle_point_arret" : "CHATOU CROISSY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3469a1cf489c744ecf2f8c71213444dbc0ea6175",
+			"fields" : {
+				"code_uic" : "87393207",
+				"train" : 1,
+				"libelle_point_arret" : "CHAVILLE RIVE GAUCHE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4048b235e7195a1197eef4bff668c64b6058e1a9",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116574",
+				"train" : 1,
+				"libelle_point_arret" : "CHEZY SUR MARNE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9188a58cbf07cbf69b3c9d320021f1ea8caed433",
+			"fields" : {
+				"code_uic" : "87381087",
+				"train" : 1,
+				"libelle_point_arret" : "COLOMBES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4221ef2d55dc98236c82c78e3bbf60fc288ef879",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682146",
+				"libelle_point_arret" : "COMBS LA VILLE QUINCY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6f60820aa4a55387c4d6fa2aad20c5909f6b4b36",
+			"fields" : {
+				"code_uic" : "87381897",
+				"train" : 1,
+				"libelle_point_arret" : "CONFLANS SAINTE-HONORINE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "bdc9ad9c7bd13c463d76ea7f1d06020e1e9369f7",
+			"fields" : {
+				"libelle_point_arret" : "CREIL",
+				"d" : 1,
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276006",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "28f760d8ac21e18f05df53b9fc24f2d156fbbdbd",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116640",
+				"train" : 1,
+				"libelle_point_arret" : "CROUY SUR OURCQ"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0026efaa8eee64063096b37ddd797c27eb90af14",
+			"fields" : {
+				"libelle_point_arret" : "DAMMARTIN JUILLY SAINT-MARD",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87271536"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "270518611ac0d888c1fb1b2f20ca2291f72204d8",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "DRANCY",
+				"code_uic" : "87271403",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "87d654fc95512f43bafb0c2a9917f6adf4c7b258",
+			"fields" : {
+				"code_uic" : "87393488",
+				"train" : 1,
+				"libelle_point_arret" : "DREUX",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6edb4eace78752ef907608c87af82d5c77dcb360",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276394",
+				"train" : 1,
+				"libelle_point_arret" : "ECOUEN EZANVILLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ec84cbaccef2804a73a88bb3f11ac71c59f0fe41",
+			"fields" : {
+				"code_uic" : "87381418",
+				"train" : 1,
+				"libelle_point_arret" : "ERAGNY NEUVILLE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "98d4d5bf408804ec24424202cb281b59d32edcbb",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681601",
+				"libelle_point_arret" : "ESSONNES ROBINSON",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d8eae5f0171c8209c207dd2471ff8b8a93bd38ee",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545145",
+				"libelle_point_arret" : "ETRECHY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "754da164f9e69b20ebdbb60131fb97df380fea0b",
+			"fields" : {
+				"libelle_point_arret" : "FONTAINE LE PORT",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682427"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "63cdf09394dacaad8369e09dac56e09b27e2f289",
+			"fields" : {
+				"libelle_point_arret" : "FONTAINEBLEAU AVON",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682211"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "767d8eab798d97f5fadd7c14e4f94b99d6539452",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "FRANCONVILLE LE PLESSIS BOUCHARD",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87276071",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "51510b2ec4c41895f6032d6c8880ef908a2f62d6",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "GIF SUR YVETTE",
+				"code_uic" : "87758870",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "691d9ce1c02e871285ef4ed3d89a8608492ea273",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276360",
+				"train" : 1,
+				"libelle_point_arret" : "GROSLAY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5190fa9214535c657f3cf6db56ee69a4a2bf341f",
+			"fields" : {
+				"code_uic" : "87545129",
+				"train" : 1,
+				"libelle_point_arret" : "GUILLERVAL",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b3d4eb7998a29a07f3f4c85ac0c7f8be3c289218",
+			"fields" : {
+				"code_uic" : "87381889",
+				"train" : 1,
+				"libelle_point_arret" : "HERBLAY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3886d14f2cbe993782c86387c75d223ecdf3e57b",
+			"fields" : {
+				"libelle_point_arret" : "HERICY",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682435"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f7c0ac9b91564daa94bc4cc0e0955db0f0b386ca",
+			"fields" : {
+				"code_uic" : "87393462",
+				"train" : 1,
+				"libelle_point_arret" : "HOUDAN",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "afd5745cef1267c4cd495b8b7ee1d06f3e9f5b82",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393033",
+				"libelle_point_arret" : "INVALIDES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c3aaa937aace11efc97c7b1d10c63f1ff1be147c",
+			"fields" : {
+				"code_uic" : "87381574",
+				"train" : 1,
+				"libelle_point_arret" : "ISSOU PORCHEVILLE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7bb77b93fb83b548d82a7ea9f1bd1ee3ce29f05c",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393074",
+				"libelle_point_arret" : "ISSY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "40ba9f312c781db647837b9ee04387be38c88bc7",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545244",
+				"libelle_point_arret" : "JUVISY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "af6e40b82a9d699ed4526f065e62f3779782e615",
+			"fields" : {
+				"code_uic" : "87386003",
+				"train" : 1,
+				"libelle_point_arret" : "LA GARENNE COLOMBES",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1593b5ffb9b4a694f7498fe2beb6e484a82d4db7",
+			"fields" : {
+				"libelle_point_arret" : "LA GRANDE PAROISSE",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682476"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "939b4988de1b524b1931db7f9d6d32ba35ef26f6",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682179",
+				"libelle_point_arret" : "LE MEE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c95f928691d20b1ddb5e14ab89267fa311944e64",
+			"fields" : {
+				"code_uic" : "87393298",
+				"train" : 1,
+				"libelle_point_arret" : "LE PERRAY",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "31510fc772fdc241377db023b2e6a0ba8d62af9b",
+			"fields" : {
+				"u" : "1",
+				"code_uic" : "87382366",
+				"train" : 1,
+				"libelle_point_arret" : "LE VAL D'OR",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6ee5a33b85da47ed358a9592759d6a68877f151f",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681247",
+				"libelle_point_arret" : "LE VERT DE MAISONS",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a4ce3c7f50c3be57fae386132c5d78149b8adc25",
+			"fields" : {
+				"code_uic" : "87381210",
+				"train" : 1,
+				"libelle_point_arret" : "LIANCOURT SAINT PIERRE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6e0004750ec9b87eca7d5faa65b7e32c79d5253b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682153",
+				"libelle_point_arret" : "LIEUSAINT MOISSY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "67ba24253031b492441c23f6443c5d8568f1d7e4",
+			"fields" : {
+				"code_uic" : "87381582",
+				"train" : 1,
+				"libelle_point_arret" : "LIMAY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "37dfdb9833068c8ac29e569b39bfcc52440d5079",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LUXEMBOURG",
+				"code_uic" : "87758615",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2cd3762a982653cf6e9df6e59202ef22d3dd5648",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681486",
+				"libelle_point_arret" : "MAISSE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2fb10995c6ebbe09b81b62a920f32b5ca05a2b43",
+			"fields" : {
+				"code_uic" : "87381590",
+				"train" : 1,
+				"libelle_point_arret" : "MANTES STATION",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b6bc536afb8f99f401c2609ad44d629500e5a8f7",
+			"fields" : {
+				"code_uic" : "87381723",
+				"train" : 1,
+				"libelle_point_arret" : "MAULE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c9f0f7a48c42a6afbf30f694f73e526dcc304f9b",
+			"fields" : {
+				"code_uic" : "87381830",
+				"train" : 1,
+				"libelle_point_arret" : "MEULAN HARDRICOURT",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e6b8af3df3bf9b16925ec6817cecbce7316968a6",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681403",
+				"libelle_point_arret" : "MOULIN GALANT",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6ae7f1f3eb83c6b27354dd8200e1e8df87a73e18",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758342",
+				"libelle_point_arret" : "NOISY CHAMPS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "550ca1532cf5ff110284cdeba6635b437582ebfb",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681346",
+				"libelle_point_arret" : "ORANGIS BOIS DE L'EPINE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "117981a90a5eadcfc42707a3a484086dcbd3f67f",
+			"fields" : {
+				"libelle_point_arret" : "ORMOY VILLERS",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87271585"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9603cb3fc4869cac727aff3bd555da4e98838a4b",
+			"fields" : {
+				"b" : 1,
+				"libelle_point_arret" : "PARIS NORD (GARE DU NORD)",
+				"d" : 1,
+				"rer" : 1,
+				"h" : 1,
+				"k" : 1,
+				"code_uic" : "87271031",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6ecf7da4f448655dec4da6a897de000aeea68efa",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393322",
+				"libelle_point_arret" : "PONT DU GARIGLIANO - H\u00f4pital Europ\u00e9en Georges Pompidou"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9bf3fa701e6d0167646b8654593c528534305609",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "PONTOISE",
+				"rer" : 1,
+				"h" : 1,
+				"j" : 1,
+				"code_uic" : "87276139",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a6b380d9a2c20b92a9b68272c0d89245ec8937ea",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393165",
+				"libelle_point_arret" : "PORCHEFONTAINE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d01eee715dcece52d781dea8b5cd75b458fade6f",
+			"fields" : {
+				"libelle_point_arret" : "PUTEAUX",
+				"tram" : 1,
+				"l" : 1,
+				"code_uic" : "87382382",
+				"train" : 1,
+				"u" : "1"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ff08874674e739b9e7ddec5f9e27bd0f2ef7c3fa",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113696",
+				"libelle_point_arret" : "ROSNY BOIS PERRIER"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "dd78be064e38dbb4ca218975c817c797b01b8cb2",
+			"fields" : {
+				"code_uic" : "87415885",
+				"train" : 1,
+				"libelle_point_arret" : "ROSNY SUR SEINE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0ac4304715dab9969162b2eb8a6717585f5c6b7a",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545509",
+				"libelle_point_arret" : "SAINT-CHERON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6a31a6a07d3859ce6704d1b1f0392dfb8588174d",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "SAINT-CYR",
+				"rer" : 1,
+				"train" : 1,
+				"n" : 1,
+				"code_uic" : "87393223",
+				"u" : "1"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "edfbd923c7a93e0b2c34d6deb7cd8fdc2ba75136",
+			"fields" : {
+				"code_uic" : "87682542",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-FARGEAU",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "afb195f4adb05d2bc01648aac126f238a44359da",
+			"fields" : {
+				"code_uic" : "87683227",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-JULIEN DU SAULT",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "13c1145690e6ca8a8f1793dd4397ea862c2f2ce2",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276402",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-LEU D ESSERENT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fd395fd13810b17e57a894ea9c20a269a47d6bca",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276600",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-LEU LA FORET"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "47974aa54e7b6651ffb221de19ed17727590e7ff",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87785436",
+				"libelle_point_arret" : "SAINT-MICHEL NOTRE DAME RER B"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "571ae3539a81162d82548a02a34f26e06a324da2",
+			"fields" : {
+				"code_uic" : "87382481",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-NOM LA BRETECHE FORET DE MARLY",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "48615a75a4d96ee64b78cf3145a0cfa53f1fde7c",
+			"fields" : {
+				"code_uic" : "87381426",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-OUEN L'AUMONE QUARTIER DE L'EGLISE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "88aa16f4aa89f2c4a5bccc8daf0770f601608858",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "SAINT-QUENTIN EN YVELINES",
+				"rer" : 1,
+				"train" : 1,
+				"n" : 1,
+				"code_uic" : "87393843",
+				"u" : "1"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a101833fab737df8510e8721469c4a13d95cee19",
+			"fields" : {
+				"code_uic" : "87382341",
+				"train" : 1,
+				"libelle_point_arret" : "SEVRES VILLE D'AVRAY",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b292595fcbb22ac424a78a56d69d4e6f07aba249",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87164780",
+				"libelle_point_arret" : "STADE DE FRANCE SAINT-DENIS",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "842b5c8474bef72c31644ae964ca9e22c06cfda7",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276261",
+				"libelle_point_arret" : "SURVILLIERS FOSSES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "04a93f4671ba7e5109b4d5af9785b0da7973ca18",
+			"fields" : {
+				"code_uic" : "87393454",
+				"train" : 1,
+				"libelle_point_arret" : "TACOIGNIERES RICHEBOURG",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5cb358d624cb4bf7a588966abca4025fc791194e",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276634",
+				"train" : 1,
+				"libelle_point_arret" : "TAVERNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c0328c7ed9411a525a414ca4356105975abd5dc0",
+			"fields" : {
+				"libelle_point_arret" : "THIEUX NANTOUILLET",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87272054"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7c22f0e035ec25fe0259c1222b2fca8192a4399e",
+			"fields" : {
+				"libelle_point_arret" : "THOMERY",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682252"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4b9b5cb35826a5d3403d2e101a8383960cabef14",
+			"fields" : {
+				"e" : 1,
+				"rer" : 1,
+				"p" : 1,
+				"code_uic" : "87116210",
+				"train" : 1,
+				"libelle_point_arret" : "TOURNAN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "825ef18bcd91d890ea8bf6030522c16b4047a3cf",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116293",
+				"train" : 1,
+				"libelle_point_arret" : "VAIRES TORCY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2feab2c127d644fd1df520024cd0238c68edacc8",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276535",
+				"train" : 1,
+				"libelle_point_arret" : "VALMONDOIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1f0cd92af87ec9da3e1cb38ffbfefacf0e58125a",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276626",
+				"train" : 1,
+				"libelle_point_arret" : "VAUCELLES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cdaefa0556a4714bab51c2b3d0365a699dfed197",
+			"fields" : {
+				"code_uic" : "87382267",
+				"train" : 1,
+				"libelle_point_arret" : "VAUCRESSON",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "034b2d07a3768a34732b6bd4ff16d76eac1b1c4e",
+			"fields" : {
+				"code_uic" : "87415604",
+				"train" : 1,
+				"libelle_point_arret" : "VERNON",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "abc39ebdbacf71e821a6ec8ddbd49fc4804c09f5",
+			"fields" : {
+				"code_uic" : "87386656",
+				"train" : 1,
+				"libelle_point_arret" : "VERNOUILLET VERNEUIL",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1f27d46b14ada349b809648e8aae360b51d945a4",
+			"fields" : {
+				"code_uic" : "87382861",
+				"train" : 1,
+				"libelle_point_arret" : "VERSAILLES RIVE DROITE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "0fd7c9272071f1f483269200f0dd711127954966",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276568",
+				"train" : 1,
+				"libelle_point_arret" : "VIARMES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "320033256c6f777c97b5bea7cfd6a1ca54ffebe5",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545277",
+				"libelle_point_arret" : "VILLENEUVE LE ROI"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cf6b203d708f5d00c56dc749b40a418ce78d6760",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "VILLEPARISIS MITRY LE NEUF",
+				"code_uic" : "87271510",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e0e48517e0bdf098ebe0b7e5aedb3dcfc97fd417",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "VILLEPINTE",
+				"code_uic" : "87271452",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2df57af28f47f38d039eecce053bfab4d3f8121d",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681312",
+				"libelle_point_arret" : "VIRY CHATILLON",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "dd0a5f17f769ebb2a60a2c82d367561ecf4c1021",
+			"fields" : {
+				"libelle_point_arret" : "VULAINES SUR SEINE SAMOREAU",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682443"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "daa87a9a58b7bb33923c8e8488594eb60f10b44b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682112",
+				"libelle_point_arret" : "YERRES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4489996c183bc5ef402c9e278f958fdbf58a5fd1",
+			"fields" : {
+				"code_uic" : "87381616",
+				"train" : 1,
+				"libelle_point_arret" : "MENERVILLE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "45923df9f1c745f5bb47eb81dbf0f2d6db39f7a7",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276667",
+				"train" : 1,
+				"libelle_point_arret" : "MERY SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2588d86c11114c6fd5d32734c420e2b5121037e4",
+			"fields" : {
+				"code_uic" : "87381160",
+				"train" : 1,
+				"libelle_point_arret" : "MONTGEROULT COURCELLES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b7a6fe39bc4db5d9c9ce5aeca2d31bea22edc76d",
+			"fields" : {
+				"libelle_point_arret" : "MONTIGNY SUR LOING",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684100"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6a4d2eb531e3cc36d4ef3fd14bb4f6fe69e98962",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116285",
+				"train" : 1,
+				"libelle_point_arret" : "MOUROUX"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fc905466624446f3fd74924834a185ba6bce58f5",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87547307",
+				"libelle_point_arret" : "MUSEE D'ORSAY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ac4c863dd6a4b76eb78a96b7388129d5c21c8e7c",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87386318",
+				"libelle_point_arret" : "NANTERRE PREFECTURE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b0f3da608dc9627fb03e076a059c4221ec40d1d1",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758045",
+				"libelle_point_arret" : "NANTERRE VILLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "14408b628a934bfb044b3e2db30b3f352f14e942",
+			"fields" : {
+				"libelle_point_arret" : "NANTEUIL LE HAUDOIN",
+				"k" : 1,
+				"train" : 1,
+				"code_uic" : "87271577"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2f2dbfab79f6f4f4585d4efd59171186f6d9fab3",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116558",
+				"train" : 1,
+				"libelle_point_arret" : "NANTEUIL SAACY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b60e47ec7eef8bb8443c17e05c5b57e5af4b0fb4",
+			"fields" : {
+				"code_uic" : "87381731",
+				"train" : 1,
+				"libelle_point_arret" : "NEZEL AULNAY",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "5a2afa439d4958d6d848a3bec8cb5dc2e47760c8",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276758",
+				"train" : 1,
+				"libelle_point_arret" : "NOINTEL MOURS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a534852c7ee2aa4c67659774785f0e5b5d49b784",
+			"fields" : {
+				"rer" : 1,
+				"tram" : 1,
+				"code_uic" : "87113217",
+				"libelle_point_arret" : "NOISY LE SEC",
+				"e" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e01efd0c12cdc1689bd9d4e229c5521fa8e20089",
+			"fields" : {
+				"code_uic" : "87393447",
+				"train" : 1,
+				"libelle_point_arret" : "ORGERUS BEHOUST",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f6e41ead13630fead4ff8735223bb920f5776940",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87546200",
+				"libelle_point_arret" : "ORLY VILLE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cf669d35d811e1d482a8970894a5df8ab7f820b5",
+			"fields" : {
+				"code_uic" : "87381145",
+				"train" : 1,
+				"libelle_point_arret" : "OSNY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "137b5fc5b4997aef591dc87bc760b96f426a6751",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87116020",
+				"libelle_point_arret" : "OZOIR LA FERRIERE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "626898668dd0f406913ba18d895edc9a908f5f92",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87381012",
+				"libelle_point_arret" : "PEREIRE LEVALLOIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "40851528518ecbb927230294b09fc72f569e85b4",
+			"fields" : {
+				"code_uic" : "87381111",
+				"train" : 1,
+				"libelle_point_arret" : "PONT CARDINET",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "10f84e9a1da576812a18784b63d08069cab1e4b4",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87546192",
+				"libelle_point_arret" : "PONT DE RUNGIS A\u00e9roport d'Orly"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "76fc985283c81f7c72561d2fb3d8d64bb746344c",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87111278",
+				"libelle_point_arret" : "PORTE DE CLICHY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4435d46ecff7c8e32585374fb067cf70390de743",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681338",
+				"libelle_point_arret" : "RIS ORANGIS",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "acf25fdad51155ebad02086f98eea11630fad083",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758052",
+				"libelle_point_arret" : "RUEIL MALMAISON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b21ddf6042d95103d1eeff0e4b04b26d9122e4ca",
+			"fields" : {
+				"u" : "1",
+				"code_uic" : "87382358",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-CLOUD",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ca4a560bed262a9d55acfea91ab6f5bca648bf5e",
+			"fields" : {
+				"code_uic" : "87366922",
+				"train" : 1,
+				"libelle_point_arret" : "SAINT-GERMAIN EN LAYE BEL AIR FOURQUEUX",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e657d655e0928f2dd7550173a7d31525ceff8618",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87276170",
+				"libelle_point_arret" : "SAINT-GRATIEN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e91c077666b2ff9638013d87b4e077ab258a89b2",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "SAINT-OUEN L'AUMONE LIESSE",
+				"rer" : 1,
+				"h" : 1,
+				"code_uic" : "87337980",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "88b362c0f2ccf755e0c1b52b59d2f4787e7b983e",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682187",
+				"libelle_point_arret" : "SAVIGNY LE TEMPLE NANDY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3b5377bcdb8017fb83fcbd1a3e9db68acce0de13",
+			"fields" : {
+				"code_uic" : "87683003",
+				"train" : 1,
+				"libelle_point_arret" : "SENS",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "863e35e8e1dbdce199313df1d2b999132d847de0",
+			"fields" : {
+				"code_uic" : "87393124",
+				"train" : 1,
+				"libelle_point_arret" : "SEVRES RIVE GAUCHE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6934fde3fdaef472b409e1ed184ff847313b6d99",
+			"fields" : {
+				"libelle_point_arret" : "SOUPPES CH\u00c2TEAU LANDON",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684217"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "10226d3c0b2bb2f4fddffd05106b0af36826a0da",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758193",
+				"libelle_point_arret" : "SUCY BONNEUIL"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "288220901b94fa3fad0770e66353eddc20f3eda8",
+			"fields" : {
+				"u" : "1",
+				"code_uic" : "87382374",
+				"train" : 1,
+				"libelle_point_arret" : "SURESNES MONT VALERIEN",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ea94f8b28f2e662cfff9bccceac102c24af9cfe1",
+			"fields" : {
+				"code_uic" : "87381236",
+				"train" : 1,
+				"libelle_point_arret" : "TRIE CHATEAU",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8370bf71793ad76fae94cf58a79afa2f46b0b54c",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116491",
+				"train" : 1,
+				"libelle_point_arret" : "TRILPORT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "98b64195e5a837960e63728d49a806a78bc6f261",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393538",
+				"libelle_point_arret" : "VAUBOYEN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "437cc8af434219398790986f2f30c2934fd9f946",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393157",
+				"libelle_point_arret" : "VERSAILLES RIVE GAUCHE - CH\u00c2TEAU DE VERSAILLES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a47cf523ead1ec0f081e6c74c325c22a46c5a5cc",
+			"fields" : {
+				"code_uic" : "87683102",
+				"train" : 1,
+				"libelle_point_arret" : "VILLENEUVE LA GUYARD",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2b798090259910fd1a0d8650249af6311ebadeae",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681825",
+				"libelle_point_arret" : "VILLENEUVE SAINT-GEORGES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "14f84b56a0bbafef965a6254b5cc8089766913d2",
+			"fields" : {
+				"code_uic" : "87683219",
+				"train" : 1,
+				"libelle_point_arret" : "VILLENEUVE SUR YONNE",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6ee1f3092d84fa3255650432c151995b5939d875",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758110",
+				"libelle_point_arret" : "VINCENNES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7f20b7a4034956100078cd2ed05a517002b16dd6",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "ANTONY",
+				"code_uic" : "87758755",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "eb48f505c3448885234810c46294890d7110b32b",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "ARCUEIL CACHAN",
+				"code_uic" : "87758672",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "a15268a2504672e6a81fe7dcb5da82e228b2ef05",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545467",
+				"libelle_point_arret" : "ARPAJON"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b378ee222627717ba7b835cd45ef68b98fd6dd5a",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "BAGNEUX",
+				"code_uic" : "87758680",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "522e819c2686734e19ce91102e8cf62591e31144",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681437",
+				"libelle_point_arret" : "BALLANCOURT",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9b6e92d39013635174610bf53dd520a747f6fed0",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276642",
+				"train" : 1,
+				"libelle_point_arret" : "BESSANCOURT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "601cab9f0e947ec74c794dfdbea05e13ab25e480",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393546",
+				"libelle_point_arret" : "BIEVRES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e77d1e36f8590ddb42f2875485f3a4d6d18b8b44",
+			"fields" : {
+				"code_uic" : "87381079",
+				"train" : 1,
+				"libelle_point_arret" : "BOIS COLOMBES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d595457be21d0258d661ecf10709eb7a25dc1590",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "BOURG LA REINE",
+				"code_uic" : "87758698",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e095e244826d13d5b6ae0dd2353d35bc7f27bb14",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545491",
+				"libelle_point_arret" : "BREUILLET VILLAGE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d1d5f36c273a19d94fc144ae5ecc482ac22f924c",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "CERGY SAINT-CHRISTOPHE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87382499",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "869ada106cb187520cbd30e83f21b7e4745d17d1",
+			"fields" : {
+				"libelle_point_arret" : "CHAMPAGNE SUR SEINE",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87682450"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fe708e258367132198f639067af5e0edb26c0566",
+			"fields" : {
+				"a" : 1,
+				"b" : 1,
+				"libelle_point_arret" : "CHATELET LES HALLES",
+				"d" : 1,
+				"rer" : 1,
+				"code_uic" : "87758607"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "12857d45649b2c2e46789e8d3392a637b0c1cc40",
+			"fields" : {
+				"code_uic" : "87382333",
+				"train" : 1,
+				"libelle_point_arret" : "CHAVILLE RIVE DROITE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f9e49433c6245b30e6c5b8ad220e96156b6bcac0",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545285",
+				"libelle_point_arret" : "CHOISY LE ROI"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e2dc1d5cde92c4313620d6d4c77a3b11adab4c3e",
+			"fields" : {
+				"code_uic" : "87393272",
+				"train" : 1,
+				"libelle_point_arret" : "COIGNIERES",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "18e7379cec5083c5afa8980d93211e9be397dfff",
+			"fields" : {
+				"code_uic" : "87381863",
+				"train" : 1,
+				"libelle_point_arret" : "CORMEILLES EN PARISIS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b4bb034ab3c18df931c60b373e08a838f6192bc8",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116301",
+				"train" : 1,
+				"libelle_point_arret" : "COULOMMIERS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "45ecd64c1130bb4e47e0a40fc1c0e031697d7f62",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276436",
+				"train" : 1,
+				"libelle_point_arret" : "DOMONT"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "8ba724762eecfea0b929fc245473f402f28d05c8",
+			"fields" : {
+				"libelle_point_arret" : "DORDIVES",
+				"train" : 1,
+				"r" : 1,
+				"code_uic" : "87684233"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2e9e372aa483df6f43fd30ae91d5608d33e039a7",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545525",
+				"libelle_point_arret" : "DOURDAN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4edcda47e1063df3efc97dd3518ce31284813025",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276147",
+				"train" : 1,
+				"libelle_point_arret" : "EPLUCHES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "06bb28443030a55bd4c21d206163160590ac5a37",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "ERMONT EAUBONNE",
+				"rer" : 1,
+				"h" : 1,
+				"j" : 1,
+				"code_uic" : "87276055",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b7a70ddeb804add1bca42ad332ea96ec4bd817ef",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545137",
+				"libelle_point_arret" : "ETAMPES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ca18a2a6f3acd7b54a164e79f32c8636a2e72570",
+			"fields" : {
+				"code_uic" : "87393405",
+				"train" : 1,
+				"libelle_point_arret" : "FONTENAY LE FLEURY",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9c25342cfb79d06993ae3e8eaac9657700c698ea",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113860",
+				"libelle_point_arret" : "GARGAN (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "bd70737b16921da553a45405ec9ca9c8ac39e7fc",
+			"fields" : {
+				"code_uic" : "87393348",
+				"train" : 1,
+				"libelle_point_arret" : "GAZERAN",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "64fe0d9138cd7dd2e2366ddebf767af663e5a715",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681353",
+				"libelle_point_arret" : "GRAND BOURG",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "f8a6cd94487e47d6044456172641a572f8feecad",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116616",
+				"train" : 1,
+				"libelle_point_arret" : "ISLES ARMENTIERES CONGIS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "db8096cbcaeb159f7a8b36c17bdb645b9180d147",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87393512",
+				"libelle_point_arret" : "JOUY EN JOSAS"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "80bf6f1c7ecce263c28db0e6ecc9d6a0a79ff99a",
+			"fields" : {
+				"bus" : 1,
+				"code_uic" : "87430900",
+				"libelle_point_arret" : "JOUY SUR MORIN EUSTACHE",
+				"p" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "2c184a4cd966e9e9d7e4154053597d4e2f59815c",
+			"fields" : {
+				"code_uic" : "87381558",
+				"train" : 1,
+				"libelle_point_arret" : "JUZIERS",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d36f7aa8b44bdd5281978dafe4e2f1edac69c934",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LA COURNEUVE AUBERVILLIERS",
+				"code_uic" : "87271304",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d4d6538f7e1bfb3fed0cb057cd3d0f81ac29f6a0",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "LA DEFENSE",
+				"rer" : 1,
+				"train" : 1,
+				"l" : 1,
+				"code_uic" : "87382218",
+				"u" : "1"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "15c0dc619ae12f0b3cdd6fee5ef7d9ada6f42423",
+			"fields" : {
+				"code_uic" : "87381871",
+				"train" : 1,
+				"libelle_point_arret" : "LA FRETTE MONTIGNY",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3b1e74c726a4cdf50aa64cfab3602872ad766f09",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758185",
+				"libelle_point_arret" : "LA VARENNE CHENNEVIERES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fa43231359e1c69fc3b5929834cc58cf0741e2a2",
+			"fields" : {
+				"code_uic" : "87381202",
+				"train" : 1,
+				"libelle_point_arret" : "LA VILLETERTRE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "86ab10f527f884126f8ee59c11cd0e4e5057a590",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113886",
+				"libelle_point_arret" : "L'ABBAYE (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "08753f0621df6a3fb7faffb0126c6633a27be77d",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545160",
+				"libelle_point_arret" : "LARDY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e338849393b53e74066247f0ab8a2ecb2bc47ebd",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681395",
+				"libelle_point_arret" : "LE BRAS DE FER - Evry G\u00e9nopole",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1999308b5ccf56f6c3e8b253e5f3f8dbd7ebc225",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113522",
+				"libelle_point_arret" : "LE CHENAY GAGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "939f75e937bad46e5020ee5d05baee3c14c29471",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "LE GUICHET",
+				"code_uic" : "87758839",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ee75399ce15cfe5b01394e8c141aae4bce5a68c8",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87492108",
+				"libelle_point_arret" : "LES ARDOINES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "605b18578c35e172ff0f0a845695fcf9c435cc00",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113779",
+				"libelle_point_arret" : "LES BOULLEREAUX CHAMPIGNY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "e0f4820e2f16b15990ccea464a7547b412b7b042",
+			"fields" : {
+				"code_uic" : "87386664",
+				"train" : 1,
+				"libelle_point_arret" : "LES CLAIRIERES DE VERNEUIL",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fd3706b0a7833a159ea8c04c2736f1678fe0fc5e",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113845",
+				"libelle_point_arret" : "LES COQUETIERS (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "170e1a9b49e6116cbeee97716db555e146d9df24",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276238",
+				"libelle_point_arret" : "LES NOUES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ac4ef987a141f7a266c24b2fd6ca32e91be97ff1",
+			"fields" : {
+				"tram" : 1,
+				"t4" : 1,
+				"code_uic" : "87113852",
+				"libelle_point_arret" : "LES PAVILLONS SOUS BOIS (T4)"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4f01a38030843ab9479ab317e39e90538b274a5e",
+			"fields" : {
+				"code_uic" : "87386300",
+				"train" : 1,
+				"libelle_point_arret" : "LES VALLEES",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "3263fecf669412b3165ba6484694019069e45472",
+			"fields" : {
+				"rer" : 1,
+				"e" : 1,
+				"code_uic" : "87113803",
+				"libelle_point_arret" : "LES YVRIS - NOISY LE GRAND"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "08bb2c88ed95d8163f8b736bd2fc793794cb7fbf",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758367",
+				"libelle_point_arret" : "LOGNES"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "1e6c593043b2bbe703340a1256929c2e6fc6f935",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "MAISONS LAFFITTE",
+				"rer" : 1,
+				"l" : 1,
+				"code_uic" : "87386425",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "244d31ed086e4b20277da8f69377e29cb0730497",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87684415",
+				"libelle_point_arret" : "MALESHERBES",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "22a034e50a94fb1cbf481d8770b2a5dab439e4d8",
+			"fields" : {
+				"code_uic" : "87382812",
+				"train" : 1,
+				"libelle_point_arret" : "MAREIL MARLY",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c50e7d598b0943c7ed051581c08e697573350ad7",
+			"fields" : {
+				"code_uic" : "87381715",
+				"train" : 1,
+				"libelle_point_arret" : "MAREIL SUR MAULDRE",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "fec6ef2e556ab2aa9d294f5d2e64066d031aae62",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116665",
+				"train" : 1,
+				"libelle_point_arret" : "MAREUIL SUR OURCQ"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d1f7c271a495c8dafdd550357a265858de743f4f",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116228",
+				"train" : 1,
+				"libelle_point_arret" : "MARLES EN BRIE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "7dcac8aa482d8bb07a86f7b6892ac7dbb643f2c1",
+			"fields" : {
+				"code_uic" : "87545707",
+				"train" : 1,
+				"libelle_point_arret" : "VOVES",
+				"ter" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "df85f84aae06ea06bf65d98b2bd84934a485cd2b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87276220",
+				"libelle_point_arret" : "VILLIERS LE BEL GONESSE ARNOUVILLE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "603e52983f2158b4d5c5340fc3507c7eb8dcd1d8",
+			"fields" : {
+				"p" : 1,
+				"code_uic" : "87116749",
+				"train" : 1,
+				"libelle_point_arret" : "VILLIERS MONTBARBIN"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4dd2c74fd7b5c972f7b34a534e2e0b562dbc1109",
+			"fields" : {
+				"code_uic" : "87393884",
+				"train" : 1,
+				"libelle_point_arret" : "VILLIERS NEAUPHLE PONTCHARTRAIN",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "64c30d0a2cb5afd7f0f9fcf8fe000b6a0b321986",
+			"fields" : {
+				"code_uic" : "87382887",
+				"train" : 1,
+				"libelle_point_arret" : "VIROFLAY RIVE DROITE",
+				"l" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "bebe9faad1434bb5d5184619fd82a51700ce043e",
+			"fields" : {
+				"c" : 1,
+				"libelle_point_arret" : "VIROFLAY RIVE GAUCHE",
+				"rer" : 1,
+				"n" : 1,
+				"code_uic" : "87393215",
+				"train" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ff8e52f74ad9f6fc736ddaab072156c856785d9f",
+			"fields" : {
+				"a" : 1,
+				"libelle_point_arret" : "ACHERES GRAND CORMIER",
+				"rer" : 1,
+				"train" : 1,
+				"j" : 1,
+				"code_uic" : "87386052"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		},
+		{
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "319ce3efce9ca0c61931c2df956de1218fc7fb5e",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "AEROPORT CHARLES DE GAULLE 2 TGV - Roissy",
+				"code_uic" : "87001479",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "d17188bbeeb9678f20ce3c3b3298663300f54552",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758599",
+				"libelle_point_arret" : "AUBER"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c4e297e55c2921fe3bfe0f6559be416d335a68d7",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87328328",
+				"libelle_point_arret" : "BIBLIOTHEQUE FRANCOIS MITTERRAND"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "024a6a90271da8d24f26d334efbe6efcc88b6c3c",
+			"fields" : {
+				"code_uic" : "87381152",
+				"train" : 1,
+				"libelle_point_arret" : "BOISSY L'AILLERIE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "540fbb5a13dc934ac22ce982a91fb7e4c6e78336",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758201",
+				"libelle_point_arret" : "BOISSY SAINT-LEGER"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "b53801d695cdbee819fe305d18f34dabf8be4229",
+			"fields" : {
+				"code_uic" : "87415893",
+				"train" : 1,
+				"libelle_point_arret" : "BONNIERES",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "6726ca643f208cd12e9cd0b475e75e4fbc7409d7",
+			"fields" : {
+				"h" : 1,
+				"code_uic" : "87276444",
+				"train" : 1,
+				"libelle_point_arret" : "BORAN SUR OISE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "79a38b9261a3be3b2bf9a7e1a2351dd8fc3bddc9",
+			"fields" : {
+				"rer" : 1,
+				"c" : 1,
+				"code_uic" : "87545178",
+				"libelle_point_arret" : "BOURAY"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "4ba6b5465465221fde1d86f8578963ea30752b97",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87682120",
+				"libelle_point_arret" : "BRUNOY",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "ae9a85af46e4446cc8d71617cca0fb848b117ead",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87758326",
+				"libelle_point_arret" : "BRY SUR MARNE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "9a3babf135b9cfd19518bc4d130814837242f25e",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681510",
+				"libelle_point_arret" : "BUNO GIRONVILLE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "c9363bd652aa09b93b07b7293eef353fde9e7843",
+			"fields" : {
+				"a" : 1,
+				"rer" : 1,
+				"code_uic" : "87730069",
+				"libelle_point_arret" : "VAL D'EUROPE"
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "cde1c58bdf29f1fc5ae19627fc9b8b881af04a60",
+			"fields" : {
+				"code_uic" : "87391532",
+				"train" : 1,
+				"libelle_point_arret" : "VANVES MALAKOFF",
+				"n" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "113597f15c000e96f12c9e15b9b5df01eac39eb0",
+			"fields" : {
+				"rer" : 1,
+				"libelle_point_arret" : "VERT GALANT",
+				"code_uic" : "87271437",
+				"b" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "87d82454873aef82cb764374bebd2bd8f6d2cbe5",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681304",
+				"libelle_point_arret" : "VIGNEUX SUR SEINE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "27ab76922d2b179a44a379db550069d98f19ef5b",
+			"fields" : {
+				"rer" : 1,
+				"code_uic" : "87681619",
+				"libelle_point_arret" : "VILLABE",
+				"d" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		}, {
+			"datasetid" : "sncf-lignes-par-gares-idf",
+			"recordid" : "74feab7ed502901907ad934794300ad4db610908",
+			"fields" : {
+				"code_uic" : "87386649",
+				"train" : 1,
+				"libelle_point_arret" : "VILLENNES SUR SEINE",
+				"j" : 1
+			},
+			"record_timestamp" : "2014-08-13T20:31:16.114566"
+		} ]
