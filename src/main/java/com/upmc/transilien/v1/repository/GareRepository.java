@@ -13,7 +13,7 @@ import com.upmc.transilien.v1.model.Gare;
  * Répertorie les gares<br>
  * <b>Singleton</b>
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class GareRepository {
@@ -99,27 +99,4 @@ public class GareRepository {
 			throw new Error("Une gare possède déjà ce numéro UIC.");
 		return gare;
 	}
-
-	// TODO voir si on peut modifier une gare et si oui quelles propriétés
-	// public Gare update(Gare editedGare) {
-	// if (editedGare.getId() == null) {
-	// return null;
-	// }
-	//
-	// Gare gare = ofy().load()
-	// .key(Key.create(Gare.class, editedGare.getId())).now();
-	// gare.setCompleted(editedGare.isCompleted());
-	// gare.setTitle(editedGare.getTitle());
-	// ofy().save().entity(gare).now();
-	//
-	// return gare;
-	// }
-
-	// TODO les gares sont fixes, on n'a pas besoin de les supprimers
-	// public void remove(Long id) {
-	// if (id == null) {
-	// return;
-	// }
-	// ofy().delete().type(Gare.class).id(id).now();
-	// }
 }

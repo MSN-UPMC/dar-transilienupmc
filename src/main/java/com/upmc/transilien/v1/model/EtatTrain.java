@@ -3,7 +3,7 @@ package com.upmc.transilien.v1.model;
 /**
  * Enumeration des différents états possible d'un train : à l'heure, en retard ou supprimé.
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public enum EtatTrain {

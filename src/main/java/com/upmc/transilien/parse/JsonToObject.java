@@ -19,7 +19,7 @@ import com.upmc.transilien.v1.repository.LigneRepository;
 /**
  * Classe statique qui convertit les fichiers JSON en Objet du modèle
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class JsonToObject {
@@ -37,7 +37,6 @@ public class JsonToObject {
 	public static void loadGare(String filename) throws FileNotFoundException, IOException, ParseException {
 		JSONParser parser = new JSONParser();
 		JSONArray array = (JSONArray) parser.parse(new FileReader(filename));
-
 		for (int i = 0; i < array.size(); i++) {
 			JSONObject gare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
 			int codeUIC = Integer.parseInt((String) gare.get("code_uic"));
@@ -47,9 +46,9 @@ public class JsonToObject {
 
 			String nom = (String) gare.get("libelle");
 			JSONArray coordGPS = (JSONArray) gare.get("coord_gps_wgs84");
-			Double longitude = (Double) coordGPS.get(1), lattitude = (Double) coordGPS.get(0);
+			Double latitude = (Double) coordGPS.get(0), longitude = (Double) coordGPS.get(1);
 
-			GareRepository.getInstance().create(new Gare(nom, codeUIC, longitude, lattitude));
+			GareRepository.getInstance().create(new Gare(nom, codeUIC, longitude, latitude));
 		}
 	}
 

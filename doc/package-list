@@ -1,0 +1,6 @@
+com.upmc.transilien.algo
+com.upmc.transilien.parse
+com.upmc.transilien.request
+com.upmc.transilien.v1.endPoint
+com.upmc.transilien.v1.model
+com.upmc.transilien.v1.repository

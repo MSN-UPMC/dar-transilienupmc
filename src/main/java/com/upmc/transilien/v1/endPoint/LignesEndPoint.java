@@ -18,7 +18,7 @@ import com.upmc.transilien.v1.repository.LigneRepository;
 /**
  * EndPoint des Lignes
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 @Api(name = "lignes", version = "v1")
@@ -48,10 +48,17 @@ public class LignesEndPoint {
 		return LigneRepository.getInstance().findGarePerLigne(ligne);
 	}
 
-	// @ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
-	// public Ligne create(Ligne ligne) {
-	// return LigneRepository.getInstance().create(ligne);
-	// }
+	/**
+	 * Recherche les lignes qui passent par la gare
+	 * 
+	 * @param codeUIC
+	 *            le codeUIC de la gare
+	 * @return la liste des lignes qui passent par la gare
+	 */
+	@ApiMethod(name = "getLigneByGare", httpMethod = ApiMethod.HttpMethod.GET, path = "getLigneByGare")
+	public List<Ligne> getLigneByGare(@Named("codeUIC") int codeUIC) {
+		return LigneRepository.getInstance().findLignePerGare(codeUIC);
+	}
 
 	/**
 	 * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
@@ -67,15 +74,4 @@ public class LignesEndPoint {
 			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
 		}
 	}
-
-	// TODO a voir si on modifie les lignes
-	// @ApiMethod(name = "update", httpMethod = ApiMethod.HttpMethod.PUT, path = "update")
-	// public Ligne update(Ligne editedLigne) {
-	// return LigneRepository.getInstance().update(editedLigne);
-	// }
-
-	// @ApiMethod(name = "remove", httpMethod = ApiMethod.HttpMethod.DELETE, path = "remove")
-	// public void remove(@Named("id") Long id) {
-	// LigneRepository.getInstance().remove(id);
-	// }
 }

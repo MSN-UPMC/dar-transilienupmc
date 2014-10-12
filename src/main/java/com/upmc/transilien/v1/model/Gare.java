@@ -7,7 +7,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 /**
  * Description d'un objet gare
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class Gare {
@@ -18,7 +18,8 @@ public class Gare {
 	private String nom;
 	@Index
 	private int codeUIC;
-	private Double longitude, latitude;
+	private Double longitude;
+	private Double latitude;
 
 	/**
 	 * nécessaire pour la conversion automatique JSON
@@ -74,9 +75,19 @@ public class Gare {
 		return latitude;
 	}
 
+	/**
+	 * Calcule la distance entre 2 gares
+	 * 
+	 * @param o
+	 *            la gare cible
+	 * @return la distance entre la gare courante et la gare cible
+	 */
+	public Double calcule(Gare o) {
+		return Math.sqrt(Math.pow(longitude - o.longitude, 2) + Math.pow(latitude - o.latitude, 2));
+	}
+
 	@Override
 	public String toString() {
 		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude + "]\n";
 	}
-
 }

@@ -10,7 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 /**
  * Requête sur l'API transilien prochainDepart
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class TransilienRequest {

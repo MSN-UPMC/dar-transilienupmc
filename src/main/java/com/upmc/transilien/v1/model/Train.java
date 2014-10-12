@@ -8,7 +8,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 /**
  * Un train
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class Train {

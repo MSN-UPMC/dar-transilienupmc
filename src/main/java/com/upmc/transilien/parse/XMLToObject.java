@@ -15,7 +15,7 @@ import com.upmc.transilien.v1.repository.TrainRepository;
 /**
  * Parse du XML en Objet du modèle
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class XMLToObject {

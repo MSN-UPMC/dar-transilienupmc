@@ -17,7 +17,7 @@ import com.upmc.transilien.v1.repository.GareRepository;
 /**
  * EndPoint des Gares
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 @Api(name = "gares", version = "v1")
@@ -62,11 +62,6 @@ public class GaresEndPoint {
 		return GareRepository.getInstance().findGaresName();
 	}
 
-	// @ApiMethod(name = "create", httpMethod = ApiMethod.HttpMethod.POST, path = "create")
-	// public Gare create(Gare gare) {
-	// return GareRepository.getInstance().create(gare);
-	// }
-
 	/**
 	 * Charge les gares depuis un fichier statique présent sur le serveur.<br>
 	 * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
@@ -82,16 +77,4 @@ public class GaresEndPoint {
 			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
 		}
 	}
-
-	// TODO a voir si on modifie les gares
-	// @ApiMethod(name = "update", httpMethod = ApiMethod.HttpMethod.PUT, path =
-	// "update")
-	// public Gare update(Gare editedGare) {
-	// return Gares.getInstance().update(editedGare);
-	// }
-
-	// @ApiMethod(name = "remove", httpMethod = ApiMethod.HttpMethod.DELETE, path = "remove")
-	// public void remove(@Named("id") Long id) {
-	// GareRepository.getInstance().remove(id);
-	// }
 }

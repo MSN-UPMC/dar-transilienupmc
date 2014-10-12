@@ -10,7 +10,7 @@ import com.googlecode.objectify.annotation.Index;
 @Entity
 /**
  * Objet ligne
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class Ligne {
@@ -19,6 +19,7 @@ public class Ligne {
 	private Long id;
 	@Index
 	private String nom;
+	@Index
 	private List<Integer> gares;
 
 	/**

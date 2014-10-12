@@ -13,7 +13,7 @@ import com.upmc.transilien.v1.model.Train;
  * Répertorie les trains<br>
  * <b>Singleton</b>
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class TrainRepository {
@@ -122,27 +122,4 @@ public class TrainRepository {
 			throw new Error("Un train possède déjà ce numéro.");
 		return train;
 	}
-
-	// TODO voir si on peut modifier un train et si oui quelles propriétés
-	// public Train update(Todo editedTrain) {
-	// if (editedTrain.getId() == null) {
-	// return null;
-	// }
-	//
-	// Train train = ofy().load()
-	// .key(Key.create(Train.class, editedTrain.getId())).now();
-	// train.setCompleted(editedTrain.isCompleted());
-	// train.setTitle(editedTrain.getTitle());
-	// ofy().save().entity(train).now();
-	//
-	// return train;
-	// }
-
-	// TODO a voir, veut-on supprimer des trains ? je ne pense pas
-	// public void remove(Long id) {
-	// if (id == null) {
-	// return;
-	// }
-	// ofy().delete().type(Train.class).id(id).now();
-	// }
 }

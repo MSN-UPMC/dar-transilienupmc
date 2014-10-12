@@ -13,7 +13,7 @@ import com.upmc.transilien.v1.model.Ligne;
  * Répertorie les lignes.<br>
  * <b>Singleton</b>
  * 
- * @author Kevin Coquart && Mag-Stellon Nadarajah
+ * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
 public class LigneRepository {
@@ -74,6 +74,24 @@ public class LigneRepository {
 	}
 
 	/**
+	 * Recherche les lignes qui passent par la gare
+	 * 
+	 * @param codeUIC
+	 *            le codeUIC de la gare
+	 * @return la liste des lignes qui passent par la gare
+	 */
+	public List<Ligne> findLignePerGare(int codeUIC) {
+		List<Ligne> lignes = ofy().load().type(Ligne.class).list();
+		List<Ligne> returnList = new ArrayList<Ligne>();
+		for (Ligne l : lignes) {
+			if (l.getGares().contains(codeUIC)) {
+				returnList.add(l);
+			}
+		}
+		return returnList;
+	}
+
+	/**
 	 * Créer la ligne dans le système de persistance
 	 * 
 	 * @param ligne
@@ -87,26 +105,4 @@ public class LigneRepository {
 			throw new Error("Une ligne possède déjà ce nom.");
 		return ligne;
 	}
-
-	// public Ligne update(Ligne editedLigne) {
-	// if (editedLigne.getId() == null) {
-	// return null;
-	// }
-	//
-	// Ligne ligne = ofy().load().key(Key.create(Ligne.class, editedLigne.getId())).now();
-	//
-	// for (Integer i : editedLigne.getGares())
-	// ligne.addGares(i);
-	//
-	// ofy().save().entity(ligne).now();
-	// return ligne;
-	// }
-
-	// TODO pareil, pourquoi supprimer une ligne ???
-	// public void remove(Long id) {
-	// if (id == null) {
-	// return;
-	// }
-	// ofy().delete().type(Ligne.class).id(id).now();
-	// }
 }
