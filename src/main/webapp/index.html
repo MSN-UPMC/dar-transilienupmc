@@ -18,8 +18,58 @@
 <body>
 	<!-- Debut du contenu du dashboard -->
 	<div id="dashboard" class="col-md-3">
-		<h3>Etat de services</h3>
-		<div id="etat-services-graphique"></div>
+		<div class="panel-group" id="accordion">
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+					  Calculer un itinéraire
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+				  <div class="panel-body">
+				  <form role="form">
+					  <div class="form-group">
+						<label for="adresseDepart">Départ</label>
+						<input type="text" class="form-control" id="adresseDepart" placeholder="Entrer une adresse de départ">
+					  </div>
+					  <div class="form-group">
+						<label for="adresseDestination">Destination</label>
+						<input type="text" class="form-control" id="adresseDestination" placeholder="Entrer une adresse de destination">
+					  </div>
+					  <button type="submit" class="btn btn-primary">Chercher un itinéraire</button>
+					</form>				  
+				  </div>
+				</div>
+			  </div>
+			  <div class="panel panel-default">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+					  Informations sur une gare
+					</a>
+				  </h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body">
+						<form role="form">
+						  <div class="form-group">
+							<label for="selectionGare">Selectionner une gare</label>
+							 <select class="form-control">
+							  <option>Gare1</option>
+							  <option>Gare2</option>
+							  <option>Gare3</option>
+							  <option>Gare4</option>
+							  <option>Gare5</option>
+							</select>
+						  </div>
+						  <button type="submit" class="btn btn-primary">Afficher les informations</button>
+						</form>	
+					</div>
+				</div>
+			  </div>
+		</div>
 	</div>
 	<!-- Fin du contenu du dashboard -->
 	<!-- Debut contenu de la barre de menu -->
@@ -81,6 +131,10 @@
 			console.log(resp);
 		});
 	}
+	
+	
+	
+		
 </script>
 <script src="https://apis.google.com/js/client.js?onload=init"></script>
 </html>

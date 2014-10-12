@@ -11,17 +11,17 @@ top:100px;
 right:15px;
 z-index:1031;
 
-height:80%;
-
+/*height:80%;
+*/
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
 
-padding:15px;
+padding-top:20px;
 word-wrap: break-word;
 text-align:center;
-color:white;
-background-color:#070716;
+color:#777;
+background-color:#ffffff;
 
 }
 
