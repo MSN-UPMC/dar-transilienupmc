@@ -1,9 +1,4 @@
 /**
- * Import de bibliotèque; externes
- */
-<script src="js/mustache.js"></script>
-
-/**
  * Création de l'environnement
  */
 function main() {
@@ -12,6 +7,18 @@ function main() {
 	environnement.ligne = new Array();
 }
 
+/**
+ * Gestion des erreurs
+ */
+function lancerException(message){
+	try {
+        throw new Error(message);
+    }
+    catch(e) {
+		console.error(e.stack);
+    }
+} 
+ 
 // ############################
 // ############################
 // ########### GARE ###########
@@ -31,6 +38,11 @@ function main() {
  * @return un objet gare
  */
 function Gare(nom, codeUIC, longitude, latitude) {
+
+	if(environnement === undefined){
+		lancerException("Environnement non initilisé.");
+	}
+
 	this.nom = nom;
 	this.codeUIC = codeUIC;
 	this.longitude = longitude;
@@ -49,20 +61,12 @@ function Gare(nom, codeUIC, longitude, latitude) {
  */
 Gare.prototype.getHTML = function(gare) {
 
-	var gareHTML = {
-		html : {
-			balise : "div",
-			nomClasse : "gare"
-		}
-		gare : {
-			nom : this.nom,
-			codeUIC : this.codeUIC,
-			latitude : this.latitude,
-			longitude : this.longitude
-		}
-	};
-	var template = "<{{html.balise}} class='{{html.nomClasse}}'>{{gare.nom}} ({{gare.codeUIC}}) &#8594; [{{gare.latitude}};{{gare.longitude}}]</{{html.balise}}>";
-	return Mustache.to_html(template, gare);
+	var s = '<div class="gare">';
+	// code html &#8594; pour =>
+	s +=  this.nom + " (" +this.codeUIC+") &#8594; "+" ["+this.latitude+";"+this.longitude+"]";
+	s += '</div>';
+
+	return s;
 }
 
 // TODO modifier / supprimer
@@ -94,6 +98,11 @@ Gare.traiteReponse = function(json) {
  * @returns un objet ligne
  */
 function Ligne(nom, gares) {
+
+	if(environnement === undefined){
+		lancerException("Environnement non initilisé.");
+	}
+
 	this.nom = nom;
 	this.gares = gares;
 
