@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projet Transilien</title>
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -13,6 +13,7 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+<link rel="stylesheet" href="lib/leaflet-0.7.3/leaflet.css" />
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -106,8 +107,6 @@
 	<!-- Fin contenu de la barre de menu -->
 	<!-- Debut du contenant de la map -->
 	<div id="map">
-		<iframe width="100%" height="100%" frameBorder="0"
-			src="http://umap.openstreetmap.fr/fr/map/carte-sans-nom_18434?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&datalayersControl=true&onLoadPanel=undefined"></iframe>
 	</div>
 	<!-- Fin du contenant de la map-->
 	<!-- jQuery  -->
@@ -118,11 +117,14 @@
 	<script src="js/highcharts.js"></script>
 	<!-- Notre biblioteque JS -->
 	<script src="js/transilienUPMC.js"></script>
+	<!-- Map JS  -->
+	<script src="lib/leaflet-0.7.3/leaflet.js"></script>
 </body>
 
 <!--  PARTIE APPEL API (KEVIN) -->
 <!-- Tout à la fin de la page html: -->
 <script>
+	/*
 	var init = function() {
 		var rootApi = 'http://localhost:8080/_ah/api';
 		gapi.client.load('todos', 'v1', function() {
@@ -132,11 +134,46 @@
 		gapi.client.todos.list().execute(function(resp) {
 			console.log(resp);
 		});
+	}*/
+	
+	
+	
+	
+// Mettre le map a la coordonnee au demarrage 
+// Sur Chatelet Paris en position 48.858755;48.858755
+// Avec un zoom de niveau 13
+var map = L.map('map').setView([48.858755, 2.347531], 13);
+
+// Utilisation dun title(cartographie) mapbox avec ma cle session 
+// Zoom de niveau 18 maximum autoriser
+L.tileLayer('https://{s}.tiles.mapbox.com/v3/magstellon.joaljn60/{z}/{x}/{y}.png', {
+    maxZoom: 18
+}).addTo(map);
+
+// Initialise l'environnement
+main();
+
+// Appel AJAX pour recuperer la liste des gares
+
+// Variable pour stocker un point de la carte
+var marker;
+// Call ajax sur l'API listGares et retourne un JSON dans la variable data
+$.get(environnement.routes["getGaresList"], function(data) {
+	for(i in data.items){
+		// Creation dune variable temporaire pour stocker une coordonnee
+		point = data.items[i];
+		// On crée un point sur la carte
+		marker = L.marker([ parseFloat(point.lattitude),parseFloat(point.longitude)]).addTo(map);
+		// On ajoute les informations info bulle à ce point
+		marker.bindPopup("<b>"+point.nom+"</b><br>Code UIC : "+point.codeUIC+".");
 	}
-	
-	
+});
+
+
+
+
 	
 		
 </script>
-<script src="https://apis.google.com/js/client.js?onload=init"></script>
+<!--<script src="https://apis.google.com/js/client.js?onload=init"></script>-->
 </html>

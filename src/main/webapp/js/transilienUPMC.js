@@ -1,3 +1,17 @@
+// ############################
+// ############################
+// ########### Routes #########
+// ############################
+// ############################
+
+
+
+// ############################
+// ############################
+// ########### Tools ##########
+// ############################
+// ############################
+
 /**
  * Création de l'environnement
  */
@@ -5,6 +19,10 @@ function main() {
 	environnement = {};
 	environnement.gare = new Array();
 	environnement.ligne = new Array();
+	
+	environnement.host = "https://supple-flux-704.appspot.com/";
+	environnement.routes = new Array();
+	environnement.routes["getGaresList"] = environnement.host+"_ah/api/gares/v1/list";
 }
 
 /**
@@ -167,3 +185,4 @@ Ligne.traiteReponse = function(json) {
 	}
 	$("#listeLigne").html(s);
 }
+
