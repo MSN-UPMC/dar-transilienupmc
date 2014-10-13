@@ -1,4 +1,9 @@
 /**
+ * Import de bibliotèque; externes
+ */
+<script src="js/mustache.js"></script>
+
+/**
  * Création de l'environnement
  */
 function main() {
@@ -43,12 +48,21 @@ function Gare(nom, codeUIC, longitude, latitude) {
  * @returns {String} le HTML correspondant à la gare
  */
 Gare.prototype.getHTML = function(gare) {
-	var s = '<div class="gare">';
-	// &#8594; : -> en HTML
-	s += this.nom + ' (' + this.codeUIC + ') &#8594; [' + this.latitude + ' ; '
-			+ this.longitude + ']';
-	s += '</div>';
-	return s;
+
+	var gareHTML = {
+		html : {
+			balise : "div",
+			nomClasse : "gare"
+		}
+		gare : {
+			nom : this.nom,
+			codeUIC : this.codeUIC,
+			latitude : this.latitude,
+			longitude : this.longitude
+		}
+	};
+	var template = "<{{html.balise}} class='{{html.nomClasse}}'>{{gare.nom}} ({{gare.codeUIC}}) &#8594; [{{gare.latitude}};{{gare.longitude}}]</{{html.balise}}>";
+	return Mustache.to_html(template, gare);
 }
 
 // TODO modifier / supprimer

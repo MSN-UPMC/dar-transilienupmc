@@ -84,7 +84,7 @@ public class ItineraireDijkstra {
 		depart = new GareDijkstra(GareRepository.getInstance().findGareByCode(departUIC), 0.);
 		destination = new GareDijkstra(GareRepository.getInstance().findGareByCode(destinationUIC), Double.MAX_VALUE);
 
-		tas = new PriorityQueue<GareDijkstra>(new Comparator<GareDijkstra>() {
+		tas = new PriorityQueue<GareDijkstra>(5, new Comparator<GareDijkstra>() {
 			public int compare(GareDijkstra gare1, GareDijkstra gare2) {
 				return Double.compare(gare1.distance, gare2.distance);
 			}
