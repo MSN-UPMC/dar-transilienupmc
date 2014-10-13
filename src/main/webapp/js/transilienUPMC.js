@@ -11,12 +11,8 @@ function main() {
  * Gestion des erreurs
  */
 function lancerException(message){
-	try {
-        throw new Error(message);
-    }
-    catch(e) {
-		console.error(e.stack);
-    }
+    throw new Error(message);
+
 } 
  
 // ############################
@@ -39,8 +35,20 @@ function lancerException(message){
  */
 function Gare(nom, codeUIC, longitude, latitude) {
 
+	// Si l'environnement n'est pas crée alors lancé une exception
 	if(environnement === undefined){
-		lancerException("Environnement non initilisé.");
+		lancerException("L'environnement n'est pas initilisé.");
+	}
+	// Ajout du typage des parametres sinon déclanchement d'une exception
+	if( (typeof nom != "string") || 
+		(typeof codeUIC != "number") ||  
+		(typeof longitude != "string") ||
+		(typeof latitude != "string") ){
+		lancerException("Les paramètres ne correspondent pas au typage de la fonction Gare");
+	}
+	// Si environnement gare n'est pas initialisé, on déclanche une exception
+	if (typeof environnement.gare === "undefined"){
+		lancerException("L'environnement Gare n'est pas initialisé");
 	}
 
 	this.nom = nom;
@@ -48,7 +56,8 @@ function Gare(nom, codeUIC, longitude, latitude) {
 	this.longitude = longitude;
 	this.latitude = latitude;
 
-	if (environnement.gare != undefined)
+	// Si la gare n'existe pas dans l'environnement Gare
+	if ( typeof environnement.gare[codeUIC] === "undefined")
 		environnement.gare[codeUIC] = this;
 }
 
@@ -62,7 +71,7 @@ function Gare(nom, codeUIC, longitude, latitude) {
 Gare.prototype.getHTML = function(gare) {
 
 	var s = '<div class="gare">';
-	// code html &#8594; pour =>
+	// Encodage HTML : &#8594; equivalent à  =>
 	s +=  this.nom + " (" +this.codeUIC+") &#8594; "+" ["+this.latitude+";"+this.longitude+"]";
 	s += '</div>';
 
@@ -99,14 +108,25 @@ Gare.traiteReponse = function(json) {
  */
 function Ligne(nom, gares) {
 
+	// Si l'environnement n'est pas crée alors lancé une exception
 	if(environnement === undefined){
 		lancerException("Environnement non initilisé.");
+	}
+	// Ajout du typage des parametres sinon déclanchement d'une exception
+	if( (typeof nom != "string") || 
+		(typeof gares != "object") ){
+		lancerException("Les paramètres ne correspondent pas au typage de la fonction Ligne");
+	}
+	// Si environnement ligne n'est pas initialisé, on déclanche une exception
+	if (typeof environnement.ligne === "undefined"){
+		lancerException("L'environnement Ligne n'est pas initialisé");
 	}
 
 	this.nom = nom;
 	this.gares = gares;
 
-	if (environnement.ligne != undefined)
+	// Si la ligne n'existe pas dans l'environnement Ligne
+	if (typeof environnement.ligne[nom] === "undefined")
 		environnement.ligne[nom] = this;
 }
 
