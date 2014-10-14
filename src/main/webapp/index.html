@@ -58,11 +58,6 @@
 						  <div class="form-group">
 							<label for="selectionGare">Selectionner une gare</label>
 							 <select class="form-control">
-							  <option>Gare1</option>
-							  <option>Gare2</option>
-							  <option>Gare3</option>
-							  <option>Gare4</option>
-							  <option>Gare5</option>
 							</select>
 						  </div>
 						  <button type="submit" class="btn btn-primary">Afficher les informations</button>
@@ -160,12 +155,16 @@ var marker;
 // Call ajax sur l'API listGares et retourne un JSON dans la variable data
 $.get(environnement.routes["getGaresList"], function(data) {
 	for(i in data.items){
+		/* Maj de la MAP */
 		// Creation dune variable temporaire pour stocker une coordonnee
 		point = data.items[i];
 		// On crée un point sur la carte
 		marker = L.marker([ parseFloat(point.lattitude),parseFloat(point.longitude)]).addTo(map);
 		// On ajoute les informations info bulle à ce point
 		marker.bindPopup("<b>"+point.nom+"</b><br>Code UIC : "+point.codeUIC+".");
+		
+		/* Maj du select dans la section 'Informations sur une gare' */
+		$("#collapseTwo select").append("<option>"+point.nom+"</option>");
 	}
 });
 
