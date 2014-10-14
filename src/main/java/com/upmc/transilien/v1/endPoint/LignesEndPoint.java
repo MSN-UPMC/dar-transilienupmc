@@ -67,11 +67,14 @@ public class LignesEndPoint {
 	 */
 	@ApiMethod(name = "loadLigne", httpMethod = ApiMethod.HttpMethod.POST, path = "loadLigne")
 	public Text loadLigne() {
-		try {
-			JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
-			return new Text("OK");
-		} catch (IOException | ParseException e) {
-			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
-		}
+		if (LigneRepository.getInstance().findLigne().isEmpty())
+			try {
+				JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
+				return new Text("OK");
+			} catch (IOException | ParseException e) {
+				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+			}
+		else
+			return new Text("Deja fait.");
 	}
 }

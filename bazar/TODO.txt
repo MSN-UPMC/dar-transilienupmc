@@ -4,3 +4,5 @@ Mag =>
 
 
 Kevin =>
+- voisin d'une gare
+- supprimer les gares en trop

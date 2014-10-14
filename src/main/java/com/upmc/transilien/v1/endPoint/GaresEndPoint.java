@@ -70,11 +70,14 @@ public class GaresEndPoint {
 	 */
 	@ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.POST, path = "loadGare")
 	public Text loadGare() {
-		try {
-			JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
-			return new Text("OK");
-		} catch (IOException | ParseException e) {
-			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
-		}
+		if (GareRepository.getInstance().findGares().isEmpty())
+			try {
+				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
+				return new Text("OK");
+			} catch (IOException | ParseException e) {
+				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+			}
+		else
+			return new Text("Deja fait.");
 	}
 }
