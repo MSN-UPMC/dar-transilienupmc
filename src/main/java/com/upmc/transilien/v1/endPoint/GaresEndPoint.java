@@ -25,7 +25,7 @@ public class GaresEndPoint {
 	/**
 	 * @return toutes les gares existantes
 	 */
-	@ApiMethod(name = "getGares", httpMethod = ApiMethod.HttpMethod.GET, path = "list")
+	@ApiMethod(name = "getGares", httpMethod = ApiMethod.HttpMethod.GET, path = "getGares")
 	public Collection<Gare> getGares() {
 		return GareRepository.getInstance().findGares();
 	}
@@ -65,7 +65,8 @@ public class GaresEndPoint {
 	// /**
 	// * @return les gares en double
 	// */
-	// @ApiMethod(name = "doublon", httpMethod = ApiMethod.HttpMethod.GET, path = "doublon")
+	// @ApiMethod(name = "doublon", httpMethod = ApiMethod.HttpMethod.GET, path
+	// = "doublon")
 	// public Collection<Gare> doublon() {
 	// Collection<Gare> gares = GareRepository.getInstance().findGares();
 	// List<Gare> retour = new ArrayList<Gare>();
@@ -81,7 +82,8 @@ public class GaresEndPoint {
 
 	/**
 	 * Charge les gares depuis un fichier statique présent sur le serveur.<br>
-	 * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
+	 * La fonction est voué à disparaître pour fonctionner de manière
+	 * transparente à l'initialisation du serveur.
 	 * 
 	 * @return OK si cela c'est bien passé, le message d'erreur sinon
 	 * @throws Exception
@@ -90,12 +92,15 @@ public class GaresEndPoint {
 	public Text loadGare() {
 		if (GareRepository.getInstance().findGares().isEmpty())
 			try {
-				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
+				JsonToObject
+						.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
 				return new Text("OK");
 			} catch (IOException | ParseException e) {
-				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+				return new Text(System.getProperties().get("user.dir") + "\n"
+						+ e.getMessage());
 			} catch (Exception e) {
-				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+				return new Text(System.getProperties().get("user.dir") + "\n"
+						+ e.getMessage());
 			}
 		else
 			return new Text("Deja fait.");
