@@ -117,6 +117,21 @@
 	<div id="map">
 	</div>
 	<!-- Fin du contenant de la map-->
+	
+	
+	<!-- Debut Alert pour affichage du chargement -->
+	<div class="modal fade" id="modalAlertDiv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title" id="myModalLabel"></h4>
+		  </div>
+		  <div class="modal-body">
+		  </div>
+		</div>
+	  </div>
+	</div>	
+	<!-- Fin Alert pour affichage du chargement -->	
 	<!-- jQuery  -->
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap JS  -->
@@ -147,6 +162,10 @@
 	
 	
 	
+	
+$("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
+$("#modalAlertDiv div[class='modal-body']").text("Création de la carte");
+$("#modalAlertDiv").modal("show");
 // Mettre le map a la coordonnee au demarrage 
 // Sur Chatelet Paris en position 48.858755;48.858755
 // Avec un zoom de niveau 13
@@ -165,8 +184,10 @@ main();
 
 // Variable pour stocker un point de la carte
 var marker;
+// Message d'attente pour le client
+$("#modalAlertDiv div[class='modal-body']").text("Chargement des gares");
 // Call ajax sur l'API listGares et retourne le JSON dans la variable data
-$.get(environnement.routes["getGaresList"], function(data) {
+$.get(environnement.routes["getGaresList"], function(data) {	
 	for(i in data.items){
 		/* Maj de la MAP */
 		// Creation dune variable temporaire pour stocker une coordonnee
@@ -179,6 +200,8 @@ $.get(environnement.routes["getGaresList"], function(data) {
 		/* Maj du select dans la section 'Informations sur une gare' */
 		$("#collapseTwo select").append("<option>"+point.nom+"</option>");
 	}
+	
+	$("#modalAlertDiv").modal("hide");
 });
 
 
