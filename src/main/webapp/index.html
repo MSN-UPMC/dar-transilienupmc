@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projet Transilien</title>
+<title>Transilien </title>
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,7 +19,9 @@
 <body>
 	<!-- Debut du contenu du dashboard -->
 	<div id="dashboard" class="col-md-3">
+		<!-- Debut groupe de bloc collapsable -->
 		<div class="panel-group" id="accordion">
+			  <!-- Debut groupe de bloc calculer un intineraire -->		
 			  <div class="panel panel-default">
 				<div class="panel-heading">
 				  <h4 class="panel-title">
@@ -33,17 +35,19 @@
 				  <form role="form">
 					  <div class="form-group">
 						<label for="adresseDepart">Départ</label>
-						<input type="text" class="form-control" id="adresseDepart" placeholder="Entrer une adresse de départ">
+						<input type="text" class="form-control" id="adresseDepart" placeholder="Entrer votre départ">
 					  </div>
 					  <div class="form-group">
 						<label for="adresseDestination">Destination</label>
-						<input type="text" class="form-control" id="adresseDestination" placeholder="Entrer une adresse de destination">
+						<input type="text" class="form-control" id="adresseDestination" placeholder="Entrer votre destination">
 					  </div>
-					  <button type="submit" class="btn btn-primary">Chercher un itinéraire</button>
+					  <button type="submit" class="btn btn-primary">Chercher votre itinéraire</button>
 					</form>				  
 				  </div>
 				</div>
 			  </div>
+			  <!-- Fin groupe de bloc calculer un intineraire -->
+			  <!-- Debut groupe de bloc information sur une gare -->
 			  <div class="panel panel-default">
 				<div class="panel-heading">
 				  <h4 class="panel-title">
@@ -65,25 +69,31 @@
 					</div>
 				</div>
 			  </div>
+			  <!-- Fin groupe de bloc information sur une gare -->
 		</div>
+		<!-- Fin groupe de bloc collapsable -->
 	</div>
 	<!-- Fin du contenu du dashboard -->
 	<!-- Debut contenu de la barre de menu -->
 	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
+				<!-- Debut bouton utile lors du passage au mobile -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-collapse">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Projet Transilien</a>
+				<!-- Fin bouton utile lors du passage au mobile -->				
+				<a class="navbar-brand" href="#">Transilien</a>
 			</div>
+			<!-- Debut liste des liens du menu -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Accueil</a></li>
-					<li><a href="#about">A propos</a></li>
+					<li><a href="#about">A propos de nous</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<!-- Debut liste des liens du menu en version dropdown -->
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Autres <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -94,9 +104,12 @@
 							<li class="dropdown-header">Sous titre</li>
 							<li><a href="#">Action 1</a></li>
 							<li><a href="#">Action 2</a></li>
-						</ul></li>
+						</ul>
+					</li>
+					<!-- Fin liste des liens du menu en version dropdown -->
 				</ul>
 			</div>
+			<!-- Fin liste des liens du menu -->
 		</div>
 	</div>
 	<!-- Fin contenu de la barre de menu -->
@@ -152,7 +165,7 @@ main();
 
 // Variable pour stocker un point de la carte
 var marker;
-// Call ajax sur l'API listGares et retourne un JSON dans la variable data
+// Call ajax sur l'API listGares et retourne le JSON dans la variable data
 $.get(environnement.routes["getGaresList"], function(data) {
 	for(i in data.items){
 		/* Maj de la MAP */

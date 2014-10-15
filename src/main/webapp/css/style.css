@@ -9,25 +9,20 @@ body {
 position:absolute;
 top:100px;
 right:15px;
-z-index:1031;
+z-index:1030;
 
-/*height:80%;
-*/
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
 border-radius: 10px;
-
-padding-top:20px;
 word-wrap: break-word;
 text-align:center;
 color:#777;
 background-color:#ffffff;
+padding: 10px;
 
 }
 
 #map {
-
-
 
 width:100%; 
 height:100%;
@@ -35,3 +30,31 @@ margin-top:50px;
 
 }
 
+#accordion{
+
+margin-bottom:0;
+
+}
+
+.panel-default>.panel-heading {
+	/* Modfier le webkit gradient */
+	background: -webkit-gradient( linear, left top, right top, from( rgba( 0, 0, 0, .8 ) ), to( rgba( 0, 0, 0, .9 ) ) );
+	background: -webkit-linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: -moz-linear-gradient(top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: -ms-radial-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: -o-linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+
+}
+
+
+.navbar-default {
+	/* Modfier le webkit gradient */
+	background: -webkit-gradient( linear, left top, right top, from( rgba( 0, 0, 0, .8 ) ), to( rgba( 0, 0, 0, .9 ) ) );
+	background: -webkit-linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ));
+	background: -moz-linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: -ms-radial-gradient(top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: -o-linear-gradient( top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+	background: linear-gradient(top, rgba( 245, 245, 245, .8 ), rgba( 232, 232, 232, .9 ) );
+
+}
