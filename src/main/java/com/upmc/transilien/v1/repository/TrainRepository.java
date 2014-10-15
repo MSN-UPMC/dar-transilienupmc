@@ -119,7 +119,8 @@ public class TrainRepository {
 		if (ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
 			ofy().save().entity(train).now();
 		else
-			throw new Error("Un train possède déjà ce numéro.");
+			// TODO effectuer des opérations de mise à jour
+			;
 		return train;
 	}
 }

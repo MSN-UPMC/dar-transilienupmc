@@ -62,11 +62,29 @@ public class GaresEndPoint {
 		return GareRepository.getInstance().findGaresName();
 	}
 
+	// /**
+	// * @return les gares en double
+	// */
+	// @ApiMethod(name = "doublon", httpMethod = ApiMethod.HttpMethod.GET, path = "doublon")
+	// public Collection<Gare> doublon() {
+	// Collection<Gare> gares = GareRepository.getInstance().findGares();
+	// List<Gare> retour = new ArrayList<Gare>();
+	// List<String> vu = new ArrayList<String>();
+	// for (Gare g : gares) {
+	// if (vu.contains(g.getNom()))
+	// retour.add(g);
+	// else
+	// vu.add(g.getNom());
+	// }
+	// return retour;
+	// }
+
 	/**
 	 * Charge les gares depuis un fichier statique présent sur le serveur.<br>
 	 * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
 	 * 
 	 * @return OK si cela c'est bien passé, le message d'erreur sinon
+	 * @throws Exception
 	 */
 	@ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.POST, path = "loadGare")
 	public Text loadGare() {
@@ -75,6 +93,8 @@ public class GaresEndPoint {
 				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
 				return new Text("OK");
 			} catch (IOException | ParseException e) {
+				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+			} catch (Exception e) {
 				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
 			}
 		else

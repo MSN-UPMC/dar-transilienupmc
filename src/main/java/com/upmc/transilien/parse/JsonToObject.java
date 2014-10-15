@@ -14,6 +14,7 @@ import org.json.simple.parser.ParseException;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
+import com.upmc.transilien.v1.repository.ItineraireRepository;
 import com.upmc.transilien.v1.repository.LigneRepository;
 
 /**
@@ -30,26 +31,36 @@ public class JsonToObject {
 	 * 
 	 * @param filename
 	 *            le nom du fichier (sncf-gares-et-arrets-transilien-ile-de-france.json)
-	 * @throws FileNotFoundException
-	 * @throws IOException
-	 * @throws ParseException
+	 * @throws Exception
 	 */
-	public static void loadGare(String filename) throws FileNotFoundException, IOException, ParseException {
+	public static void loadGare(String filename) throws Exception {
+		Map<String, Gare> gares = new HashMap<String, Gare>();
+
 		JSONParser parser = new JSONParser();
 		JSONArray array = (JSONArray) parser.parse(new FileReader(filename));
 		for (int i = 0; i < array.size(); i++) {
 			JSONObject gare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
 			int codeUIC = Integer.parseInt((String) gare.get("code_uic"));
 
-			if (GareRepository.getInstance().findGareByCode(codeUIC) != null)
-				continue;
-
 			String nom = (String) gare.get("libelle");
 			JSONArray coordGPS = (JSONArray) gare.get("coord_gps_wgs84");
 			Double latitude = (Double) coordGPS.get(0), longitude = (Double) coordGPS.get(1);
 
-			GareRepository.getInstance().create(new Gare(nom, codeUIC, longitude, latitude));
+			if (gares.containsKey(nom)) {
+				if (ItineraireRepository.getInstance().prochainDepart(gares.get(nom).getCodeUIC()).isEmpty()) {
+					if (ItineraireRepository.getInstance().prochainDepart(codeUIC).isEmpty())
+						throw new Exception("Aucun des 2 doublons de la gare : " + nom + " ne donne de résultat sur l'API Transilien.\nCodeUIC : " + codeUIC
+								+ " | " + gares.get(nom).getCodeUIC() + ".");
+					else
+						gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
+				}
+			} else
+				gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
+
 		}
+
+		for (Gare g : gares.values())
+			GareRepository.getInstance().create(g);
 	}
 
 	/**
@@ -65,6 +76,7 @@ public class JsonToObject {
 	 * @throws ParseException
 	 */
 	public static void loadLigne(String filename) throws FileNotFoundException, IOException, ParseException {
+
 		String[] lTrain = { "h", "j", "k", "l", "n", "p", "r", "u" }, lRER = { "a", "b", "c", "d", "e" };
 		Map<String, Ligne> lignes = new HashMap<String, Ligne>();
 
@@ -100,7 +112,11 @@ public class JsonToObject {
 			if (jsonLigne.get(s) != null) {
 				if (!lignes.containsKey(s))
 					lignes.put(s, new Ligne(s));
-				lignes.get(s).addGares(Integer.parseInt((String) jsonLigne.get("code_uic")));
+				int codeUIC = Integer.parseInt((String) jsonLigne.get("code_uic"));
+				/* Cas d'une gare doublon, on ne l'ajoute pas la ligne. */
+				if (GareRepository.getInstance().findGareByCode(codeUIC) == null)
+					continue;
+				lignes.get(s).addGares(codeUIC);
 			}
 	}
 
