@@ -10,7 +10,7 @@ import com.googlecode.objectify.annotation.Index;
  * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
-public class Gare {
+public class Gare implements Comparable<Gare>{
 	@Id
 	/* @Id sur Long => si null un identifiant unique sera auto généré lors d'une insertion */
 	private Long id;
@@ -90,4 +90,11 @@ public class Gare {
 	public String toString() {
 		return "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude + "]\n";
 	}
+	
+	
+	@Override
+	public int compareTo(Gare arg0) {
+		return this.nom.compareTo(arg0.nom);
+	}
+	
 }

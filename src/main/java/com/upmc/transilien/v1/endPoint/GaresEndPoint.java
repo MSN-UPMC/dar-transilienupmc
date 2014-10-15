@@ -1,7 +1,9 @@
 package com.upmc.transilien.v1.endPoint;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.json.simple.parser.ParseException;
@@ -27,7 +29,9 @@ public class GaresEndPoint {
 	 */
 	@ApiMethod(name = "getGares", httpMethod = ApiMethod.HttpMethod.GET, path = "getGares")
 	public Collection<Gare> getGares() {
-		return GareRepository.getInstance().findGares();
+		ArrayList<Gare> listeGares = new ArrayList<Gare>(GareRepository.getInstance().findGares());
+		Collections.sort(listeGares);
+		return listeGares;
 	}
 
 	/**

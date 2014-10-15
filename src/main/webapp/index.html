@@ -162,7 +162,7 @@
 	
 	
 	
-	
+// Message d'attente pour le client - chargement de la carte
 $("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
 $("#modalAlertDiv div[class='modal-body']").text("Création de la carte");
 $("#modalAlertDiv").modal("show");
@@ -184,7 +184,7 @@ main();
 
 // Variable pour stocker un point de la carte
 var marker;
-// Message d'attente pour le client
+// Message d'attente pour le client - retour de lappel ajax et placement des gares sur carte et select
 $("#modalAlertDiv div[class='modal-body']").text("Chargement des gares");
 // Call ajax sur l'API listGares et retourne le JSON dans la variable data
 $.get(environnement.routes["getGaresList"], function(data) {	
@@ -200,7 +200,6 @@ $.get(environnement.routes["getGaresList"], function(data) {
 		/* Maj du select dans la section 'Informations sur une gare' */
 		$("#collapseTwo select").append("<option>"+point.nom+"</option>");
 	}
-	
 	$("#modalAlertDiv").modal("hide");
 });
 
