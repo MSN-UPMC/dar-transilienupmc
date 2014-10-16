@@ -94,7 +94,7 @@ public class Gare implements Comparable<Gare>{
 	
 	@Override
 	public int compareTo(Gare arg0) {
-		return this.nom.compareTo(arg0.nom);
+		return nom.compareTo(arg0.nom);
 	}
 	
 }

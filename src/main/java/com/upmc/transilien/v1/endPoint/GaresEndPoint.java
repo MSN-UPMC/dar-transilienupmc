@@ -29,7 +29,7 @@ public class GaresEndPoint {
 	 */
 	@ApiMethod(name = "getGares", httpMethod = ApiMethod.HttpMethod.GET, path = "getGares")
 	public Collection<Gare> getGares() {
-		ArrayList<Gare> listeGares = new ArrayList<Gare>(GareRepository.getInstance().findGares());
+		List<Gare> listeGares = new ArrayList<Gare>(GareRepository.getInstance().findGares());
 		Collections.sort(listeGares);
 		return listeGares;
 	}
