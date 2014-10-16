@@ -9,7 +9,7 @@ import com.upmc.transilien.v1.model.Gare;
  *
  */
 public class GareOriente extends Gare {
-	private GareOriente voisin1, voisin2;
+	private Integer voisin1, voisin2;
 
 	/**
 	 * Constructeur à partir d'une gare
@@ -19,7 +19,7 @@ public class GareOriente extends Gare {
 	 */
 	public GareOriente(Gare g) {
 		super(g.getNom(), g.getCodeUIC(), g.getLongitude(), g.getLatitude());
-		setVoisin1(setVoisin2(null));
+		voisin1 = voisin2 = null;
 	}
 
 	/**
@@ -45,35 +45,29 @@ public class GareOriente extends Gare {
 	 * @throws Exception
 	 *             si les 2 gares sont rempli avant l'appel à cette fonction
 	 */
-	public boolean ajoute(GareOriente go) throws Exception {
+	public boolean ajoute(GareOriente go, boolean recursion) throws Exception {
 		boolean result = false;
 
-		if (getVoisin1() == null)
-			setVoisin1(go);
-		else if (getVoisin2() == null) {
-			setVoisin2(go);
+		if (voisin1 == null)
+			voisin1 = go.getCodeUIC();
+		else if (voisin2 == null) {
+			voisin2 = go.getCodeUIC();
 			result = true;
 		} else
 			throw new Exception(
 					"Les 2 gares sont déjà rempli, qu'est ce que t'as foutu sur l'algo ...");
 
+		if (recursion) {
+			result = go.ajoute(this, false);
+		}
 		return result;
 	}
 
-	public GareOriente getVoisin1() {
+	public Integer getVoisin1() {
 		return voisin1;
 	}
 
-	public void setVoisin1(GareOriente voisin1) {
-		this.voisin1 = voisin1;
-	}
-
-	public GareOriente getVoisin2() {
-		return voisin2;
-	}
-
-	public GareOriente setVoisin2(GareOriente voisin2) {
-		this.voisin2 = voisin2;
+	public Integer getVoisin2() {
 		return voisin2;
 	}
 }

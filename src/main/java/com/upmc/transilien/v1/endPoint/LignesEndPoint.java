@@ -10,7 +10,6 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
 import com.google.appengine.api.datastore.Text;
-import com.upmc.transilien.algo.GareOriente;
 import com.upmc.transilien.algo.LigneOriente;
 import com.upmc.transilien.parse.JsonToObject;
 import com.upmc.transilien.v1.model.Gare;
@@ -84,9 +83,11 @@ public class LignesEndPoint {
 	}
 
 	@ApiMethod(name = "ligneOriente", httpMethod = ApiMethod.HttpMethod.POST, path = "ligneOriente")
-	public Collection<GareOriente> ligneOriente(
+	public Collection<Gare> ligneOriente(
 			@Named("nom de la ligne") String nomLigne) throws Exception {
 		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
-		return LigneOriente.execute(ligne);
+		LigneOriente lo = new LigneOriente();
+		lo.execute(ligne);
+		return lo.goodOrder();
 	}
 }

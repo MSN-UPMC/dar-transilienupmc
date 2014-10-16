@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 import com.upmc.transilien.tools.math.Vecteur;
+import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
 
@@ -22,6 +23,7 @@ import com.upmc.transilien.v1.repository.GareRepository;
  */
 public class LigneOriente {
 	private static int angleMinimumOpposition = 45;
+	private Map<Integer, GareOriente> gos = new HashMap<Integer, GareOriente>();
 
 	/**
 	 * Couple pour répresenter le codeUIC de la gare et la distance par rapport
@@ -54,12 +56,10 @@ public class LigneOriente {
 	 * @param ligne
 	 * @throws Exception
 	 */
-	public static Collection<GareOriente> execute(Ligne ligne) throws Exception {
+	public void execute(Ligne ligne) throws Exception {
 		/**
 		 * 1) On ajoute à une map toutes les gares de la ligne
 		 */
-		Map<Integer, GareOriente> gos = new HashMap<Integer, GareOriente>();
-
 		List<Integer> aTraiter = new ArrayList<Integer>(ligne.getGares());
 		for (Integer ite : aTraiter)
 			gos.put(ite, new GareOriente(GareRepository.getInstance()
@@ -68,7 +68,7 @@ public class LigneOriente {
 		/**
 		 * On traite chaque gare de la ligne
 		 */
-		int i = 1000;
+		int i = 100;
 		while (!aTraiter.isEmpty() && i-- > 0) {
 			Integer elt = aTraiter.remove(0);
 			GareOriente gareElt = gos.get(elt);
@@ -105,16 +105,15 @@ public class LigneOriente {
 			while (!distances.isEmpty()
 					&& (gareElt.getVoisin1() == null || gareElt.getVoisin2() == null)) {
 				Couple c = distances.poll();
-				GareOriente tmp = gos.get(c.codeUIC);
+				GareOriente voisinPotentielle = gos.get(c.codeUIC);
 
 				/**
 				 * 5.1) Le voisin1 est null, le voisin2 aussi par construction.<br>
 				 * On indique aux gares qu'elles sont voisines.
 				 */
 				if (gareElt.getVoisin1() == null) {
-					gareElt.setVoisin1(tmp);
-					if (tmp.ajoute(gareElt))
-						aTraiter.remove((Object) tmp.getCodeUIC());
+					if (gareElt.ajoute(voisinPotentielle, true))
+						aTraiter.remove((Object) voisinPotentielle.getCodeUIC());
 				} else {
 					if (gareElt.getVoisin2() != null)
 						throw new Exception("Il y a une couille dans l'algo.");
@@ -127,17 +126,40 @@ public class LigneOriente {
 					 * voisin doit bien appartenir à le côté opposé de la ligne
 					 * et on indique aux gares qu'elles sont voisines.
 					 */
-					Vecteur v1 = new Vecteur(gareElt.x(), gareElt.y(), gareElt
-							.getVoisin1().x(), gareElt.getVoisin1().y()), v2 = new Vecteur(
-							gareElt.x(), gareElt.y(), tmp.x(), tmp.y());
-					if (Math.abs(v1.angle(v2)) > angleMinimumOpposition) {
-						gareElt.setVoisin2(tmp);
-						if (tmp.ajoute(gareElt))
-							aTraiter.remove((Object) tmp.getCodeUIC());
+					GareOriente vois1 = gos.get(gareElt.getVoisin1());
+					Vecteur vect1 = new Vecteur(gareElt.x(), gareElt.y(),
+							vois1.x(), vois1.y()), vect2 = new Vecteur(
+							gareElt.x(), gareElt.y(), voisinPotentielle.x(),
+							voisinPotentielle.y());
+					if (Math.abs(vect1.angle(vect2)) > angleMinimumOpposition) {
+						if (gareElt.ajoute(voisinPotentielle, true))
+							aTraiter.remove((Object) voisinPotentielle
+									.getCodeUIC());
 					}
 				}
 			}
 		}
-		return gos.values();
+	}
+
+	public Collection<Gare> goodOrder() throws Exception {
+		List<Gare> gares = new ArrayList<Gare>();
+
+		GareOriente debut = null;
+		for (GareOriente go : gos.values())
+			if (go.getVoisin2() == null) {
+				debut = go;
+				break;
+			}
+		if (debut == null)
+			throw new Exception("Impossible de trouver un début de ligne");
+
+		while (debut != null) {
+			gares.add(debut);
+			if (gares.contains(gos.get(debut.getVoisin1())))
+				debut = gos.get(debut.getVoisin2());
+			else
+				debut = gos.get(debut.getVoisin1());
+		}
+		return gares;
 	}
 }
