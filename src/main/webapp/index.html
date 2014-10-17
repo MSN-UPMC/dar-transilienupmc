@@ -138,76 +138,28 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Diagramme camembert -->
 	<script src="js/highcharts.js"></script>
-	<!-- Notre biblioteque JS -->
-	<script src="js/transilienUPMC.js"></script>
 	<!-- Map JS  -->
 	<script src="lib/leaflet-0.7.3/leaflet.js"></script>
+	<!-- Notre biblioteque JS -->
+	<script src="js/transilienUPMC.js"></script>
 </body>
 
 <!--  PARTIE APPEL API (KEVIN) -->
 <!-- Tout à la fin de la page html: -->
 <script>
-	/*
-	var init = function() {
-		var rootApi = 'http://localhost:8080/_ah/api';
-		gapi.client.load('todos', 'v1', function() {
-			console.log("todos api loaded");
-		}, rootApi);
-		// Appeler l'api todos
-		gapi.client.todos.list().execute(function(resp) {
-			console.log(resp);
-		});
-	}*/
-	
-	
-	
-	
-// Message d'attente pour le client - chargement de la carte
+// Affichage message de chargement
 $("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
-$("#modalAlertDiv div[class='modal-body']").text("Création de la carte");
 $("#modalAlertDiv").modal("show");
-// Mettre le map a la coordonnee au demarrage 
-// Sur Chatelet Paris en position 48.858755;48.858755
-// Avec un zoom de niveau 13
-var map = L.map('map').setView([48.858755, 2.347531], 13);
-
-// Utilisation dun title(cartographie) mapbox avec ma cle session 
-// Zoom de niveau 18 maximum autoriser
-L.tileLayer('https://{s}.tiles.mapbox.com/v3/magstellon.joaljn60/{z}/{x}/{y}.png', {
-    maxZoom: 18
-}).addTo(map);
-
-// Initialise l'environnement
-main();
-
-// Appel AJAX pour recuperer la liste des gares
-
-// Variable pour stocker un point de la carte
-var marker;
-// Message d'attente pour le client - retour de lappel ajax et placement des gares sur carte et select
-$("#modalAlertDiv div[class='modal-body']").text("Chargement des gares");
-// Call ajax sur l'API listGares et retourne le JSON dans la variable data
-$.get(environnement.routes["getGaresList"], function(data) {	
-	for(i in data.items){
-		/* Maj de la MAP */
-		// Creation dune variable temporaire pour stocker une coordonnee
-		point = data.items[i];
-		// On crée un point sur la carte
-		marker = L.marker([ parseFloat(point.lattitude),parseFloat(point.longitude)]).addTo(map);
-		// On ajoute les informations info bulle à ce point
-		marker.bindPopup("<b>"+point.nom+"</b><br>Code UIC : "+point.codeUIC+".");
-		
-		/* Maj du select dans la section 'Informations sur une gare' */
-		$("#collapseTwo select").append("<option>"+point.nom+"</option>");
-	}
-	$("#modalAlertDiv").modal("hide");
-});
-
-
-
-
 	
-		
+// Initialise l'environnement et données
+initDataModel();
+// Initialise la carte
+initMap();
+// Initialise les evenements et injection de donnée
+initUIEvent();
+
+// Enlever message d'attente
+$("#modalAlertDiv").modal("hide");		
 </script>
 <!--<script src="https://apis.google.com/js/client.js?onload=init"></script>-->
 </html>
