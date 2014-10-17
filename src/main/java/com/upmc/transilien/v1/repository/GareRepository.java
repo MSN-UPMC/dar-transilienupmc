@@ -54,6 +54,8 @@ public class GareRepository {
 	 */
 	public Gare findGareByCode(int codeUIC) {
 		List<Gare> gares = ofy().load().type(Gare.class).filter("codeUIC =", codeUIC).list();
+		if (gares.isEmpty())
+			gares = ofy().load().type(Gare.class).filter("codeUIC2 =", codeUIC).list();
 		return (gares.isEmpty() ? null : gares.get(0));
 	}
 
@@ -93,7 +95,7 @@ public class GareRepository {
 	 * @return la gare
 	 */
 	public Gare create(Gare gare) {
-		if (ofy().load().type(Gare.class).filter("codeUIC =", gare.getCodeUIC()).list().isEmpty())
+		if (ofy().load().type(Gare.class).filter("codeUIC in", gare.getCodesUIC()).list().isEmpty())
 			ofy().save().entity(gare).now();
 		else
 			throw new Error("Une gare possède déjà ce numéro UIC.");

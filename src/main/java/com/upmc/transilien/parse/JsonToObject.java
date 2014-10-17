@@ -14,7 +14,6 @@ import org.json.simple.parser.ParseException;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
-import com.upmc.transilien.v1.repository.ItineraireRepository;
 import com.upmc.transilien.v1.repository.LigneRepository;
 
 /**
@@ -39,23 +38,20 @@ public class JsonToObject {
 		JSONParser parser = new JSONParser();
 		JSONArray array = (JSONArray) parser.parse(new FileReader(filename));
 		for (int i = 0; i < array.size(); i++) {
-			JSONObject gare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
-			int codeUIC = Integer.parseInt((String) gare.get("code_uic"));
+			JSONObject jsonGare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
+			int codeUIC = Integer.parseInt((String) jsonGare.get("code_uic"));
 
-			String nom = (String) gare.get("libelle");
-			JSONArray coordGPS = (JSONArray) gare.get("coord_gps_wgs84");
+			String nom = (String) jsonGare.get("libelle");
+			JSONArray coordGPS = (JSONArray) jsonGare.get("coord_gps_wgs84");
 			Double latitude = (Double) coordGPS.get(0), longitude = (Double) coordGPS.get(1);
 
-			if (gares.containsKey(nom)) {
-				if (ItineraireRepository.getInstance().prochainDepart(gares.get(nom).getCodeUIC()).isEmpty()) {
-					if (ItineraireRepository.getInstance().prochainDepart(codeUIC).isEmpty())
-						throw new Exception("Aucun des 2 doublons de la gare : " + nom + " ne donne de résultat sur l'API Transilien.\nCodeUIC : " + codeUIC
-								+ " | " + gares.get(nom).getCodeUIC() + ".");
-					else
-						gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
-				}
-			} else
-				gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
+			// if (gares.containsKey(nom)) {
+			// Gare gare = gares.get(nom);
+			// if (ItineraireRepository.getInstance().prochainDepart(gare.codeUIC()[0]).isEmpty()) {
+			// gare.ajouteUIC(codeUIC, true);
+			// }
+			// } else
+			gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
 
 		}
 
@@ -66,8 +62,8 @@ public class JsonToObject {
 	/**
 	 * Charge les lignes à partir d'un fichier JSON<br>
 	 * <br>
-	 * La fonction parse le fichier puis parcours les gares. A chaque gare, on l'ajoute à la ligne correspondante. La fonction se termine en sauvegardant les
-	 * lignes.
+	 * La fonction parse le fichier puis parcours les gares. A chaque gare, on l'ajoute à la ligne correspondante. La
+	 * fonction se termine en sauvegardant les lignes.
 	 * 
 	 * @param filename
 	 *            le nom du fichier (sncf-lignes-par-gares-idf.json)
@@ -113,39 +109,50 @@ public class JsonToObject {
 				if (!lignes.containsKey(s))
 					lignes.put(s, new Ligne(s));
 				int codeUIC = Integer.parseInt((String) jsonLigne.get("code_uic"));
-				/* Cas d'une gare doublon, on ne l'ajoute pas la ligne. */
-				if (GareRepository.getInstance().findGareByCode(codeUIC) == null)
-					continue;
 				lignes.get(s).addGares(codeUIC);
 			}
 	}
 
 	// TODO effacer le test
-	// public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
+	// public static void main(String[] args) throws Exception {
 	// String s = "";
 	//
 	// /* Test loadGare */
-	// // JSONParser parser = new JSONParser();
-	// // JSONArray array = (JSONArray) parser.parse(new FileReader("src/main/webapp/ressources/sncf-gares-et-arrets-transilien-ile-de-france.json"));
-	// //
-	// // for (int i = 0; i < array.size(); i++) {
-	// // JSONObject gare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
-	// // int codeUIC = Integer.parseInt((String) gare.get("code_uic"));
-	// //
-	// // String nom = (String) gare.get("libelle");
-	// // JSONArray coordGPS = (JSONArray) gare.get("coord_gps_wgs84");
-	// // Double longitude = (Double) coordGPS.get(1), lattitude = (Double) coordGPS.get(0);
-	// //
-	// // s += new Gare(nom, codeUIC, longitude, lattitude).toString();
-	// // }
+	// Map<String, Gare> gares = new HashMap<String, Gare>();
+	//
+	// JSONParser parser = new JSONParser();
+	// JSONArray array = (JSONArray) parser.parse(new FileReader(
+	// "src/main/webapp/ressources/sncf-gares-et-arrets-transilien-ile-de-france.json"));
+	// for (int i = 0; i < array.size(); i++) {
+	// JSONObject jsonGare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
+	// int codeUIC = Integer.parseInt((String) jsonGare.get("code_uic"));
+	//
+	// String nom = (String) jsonGare.get("libelle");
+	// JSONArray coordGPS = (JSONArray) jsonGare.get("coord_gps_wgs84");
+	// Double latitude = (Double) coordGPS.get(0), longitude = (Double) coordGPS.get(1);
+	//
+	// if (gares.containsKey(nom)) {
+	// Gare gare = gares.get(nom);
+	// if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.codeUIC()[0])).isEmpty()) {
+	// gare.ajouteUIC(codeUIC, true);
+	// }
+	// } else
+	// gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
+	//
+	// }
+	//
+	// for (Gare g : gares.values())
+	// if (g.nom().equals("NATION"))
+	// s += g.toString();
 	// /* FIN Test loadGare */
 	//
-	// /* Test loadLigne */
+	// // /* Test loadLigne */
 	// // String[] lTrain = { "h", "j", "k", "l", "n", "p", "r", "u" }, lRER = { "a", "b", "c", "d", "e" };
 	// // Map<String, Ligne> lignes = new HashMap<String, Ligne>();
 	// //
 	// // JSONParser parser = new JSONParser();
-	// // JSONArray array = (JSONArray) parser.parse(new FileReader("src/main/webapp/ressources/sncf-lignes-par-gares-idf.json"));
+	// // JSONArray array = (JSONArray) parser.parse(new FileReader(
+	// // "src/main/webapp/ressources/sncf-lignes-par-gares-idf.json"));
 	// //
 	// // for (int i = 0; i < array.size(); i++) {
 	// // JSONObject jsonLigne = (JSONObject) ((JSONObject) array.get(i)).get("fields");

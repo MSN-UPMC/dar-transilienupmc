@@ -18,7 +18,7 @@ public class Train {
 	@Index
 	private int depart, terminus;
 	@Index
-	private int numero;
+	private String numero;
 	@Index
 	private String codeMission;
 	private String date;
@@ -47,7 +47,7 @@ public class Train {
 	 * @param etat
 	 *            l'état du train
 	 */
-	public Train(int depart, int terminus, int numero, String codeMission, String date, @AlsoLoad("etat") String etat) {
+	public Train(int depart, int terminus, String numero, String codeMission, String date, @AlsoLoad("etat") String etat) {
 		super();
 		this.depart = depart;
 		this.terminus = terminus;
@@ -60,42 +60,42 @@ public class Train {
 	/**
 	 * @return le codeUIC de la gare de départ
 	 */
-	public int getDepart() {
+	public int depart() {
 		return depart;
 	}
 
 	/**
 	 * @return le codeUIC du terminus
 	 */
-	public int getTerminus() {
+	public int terminus() {
 		return terminus;
 	}
 
 	/**
 	 * @return son numéro
 	 */
-	public int getNumero() {
+	public String numero() {
 		return numero;
 	}
 
 	/**
 	 * @return son code mission
 	 */
-	public String getCodeMission() {
+	public String codeMission() {
 		return codeMission;
 	}
 
 	/**
 	 * @return son horaire de départ
 	 */
-	public String getDate() {
+	public String date() {
 		return date;
 	}
 
 	/**
 	 * @return son état
 	 */
-	public EtatTrain getEtat() {
+	public EtatTrain etat() {
 		return etat;
 	}
 
@@ -104,19 +104,23 @@ public class Train {
 		String result = "";
 		// switch (etat) {
 		// case RAS:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " partira de " + getDepart().getNom() + " à " + date
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " partira de "
+		// + getDepart().getNom() + " à " + date
 		// + ".";
 		// break;
 		// case RETARD:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ " + getDepart().getNom() + " à " + date
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ "
+		// + getDepart().getNom() + " à " + date
 		// + " est retardé.";
 		// break;
 		// case SUP:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ " + getDepart().getNom() + " à " + date
+		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ "
+		// + getDepart().getNom() + " à " + date
 		// + " est supprimé.";
 		// break;
 		// }
-		result = "Le train " + codeMission + "n°" + numero + " terminus : " + terminus + " partira de " + depart + " à " + date + ".";
+		result = "Le train " + codeMission + "n°" + numero + " terminus : " + terminus + " partira de " + depart
+				+ " à " + date + ".";
 		return result + "\n";
 	}
 

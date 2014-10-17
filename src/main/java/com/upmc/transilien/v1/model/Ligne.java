@@ -19,7 +19,6 @@ public class Ligne {
 	private Long id;
 	@Index
 	private String nom;
-	@Index
 	private List<Integer> gares;
 
 	/**

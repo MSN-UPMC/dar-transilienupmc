@@ -41,8 +41,8 @@ public class XMLToObject {
 			List<Element> listTrains = racine.getChildren("train");
 
 			for (Element elt : listTrains) {
-				Train t = new Train(depart, Integer.parseInt(elt.getChildText("term")), Integer.parseInt(elt.getChildText("num")), elt.getChildText("miss"),
-						elt.getChildText("date"), elt.getChildText("etat"));
+				Train t = new Train(depart, Integer.parseInt(elt.getChildText("term")), elt.getChildText("num"),
+						elt.getChildText("miss"), elt.getChildText("date"), elt.getChildText("etat"));
 				TrainRepository.getInstance().create(t);
 				trains.add(t);
 			}

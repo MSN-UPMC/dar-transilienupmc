@@ -62,8 +62,7 @@ public class LignesEndPoint {
 	}
 
 	/**
-	 * Charge les lignes existantes depuis un fichier JSON statique présent sur
-	 * le serveur
+	 * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
 	 * 
 	 * @return OK ou un message d'erreur
 	 */
@@ -71,23 +70,18 @@ public class LignesEndPoint {
 	public Text loadLigne() {
 		if (LigneRepository.getInstance().findLigne().isEmpty())
 			try {
-				JsonToObject
-						.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
+				JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
 				return new Text("OK");
 			} catch (IOException | ParseException e) {
-				return new Text(System.getProperties().get("user.dir") + "\n"
-						+ e.getMessage());
+				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
 			}
 		else
 			return new Text("Deja fait.");
 	}
 
 	@ApiMethod(name = "ligneOriente", httpMethod = ApiMethod.HttpMethod.POST, path = "ligneOriente")
-	public Collection<Gare> ligneOriente(
-			@Named("nom de la ligne") String nomLigne) throws Exception {
+	public Collection<Gare> ligneOriente(@Named("nom de la ligne") String nomLigne) throws Exception {
 		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
-		LigneOriente lo = new LigneOriente();
-		lo.execute(ligne);
-		return lo.goodOrder();
+		return LigneOriente.execute(ligne);
 	}
 }

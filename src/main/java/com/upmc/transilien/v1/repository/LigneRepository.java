@@ -52,8 +52,7 @@ public class LigneRepository {
 	 * @return la ligne qui correspond au nom donné
 	 */
 	public Ligne findLigneByName(String nom) {
-		List<Ligne> tmp = ofy().load().type(Ligne.class).filter("nom", nom)
-				.list();
+		List<Ligne> tmp = ofy().load().type(Ligne.class).filter("nom", nom).list();
 		return tmp == null ? null : tmp.get(0);
 	}
 
@@ -70,20 +69,17 @@ public class LigneRepository {
 	 */
 	public List<Gare> findGarePerLigne(String ligne) {
 		List<Gare> gares;
-		List<Ligne> lignes = ofy().load().type(Ligne.class)
-				.filter("nom = ", ligne).list();
+		List<Ligne> lignes = ofy().load().type(Ligne.class).filter("nom = ", ligne).list();
 		if (ligne.isEmpty())
 			gares = null;
 		else {
 			gares = new ArrayList<Gare>();
 			for (Integer codeUIC : lignes.get(0).getGares()) {
-				Gare gare = GareRepository.getInstance()
-						.findGareByCode(codeUIC);
+				Gare gare = GareRepository.getInstance().findGareByCode(codeUIC);
 				if (gare != null)
 					gares.add(gare);
 				else
-					throw new Error("La gare de code " + codeUIC
-							+ " n'existe pas ...");
+					throw new Error("La gare de code " + codeUIC + " n'existe pas ...");
 			}
 		}
 		return gares;
@@ -97,12 +93,16 @@ public class LigneRepository {
 	 * @return la liste des lignes qui passent par la gare
 	 */
 	public List<Ligne> findLignePerGare(int codeUIC) {
+		Integer[] tCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
+
 		List<Ligne> lignes = ofy().load().type(Ligne.class).list();
 		List<Ligne> returnList = new ArrayList<Ligne>();
 		for (Ligne l : lignes) {
-			if (l.getGares().contains(codeUIC)) {
-				returnList.add(l);
-			}
+			List<Integer> lGares = l.getGares();
+			for (int i : tCode)
+				if (lGares.contains(i)) {
+					returnList.add(l);
+				}
 		}
 		return returnList;
 	}
@@ -115,8 +115,7 @@ public class LigneRepository {
 	 * @return la ligne
 	 */
 	public Ligne create(Ligne ligne) {
-		if (ofy().load().type(Ligne.class).filter("codeUIC =", ligne.getNom())
-				.list().isEmpty())
+		if (ofy().load().type(Ligne.class).filter("nom =", ligne.getNom()).list().isEmpty())
 			ofy().save().entity(ligne).now();
 		else
 			throw new Error("Une ligne possède déjà ce nom.");

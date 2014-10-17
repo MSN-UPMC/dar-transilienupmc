@@ -1,5 +1,6 @@
 package com.upmc.transilien.v1.repository;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -50,13 +51,18 @@ public class ItineraireRepository {
 	 * @throws Exception
 	 */
 	public Collection<Train> prochainDepart(int codeUIC) throws Exception {
-		return XMLToObject.parseTrain(TransilienRequest.prochainDepart(codeUIC));
+		Integer[] tabCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
+
+		List<Train> trains = new ArrayList<Train>();
+		for (int i : tabCode)
+			trains.addAll(XMLToObject.parseTrain(TransilienRequest.prochainDepart(i)));
+		return trains;
 	}
 
 	/**
 	 * Recherche les prochains départ depuis une gare vers une autre.<br>
-	 * L'API SNCF ne gère pas les changements, c'est à nous de réaliser un algorithme sous une autre fonction capable de trouver un itinéraire à partir du plan
-	 * des lignes.
+	 * L'API SNCF ne gère pas les changements, c'est à nous de réaliser un algorithme sous une autre fonction capable de
+	 * trouver un itinéraire à partir du plan des lignes.
 	 * 
 	 * @param departUIC
 	 *            le codeUIC de la gare de départ
@@ -66,7 +72,14 @@ public class ItineraireRepository {
 	 * @throws Exception
 	 */
 	public Collection<Train> prochainDepart(int departUIC, int destinationUIC) throws Exception {
-		return XMLToObject.parseTrain(TransilienRequest.prochainDepart(departUIC, destinationUIC));
+		Integer[] tDepartCode = GareRepository.getInstance().findGareByCode(departUIC).getCodesUIC();
+		Integer[] tDestCode = GareRepository.getInstance().findGareByCode(departUIC).getCodesUIC();
+
+		List<Train> trains = new ArrayList<Train>();
+		for (int i : tDepartCode)
+			for (int j : tDestCode)
+				trains.addAll(XMLToObject.parseTrain(TransilienRequest.prochainDepart(i, j)));
+		return trains;
 	}
 
 	/**

@@ -2,6 +2,7 @@ package com.upmc.transilien.v1.repository;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -55,7 +56,11 @@ public class TrainRepository {
 	 * @return les trains partant de la gare
 	 */
 	public Collection<Train> findTrainsByDepart(int depart) {
-		List<Train> trains = ofy().load().type(Train.class).filter("depart = ", depart).list();
+		Integer[] tCode = GareRepository.getInstance().findGareByCode(depart).getCodesUIC();
+		List<Train> trains = new ArrayList<Train>();
+		for (int i : tCode) {
+			trains.addAll(ofy().load().type(Train.class).filter("depart = ", i).list());
+		}
 		return trains;
 	}
 
@@ -68,7 +73,11 @@ public class TrainRepository {
 	 * @return
 	 */
 	public Collection<Train> findTrainsByTerminus(int terminus) {
-		List<Train> trains = ofy().load().type(Train.class).filter("terminus = ", terminus).list();
+		Integer[] tCode = GareRepository.getInstance().findGareByCode(terminus).getCodesUIC();
+		List<Train> trains = new ArrayList<Train>();
+		for (int i : tCode) {
+			trains.addAll(ofy().load().type(Train.class).filter("terminus = ", i).list());
+		}
 		return trains;
 	}
 
@@ -79,7 +88,7 @@ public class TrainRepository {
 	 *            son numéro
 	 * @return le train correspondant
 	 */
-	public Train findTrainsByNumero(int numero) {
+	public Train findTrainsByNumero(String numero) {
 		List<Train> trains = ofy().load().type(Train.class).filter("numero = ", numero).list();
 		return (trains.isEmpty() ? null : trains.get(0));
 	}
@@ -116,7 +125,7 @@ public class TrainRepository {
 	 * @return le train
 	 */
 	public Train create(Train train) {
-		if (ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
+		if (ofy().load().type(Train.class).filter("numero =", train.numero()).list().isEmpty())
 			ofy().save().entity(train).now();
 		else
 			// TODO effectuer des opérations de mise à jour

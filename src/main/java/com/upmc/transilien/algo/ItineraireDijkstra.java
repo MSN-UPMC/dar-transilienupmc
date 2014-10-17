@@ -15,10 +15,11 @@ import com.upmc.transilien.v1.repository.LigneRepository;
 
 /**
  * Algorithme Dijkstra qui calcule les itinéraires pour se rendre d'une gare A à une gare B.<br>
- * L'API transilien ce limite au gare sur la même ligne, nous allons plus loin et proposons un itinéraire optimisé multi-ligne.<br>
+ * L'API transilien ce limite au gare sur la même ligne, nous allons plus loin et proposons un itinéraire optimisé
+ * multi-ligne.<br>
  * <br>
- * Le manque d'info sur la cartographie des lignes ne nous permet pas pour le moment de créer un algorithme optimisé, on ne se limite pas au gare voisine mais
- * on essai avec chaque gare de la ligne.
+ * Le manque d'info sur la cartographie des lignes ne nous permet pas pour le moment de créer un algorithme optimisé, on
+ * ne se limite pas au gare voisine mais on essai avec chaque gare de la ligne.
  * 
  * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
@@ -104,7 +105,7 @@ public class ItineraireDijkstra {
 	 */
 	public void execute() {
 		/** 1) Recherche d'un directe */
-		List<Ligne> testInitial = LigneRepository.getInstance().findLignePerGare(depart.gare.getCodeUIC());
+		List<Ligne> testInitial = LigneRepository.getInstance().findLignePerGare(depart.gare.getCodesUIC()[0]);
 		for (Ligne ligne : testInitial) {
 			List<Gare> lGare = LigneRepository.getInstance().findGarePerLigne(ligne.getNom());
 			if (lGare.contains(destination.gare)) {
@@ -120,31 +121,36 @@ public class ItineraireDijkstra {
 			GareDijkstra gareDijk = tas.poll();
 
 			/** 2.1) On itère sur les lignes qui passent par la gare */
-			List<Ligne> lignes = LigneRepository.getInstance().findLignePerGare(gareDijk.gare.getCodeUIC());
+			List<Ligne> lignes = LigneRepository.getInstance().findLignePerGare(gareDijk.gare.getCodesUIC()[0]);
 			for (Ligne ligne : lignes) {
 
 				/** 2.2) On itère sur les gares de chaque lignes */
 				List<Gare> lGare = LigneRepository.getInstance().findGarePerLigne(ligne.getNom());
 				for (Gare g : lGare) {
-					GareDijkstra tmp = mapGare.get(g.getCodeUIC());
+					GareDijkstra tmp = mapGare.get(g.getCodesUIC()[0]);
+					if (tmp == null && g.getCodesUIC()[1] != null)
+						tmp = mapGare.get(g.getCodesUIC()[1]);
 					double newDist = gareDijk.gare.calcule(g) + gareDijk.distance;
 
 					/**
 					 * 3 cas possibles :
 					 * <ul>
-					 * <li>La gare n'existe pas dans la map, c'est la premiere fois qu'on la traite. On créer une nouvelle gareDijkstra et l'ajoute à la map.</li>
-					 * <li>La gare existe dans la map et la distance est inférieur à celle calculé, on conserve la gare en l'état et on passe à la suivante.</li>
-					 * <li>La gare existe mais la distance est amélioré via le nouveau chemin, on met à jour la distance.</li>
+					 * <li>La gare n'existe pas dans la map, c'est la premiere fois qu'on la traite. On créer une
+					 * nouvelle gareDijkstra et l'ajoute à la map.</li>
+					 * <li>La gare existe dans la map et la distance est inférieur à celle calculé, on conserve la gare
+					 * en l'état et on passe à la suivante.</li>
+					 * <li>La gare existe mais la distance est amélioré via le nouveau chemin, on met à jour la
+					 * distance.</li>
 					 * </ul>
 					 * <p>
-					 * Par la suite, en dehors du cas n°2 ou l'on passe à la gare suivante, on ajoute / modifie le prédécesseur pour coller au chemin courant,
-					 * on actualise aussi le tas pour y ajouter la gare
+					 * Par la suite, en dehors du cas n°2 ou l'on passe à la gare suivante, on ajoute / modifie le
+					 * prédécesseur pour coller au chemin courant, on actualise aussi le tas pour y ajouter la gare
 					 * </p>
 					 */
 					if (tmp == null) {
 						// 1ere fois qu'on traite la gare
 						tmp = new GareDijkstra(g, newDist);
-						mapGare.put(g.getCodeUIC(), tmp);
+						mapGare.put(g.getCodesUIC()[0], tmp);
 					} else if (tmp.lt(newDist)) {
 						// La gare a déjà été parcouru et sa distance est meilleurs.
 						continue;
