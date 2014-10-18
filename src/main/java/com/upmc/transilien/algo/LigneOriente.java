@@ -49,6 +49,46 @@ public class LigneOriente {
 	}
 
 	/**
+	 * Sous classe pour répresenter les voisins lors de l'algo
+	 * 
+	 * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
+	 *
+	 */
+	static class Voisin {
+		private String voisin1;
+		private String voisin2;
+	}
+
+	/**
+	 * ajoute un voisin en commencant par le voisin1.
+	 * 
+	 * @param voisine
+	 *            la gare voisine ajoutée
+	 * @return vrai si les 2 gares sont remplis
+	 * @throws Exception
+	 *             si les 2 gares sont rempli avant l'appel à cette fonction
+	 */
+	private static boolean ajoute(Map<String, Voisin> voisins, String courante, String voisine, boolean recursion)
+			throws Exception {
+		boolean result = false;
+		String voisin1 = voisins.get(courante).voisin1;
+		String voisin2 = voisins.get(courante).voisin2;
+
+		if (voisin1 == null)
+			voisin1 = voisine;
+		else if (voisin2 == null) {
+			voisin2 = voisine;
+			result = true;
+		} else
+			throw new Exception("Les 2 voisins sont déjà rempli, qu'est ce que t'as foutu sur l'algo ...");
+
+		if (recursion) {
+			result = ajoute(voisins, voisine, courante, false);
+		}
+		return result;
+	}
+
+	/**
 	 * Execute l'algorithme qui calcule des gares orientées.
 	 * 
 	 * @param ligne
@@ -66,6 +106,13 @@ public class LigneOriente {
 			aTraiter.add(gare.getNom());
 			gos.put(gare.getNom(), gare);
 		}
+
+		/**
+		 * 2) On associe a chaque gare un Voisin
+		 */
+		Map<String, Voisin> voisins = new HashMap<String, Voisin>();
+		for (String nomGare : gos.keySet())
+			voisins.put(nomGare, new Voisin());
 
 		/**
 		 * On traite chaque gare de la ligne
@@ -92,7 +139,9 @@ public class LigneOriente {
 			/**
 			 * 5) Tant que la file n'est pas vide, on recherche les voisins pour les ajouters.
 			 */
-			while (!distances.isEmpty() && (gareElt.getVoisin1() == null || gareElt.getVoisin2() == null)) {
+			String voisin1 = voisins.get(gareElt.getNom()).voisin1;
+			String voisin2 = voisins.get(gareElt.getNom()).voisin2;
+			while (!distances.isEmpty() && (voisin1 == null || voisin2 == null)) {
 				Couple c = distances.poll();
 				Gare voisinPotentielle = gos.get(c.nom);
 
@@ -100,11 +149,11 @@ public class LigneOriente {
 				 * 5.1) Le voisin1 est null, le voisin2 aussi par construction.<br>
 				 * On indique aux gares qu'elles sont voisines.
 				 */
-				if (gareElt.getVoisin1() == null) {
-					if (gareElt.ajoute(voisinPotentielle, true))
-						aTraiter.remove((Object) voisinPotentielle.getCodeUIC());
+				if (voisin1 == null) {
+					if (ajoute(voisins, gareElt.getNom(), voisinPotentielle.getNom(), true))
+						aTraiter.remove((Object) voisinPotentielle.getNom());
 				} else {
-					if (gareElt.getVoisin2() != null)
+					if (voisin2 != null)
 						throw new Exception("Il y a une couille dans l'algo.");
 					/**
 					 * 5.2) Le voisin2 est null, sinon c'est qu'il y a un soucis de construction.<br>
@@ -112,26 +161,27 @@ public class LigneOriente {
 					 * Si la valeur absolu de l'angle est > à 45° alors le voisin doit bien appartenir à le côté opposé
 					 * de la ligne et on indique aux gares qu'elles sont voisines.
 					 */
-					Gare vois1 = gos.get(gareElt.getVoisin1());
-					Vecteur vect1 = new Vecteur(gareElt.getLatitude(), gareElt.getLongitude(), vois1.getLatitude(),
-							vois1.getLongitude()), vect2 = new Vecteur(gareElt.getLatitude(), gareElt.getLongitude(),
-							voisinPotentielle.getLatitude(), voisinPotentielle.getLongitude());
+					Gare gareVoisine = gos.get(voisin1);
+					Vecteur vect1 = new Vecteur(gareElt.getLatitude(), gareElt.getLongitude(),
+							gareVoisine.getLatitude(), gareVoisine.getLongitude()), vect2 = new Vecteur(
+							gareElt.getLatitude(), gareElt.getLongitude(), voisinPotentielle.getLatitude(),
+							voisinPotentielle.getLongitude());
 					if (Math.abs(vect1.angle(vect2)) > angleMinimumOpposition) {
-						if (gareElt.ajoute(voisinPotentielle, true))
-							aTraiter.remove((Object) voisinPotentielle.getCodeUIC());
+						if (ajoute(voisins, gareElt.getNom(), voisinPotentielle.getNom(), true))
+							aTraiter.remove((Object) voisinPotentielle.getNom());
 					}
 				}
 			}
 		}
-		return goodOrder(gos);
+		return goodOrder(gos, voisins);
 	}
 
-	private static Collection<Gare> goodOrder(Map<String, Gare> gos) throws Exception {
+	private static Collection<Gare> goodOrder(Map<String, Gare> gos, Map<String, Voisin> voisins) throws Exception {
 		List<Gare> gares = new ArrayList<Gare>();
 
 		Gare debut = null;
 		for (Gare go : gos.values())
-			if (go.getVoisin2() == null) {
+			if (voisins.get(go.getNom()).voisin2 == null) {
 				debut = go;
 				break;
 			}
@@ -140,10 +190,10 @@ public class LigneOriente {
 
 		while (debut != null) {
 			gares.add(debut);
-			if (gares.contains(gos.get(debut.getVoisin1())))
-				debut = gos.get(debut.getVoisin2());
+			if (gares.contains(gos.get(voisins.get(debut.getNom()).voisin1)))
+				debut = gos.get(voisins.get(debut.getNom()).voisin2);
 			else
-				debut = gos.get(debut.getVoisin1());
+				debut = gos.get(voisins.get(debut.getNom()).voisin1);
 		}
 		return gares;
 	}
