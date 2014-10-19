@@ -12,21 +12,9 @@ function initDataModel() {
 	environnement.gares = new Array();
 	environnement.lignes = new Array();
 	
-	environnement.host = "https://supple-flux-704.appspot.com/_ah/api/gares";
+	environnement.host = "https://transilien-upmc.appspot.com/_ah/api";
 	environnement.routes = new Array();
-	environnement.routes["getGaresList"] = environnement.host+"/v1/list";
-	
-	// Message d'attente pour le client - chargement des données des gares 
-	$("#modalAlertDiv div[class='modal-body']").text("Chargement des gares");
-	// Appel Ajax synchrone - données critique
-	$.ajaxSetup({async: false});
-	$.get(environnement.routes["getGaresList"], function(data) {
-		for(i in data.items){	
-			gare = data.items[i];
-			environnement.gares[gare.codeUIC]= new Gare(gare.nom,parseInt(gare.codeUIC),parseFloat(gare.longitude),parseFloat(gare.lattitude));			
-		}
-	});
-	$.ajaxSetup({async: true});
+	environnement.routes["getGaresList"] = environnement.host+"/gares/v1/getGares";
 }
 
 /**
@@ -190,84 +178,4 @@ Ligne.traiteReponse = function(json) {
 	$("#listeLigne").html(s);
 }
 
-
-// ############################
-// ############################
-// ########### MAP ############
-// ############################
-// ############################
-
-/**
- * Création de l'environnement
- */
-function initMap() {
-
-	// Si l'environnement n'est pas crée alors lancé une exception
-	if(environnement === undefined){
-		lancerException("L'environnement n'est pas initialisé.");
-	}
-	
-	// Message d'attente pour le client - creation de la carte
-	$("#modalAlertDiv div[class='modal-body']").text("Création de la carte");
-
-	
-	// Mettre le map a la coordonnee au demarrage 
-	// Sur Chatelet Paris en position 48.858755;48.858755
-	// Avec un zoom de niveau 13
-	var map = L.map('map').setView([48.858755, 2.347531], 13);
-	
-
-	// Utilisation dun title(cartographie) mapbox avec ma cle session 
-	// Zoom de niveau 18 maximum autoriser
-	L.tileLayer('https://{s}.tiles.mapbox.com/v3/magstellon.joaljn60/{z}/{x}/{y}.png', {
-		maxZoom: 18,
-		minZoom: 9
-	}).addTo(map);
-	
-
-	environnement.map = {};
-	environnement.map.instance = map;
-	environnement.map.markers = new Array();
-	
-
-	// Message d'attente pour le client - placement des gares sur carte
-	$("#modalAlertDiv div[class='modal-body']").text("Génération de la carte");
-	for(i in environnement.gares){
-		/* Maj de la MAP */
-		// Creation dune variable temporaire pour stocker une gare
-		gare = environnement.gares[i];
-		// On crée un point sur la carte
-		marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1'}).addTo(environnement.map.instance);
-		environnement.map.markers[gare.codeUIC] = marker; 
-		// On ajoute les informations info bulle à cette gare
-		marker.bindPopup("<b>"+gare.nom+"</b><br>Code UIC : "+gare.codeUIC+".");
-			
-		/* Maj du select dans la section 'Informations sur une gare' */
-		$("#collapseTwo select").append("<option data-uic="+gare.codeUIC+">"+gare.nom+"</option>");
-	}
-}
-
-
-function initUIEvent(){
-	// Attendre la fin du charement de la page et creation du DOM
-	$(function() {
-		// Message d'attente pour le client - initiation evenmenet ui + injection donnée
-		$("#modalAlertDiv div[class='modal-body']").text("Initialisation de l'interface graphique");
-		for(i in environnement.gares){
-			/* Maj du select dans la section 'Informations sur une gare' */
-			$("#collapseTwo select").append("<option data-uic="+gare.codeUIC+">"+gare.nom+"</option>");
-		}
-		// Evenement sur la recherche d'info sur une gare - deplace la map sur la gare et ouvre la popup d'info
-		$('#collapseTwo form button[type="submit"]').click(function(e) {
-		  e.preventDefault();
-		  e.stopPropagation();
-		  
-		  codeUIC = $('#collapseTwo form option:selected').attr('data-uic');
-		  environnement.map.instance.setView(environnement.map.markers[codeUIC].getLatLng());
-		  environnement.map.instance.setZoom(15);
-		  environnement.map.markers[codeUIC].openPopup();
-		});			
-	});
-
-}
 

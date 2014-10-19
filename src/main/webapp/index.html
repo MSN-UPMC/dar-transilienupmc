@@ -140,8 +140,11 @@
 	<script src="js/highcharts.js"></script>
 	<!-- Map JS  -->
 	<script src="lib/leaflet-0.7.3/leaflet.js"></script>
-	<!-- Notre biblioteque JS -->
-	<script src="js/transilienUPMC.js"></script>
+	<!-- Nos biblioteques JS -->
+	<script src="js/main.js"></script>
+	<script src="js/gare.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/ui.js"></script>
 </body>
 
 <!--  PARTIE APPEL API (KEVIN) -->
@@ -151,8 +154,10 @@
 $("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
 $("#modalAlertDiv").modal("show");
 	
-// Initialise l'environnement et données
+// Initialise l'environnement et modele de donnees
 initDataModel();
+// Recupere les donnees relatifs aux gares
+initGare();
 // Initialise la carte
 initMap();
 // Initialise les evenements et injection de donnée
