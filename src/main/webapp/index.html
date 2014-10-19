@@ -143,6 +143,7 @@
 	<!-- Nos biblioteques JS -->
 	<script src="js/main.js"></script>
 	<script src="js/gare.js"></script>
+	<script src="js/ligne.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/ui.js"></script>
 </body>
@@ -156,8 +157,9 @@ $("#modalAlertDiv").modal("show");
 	
 // Initialise l'environnement et modele de donnees
 initDataModel();
-// Recupere les donnees relatifs aux gares
+// Initialisation des données
 initGare();
+initLigne();
 // Initialise la carte
 initMap();
 // Initialise les evenements et injection de donnée

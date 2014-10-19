@@ -15,6 +15,9 @@ function initDataModel() {
 	environnement.host = "https://transilien-upmc.appspot.com/_ah/api";
 	environnement.routes = new Array();
 	environnement.routes["getGaresList"] = environnement.host+"/gares/v1/getGares";
+	environnement.routes["getLignes"] = environnement.host+"/lignes/v1/getLignes";
+
+	
 }
 
 /**
@@ -128,7 +131,7 @@ function Ligne(nom, gares) {
 		lancerException("Les paramètres ne correspondent pas au typage de la fonction Ligne");
 	}
 	// Si environnement ligne n'est pas initialisé, on déclanche une exception
-	if (typeof environnement.ligne === "undefined"){
+	if (typeof environnement.lignes === "undefined"){
 		lancerException("L'environnement Ligne n'est pas initialisé");
 	}
 
@@ -136,8 +139,8 @@ function Ligne(nom, gares) {
 	this.gares = gares;
 
 	// Si la ligne n'existe pas dans l'environnement Ligne
-	if (typeof environnement.ligne[nom] === "undefined")
-		environnement.ligne[nom] = this;
+	if (typeof environnement.lignes[nom] === "undefined")
+		environnement.lignes[nom] = this;
 }
 
 /**

@@ -12,6 +12,7 @@ function initUIEvent(){
 		$("#modalAlertDiv div[class='modal-body']").text("Initialisation de l'interface graphique");
 		for(i in environnement.gares){
 			/* Maj du select dans la section 'Informations sur une gare' */
+			gare = environnement.gares[i];
 			$("#collapseTwo select").append("<option data-uic="+gare.codeUIC+">"+gare.nom+"</option>");
 		}
 		// Evenement sur la recherche d'info sur une gare - deplace la map sur la gare et ouvre la popup d'info
