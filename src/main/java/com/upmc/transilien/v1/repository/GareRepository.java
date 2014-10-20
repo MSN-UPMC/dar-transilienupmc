@@ -3,7 +3,6 @@ package com.upmc.transilien.v1.repository;
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.googlecode.objectify.ObjectifyService;
@@ -41,7 +40,7 @@ public class GareRepository {
 	 * 
 	 * @return toutes les gares disponibles
 	 */
-	public Collection<Gare> findGares() {
+	public List<Gare> findGares() {
 		return ofy().load().type(Gare.class).list();
 	}
 
@@ -100,5 +99,18 @@ public class GareRepository {
 		else
 			throw new Error("Une gare possède déjà ce numéro UIC.");
 		return gare;
+	}
+
+	/**
+	 * Supprimer une gare dans le système de persistance, est utilisé par le filtre des gares via les lignes.
+	 * 
+	 * @param id
+	 *            l'id de la gare
+	 */
+	public void remove(Long id) {
+		if (id == null) {
+			return;
+		}
+		ofy().delete().type(Gare.class).id(id).now();
 	}
 }

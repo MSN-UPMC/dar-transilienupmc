@@ -8,8 +8,6 @@ import java.util.List;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
-import com.google.appengine.api.datastore.Text;
-import com.upmc.transilien.parse.JsonToObject;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.repository.GareRepository;
 
@@ -80,26 +78,4 @@ public class GaresEndPoint {
 	// }
 	// return retour;
 	// }
-
-	/**
-	 * Charge les gares depuis un fichier statique présent sur le serveur.<br>
-	 * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
-	 * 
-	 * @return OK si cela c'est bien passé, le message d'erreur sinon
-	 * @throws Exception
-	 */
-	@ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.POST, path = "loadGare")
-	public Text loadGare() {
-		if (GareRepository.getInstance().findGares().isEmpty())
-			try {
-				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
-				return new Text("OK");
-				// } catch (IOException | ParseException e) {
-				// return new Text(System.getProperties().get("user.dir") + "     ->     " + e);
-			} catch (Exception e) {
-				return new Text(System.getProperties().get("user.dir") + "     ->     " + e);
-			}
-		else
-			return new Text("Deja fait.");
-	}
 }

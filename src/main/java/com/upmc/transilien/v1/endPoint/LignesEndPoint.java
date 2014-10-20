@@ -1,17 +1,12 @@
 package com.upmc.transilien.v1.endPoint;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
-
-import org.json.simple.parser.ParseException;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
-import com.google.appengine.api.datastore.Text;
 import com.upmc.transilien.algo.LigneOriente;
-import com.upmc.transilien.parse.JsonToObject;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.LigneRepository;
@@ -59,24 +54,6 @@ public class LignesEndPoint {
 	@ApiMethod(name = "getLigneByGare", httpMethod = ApiMethod.HttpMethod.GET, path = "getLigneByGare")
 	public List<Ligne> getLigneByGare(@Named("codeUIC") int codeUIC) {
 		return LigneRepository.getInstance().findLignePerGare(codeUIC);
-	}
-
-	/**
-	 * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
-	 * 
-	 * @return OK ou un message d'erreur
-	 */
-	@ApiMethod(name = "loadLigne", httpMethod = ApiMethod.HttpMethod.POST, path = "loadLigne")
-	public Text loadLigne() {
-		if (LigneRepository.getInstance().findLigne().isEmpty())
-			try {
-				JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
-				return new Text("OK");
-			} catch (IOException | ParseException e) {
-				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
-			}
-		else
-			return new Text("Deja fait.");
 	}
 
 	@ApiMethod(name = "ligneOriente", httpMethod = ApiMethod.HttpMethod.POST, path = "ligneOriente")

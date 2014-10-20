@@ -11,6 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.upmc.transilien.request.TransilienRequest;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
@@ -45,13 +46,15 @@ public class JsonToObject {
 			JSONArray coordGPS = (JSONArray) jsonGare.get("coord_gps_wgs84");
 			Double latitude = (Double) coordGPS.get(0), longitude = (Double) coordGPS.get(1);
 
-			// if (gares.containsKey(nom)) {
-			// Gare gare = gares.get(nom);
-			// if (ItineraireRepository.getInstance().prochainDepart(gare.codeUIC()[0]).isEmpty()) {
-			// gare.ajouteUIC(codeUIC, true);
-			// }
-			// } else
-			gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
+			if (gares.containsKey(nom)) {
+				Gare gare = gares.get(nom);
+				if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.getCodesUIC()[0])).isEmpty()) {
+					gare.ajouteUIC(codeUIC, true);
+				} else {
+					gare.ajouteUIC(codeUIC, false);
+				}
+			} else
+				gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
 
 		}
 
@@ -62,8 +65,8 @@ public class JsonToObject {
 	/**
 	 * Charge les lignes à partir d'un fichier JSON<br>
 	 * <br>
-	 * La fonction parse le fichier puis parcours les gares. A chaque gare, on l'ajoute à la ligne correspondante. La
-	 * fonction se termine en sauvegardant les lignes.
+	 * La fonction parse le fichier puis parcours les gares. A chaque gare, on l'ajoute à la ligne correspondante. La fonction se termine en sauvegardant les
+	 * lignes.
 	 * 
 	 * @param filename
 	 *            le nom du fichier (sncf-lignes-par-gares-idf.json)
@@ -113,7 +116,7 @@ public class JsonToObject {
 			}
 	}
 
-	// TODO effacer le test
+	// // TODO effacer le test
 	// public static void main(String[] args) throws Exception {
 	// String s = "";
 	//
@@ -121,8 +124,7 @@ public class JsonToObject {
 	// Map<String, Gare> gares = new HashMap<String, Gare>();
 	//
 	// JSONParser parser = new JSONParser();
-	// JSONArray array = (JSONArray) parser.parse(new FileReader(
-	// "src/main/webapp/ressources/sncf-gares-et-arrets-transilien-ile-de-france.json"));
+	// JSONArray array = (JSONArray) parser.parse(new FileReader("src/main/webapp/ressources/sncf-gares-et-arrets-transilien-ile-de-france.json"));
 	// for (int i = 0; i < array.size(); i++) {
 	// JSONObject jsonGare = (JSONObject) ((JSONObject) array.get(i)).get("fields");
 	// int codeUIC = Integer.parseInt((String) jsonGare.get("code_uic"));
@@ -133,8 +135,10 @@ public class JsonToObject {
 	//
 	// if (gares.containsKey(nom)) {
 	// Gare gare = gares.get(nom);
-	// if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.codeUIC()[0])).isEmpty()) {
+	// if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.getCodesUIC()[0])).isEmpty()) {
 	// gare.ajouteUIC(codeUIC, true);
+	// } else {
+	// gare.ajouteUIC(codeUIC, false);
 	// }
 	// } else
 	// gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
@@ -142,7 +146,7 @@ public class JsonToObject {
 	// }
 	//
 	// for (Gare g : gares.values())
-	// if (g.nom().equals("NATION"))
+	// if (g.getCodeUIC2() != null)
 	// s += g.toString();
 	// /* FIN Test loadGare */
 	//

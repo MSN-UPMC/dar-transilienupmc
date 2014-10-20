@@ -53,6 +53,13 @@ public class Gare implements Comparable<Gare> {
 	}
 
 	/**
+	 * @return l'id de la gare
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
 	 * @return son nom
 	 */
 	public String getNom() {
@@ -112,18 +119,18 @@ public class Gare implements Comparable<Gare> {
 	 * @return la distance entre la gare courante et la gare cible
 	 */
 	public Double calcule(Gare o) {
-		return Math.sqrt(Math.pow(longitude - o.longitude, 2) + Math.pow(latitude - o.latitude, 2));
+		double latLongToMeters = 111319.49079327;
+		double deltaLat = (latitude - o.latitude) * latLongToMeters, deltaLong = (longitude - o.longitude) * latLongToMeters;
+		return Math.sqrt(Math.pow(deltaLat, 2) + Math.pow(deltaLong, 2));
 	}
 
 	@Override
 	public String toString() {
 		String s = "";
 		if (codeUIC2 != null) {
-			s = "Gare [nom=" + nom + ", codeUIC=[" + codeUIC + ", " + codeUIC2 + "], longitude=" + longitude
-					+ ", lattitude=" + latitude + "]\n";
+			s = "Gare [nom=" + nom + ", codeUIC=[" + codeUIC + ", " + codeUIC2 + "], longitude=" + longitude + ", lattitude=" + latitude + "]\n";
 		} else
-			s = "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude
-					+ "]\n";
+			s = "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude + "]\n";
 		return s;
 	}
 
