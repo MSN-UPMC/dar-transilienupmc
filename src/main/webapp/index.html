@@ -34,11 +34,11 @@
 				  <div class="panel-body">
 				  <form role="form">
 					  <div class="form-group">
-						<label for="adresseDepart">Départ</label>
+						<label for="adresseDepart">Départ</label></br>
 						<input type="text" class="form-control" id="adresseDepart" placeholder="Entrer votre départ">
 					  </div>
 					  <div class="form-group">
-						<label for="adresseDestination">Destination</label>
+						<label for="adresseDestination">Destination</label></br>
 						<input type="text" class="form-control" id="adresseDestination" placeholder="Entrer votre destination">
 					  </div>
 					  <button type="submit" class="btn btn-primary">Chercher votre itinéraire</button>
@@ -60,12 +60,12 @@
 					<div class="panel-body">
 						<form role="form">
 						  <div class="form-group">
-							<label for="selectionGare">Selectionner une gare</label>
-							 <select class="form-control">
-							</select>
+							<label for="selectionGare">Selectionner votre gare</label></br>
+							<input id="rechercherGare" type="text" class="form-control"  placeholder="Entrer votre gare">
 						  </div>
 						  <button type="submit" class="btn btn-primary">Afficher les informations</button>
 						</form>	
+
 					</div>
 				</div>
 			  </div>
@@ -140,6 +140,8 @@
 	<script src="js/highcharts.js"></script>
 	<!-- Map JS  -->
 	<script src="lib/leaflet-0.7.3/leaflet.js"></script>
+	<!-- Autocompletion JS -->
+	<script src="js/typeahead.bundle.min.js"></script>
 	<!-- Nos biblioteques JS -->
 	<script src="js/main.js"></script>
 	<script src="js/gare.js"></script>

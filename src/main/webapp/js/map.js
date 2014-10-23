@@ -57,7 +57,7 @@ function initGareOnMap(){
 		// Si il y a qu'une seule ligne => couleur de la ligne 
 		else{
 			couleur = environnement.lignes.couleurs[lignes[0]];
-			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1',color: couleur, fillColor :couleur}).setRadius(8).addTo(environnement.map.instance);		
+			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1', fillOpacity:'0.5',color: couleur, fillColor :couleur}).setRadius(8).addTo(environnement.map.instance);		
 		}
 
 		
@@ -95,7 +95,7 @@ function getLignesOfAGare(codeUICInput){
 	}
 	
 	if( output.length == 0){
-		lancerException("La gare avec le codeUIC "+codeUICInput+" n'est liée à aucune ligne dans la fonction getLignesOfAGare");
+		//lancerException("La gare avec le codeUIC "+codeUICInput+" n'est liée à aucune ligne dans la fonction getLignesOfAGare");
 	}
 	
 	return output;
@@ -106,10 +106,10 @@ function getLignesOfAGare(codeUICInput){
 function getLignesOfAGareToHTML(lignesOfAGareArray){
 
 	if( !(lignesOfAGareArray instanceof Array) ){
-		lancerException("Les paramètres ne correspondent pas au typage de la fonction getLignesOfAGare");
+		//lancerException("Les paramètres ne correspondent pas au typage de la fonction getLignesOfAGare");
 	}
 	if( lignesOfAGareArray.length == 0){
-		lancerException("Le paramètre de la fonction getLignesOfAGareToHTML ne contient aucun élement");
+		//lancerException("Le paramètre de la fonction getLignesOfAGareToHTML ne contient aucun élement");
 	}
 
 	var output = '';
