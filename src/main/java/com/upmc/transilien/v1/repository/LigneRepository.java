@@ -5,6 +5,7 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
@@ -119,6 +120,25 @@ public class LigneRepository {
 			ofy().save().entity(ligne).now();
 		else
 			throw new Error("Une ligne possède déjà ce nom.");
+		return ligne;
+	}
+
+	/**
+	 * Modifie la ligne dans le système de persistance.
+	 * 
+	 * @param editedLigne
+	 *            la ligne modifié
+	 * @return la ligne original modifié
+	 */
+	public Ligne update(Ligne editedLigne) {
+		if (editedLigne.getNom() == null) {
+			return null;
+		}
+
+		Ligne ligne = ofy().load().key(Key.create(Ligne.class, editedLigne.getId())).now();
+		ligne.setGares(editedLigne.getGares());
+		ofy().save().entity(ligne).now();
+
 		return ligne;
 	}
 }

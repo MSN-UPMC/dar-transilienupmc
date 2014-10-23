@@ -40,6 +40,13 @@ public class Ligne {
 	}
 
 	/**
+	 * @return l'id de la gare
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
 	 * @return son nom
 	 */
 	public String getNom() {
@@ -62,6 +69,16 @@ public class Ligne {
 	public void addGares(int gare) {
 		if (!gares.contains(gare))
 			gares.add(gare);
+	}
+
+	/**
+	 * modifie les gares de la ligne
+	 * 
+	 * @param newGares
+	 *            la nouvelle liste de gares
+	 */
+	public void setGares(List<Integer> newGares) {
+		gares = newGares;
 	}
 
 	@Override

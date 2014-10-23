@@ -1,14 +1,25 @@
 package com.upmc.transilien.v1.endPoint;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import org.json.simple.parser.ParseException;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.PreparedQuery;
+import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Text;
 import com.upmc.transilien.algo.Initialisation;
+import com.upmc.transilien.algo.LigneOriente;
 import com.upmc.transilien.parse.JsonToObject;
+import com.upmc.transilien.v1.model.Gare;
+import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
 import com.upmc.transilien.v1.repository.LigneRepository;
 
@@ -29,6 +40,35 @@ public class InitialisationEndPoint {
 		loadGare();
 		loadLigne();
 		filtreGareNonTransilien();
+
+		for (Ligne ligne : LigneRepository.getInstance().findLigne()) {
+			try {
+				Collection<Gare> gares;
+				gares = LigneOriente.execute(ligne);
+				List<Integer> lCodeUIC = new ArrayList<Integer>();
+				for (Gare gare : gares)
+					lCodeUIC.add(gare.getCodeUIC());
+				ligne.setGares(lCodeUIC);
+				LigneRepository.getInstance().update(ligne);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				// e.printStackTrace();
+			}
+		}
+	}
+
+	/**
+	 * Nettoie la dataStore
+	 */
+	@ApiMethod(name = "clean", httpMethod = ApiMethod.HttpMethod.GET, path = "clean")
+	public void clean() {
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+
+		Query mydeleteq = new Query();
+		PreparedQuery pq = datastore.prepare(mydeleteq);
+		for (Entity result : pq.asIterable()) {
+			datastore.delete(result.getKey());
+		}
 	}
 
 	/**
@@ -64,6 +104,8 @@ public class InitialisationEndPoint {
 				return new Text("OK");
 			} catch (IOException | ParseException e) {
 				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+			} catch (Exception e) {
+				return new Text("Erreur surement dut à l'orientation des lignes.");
 			}
 		else
 			return new Text("Deja fait.");

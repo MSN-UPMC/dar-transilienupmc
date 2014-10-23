@@ -191,23 +191,28 @@ public class LigneOriente {
 		List<Gare> gares = new ArrayList<Gare>();
 		List<String> aTraiter = new ArrayList<String>(gos.keySet());
 
-		while (aTraiter != null) {
-			Gare debut = null;
-			for (Gare go : gos.values())
-				if (voisins.get(go.getNom()).voisin2 == null) {
-					debut = go;
+		// Tant qu'il y a des gares
+		while (!aTraiter.isEmpty()) {
+			Gare debut = gos.get(aTraiter.get(0));
+
+			// On recherche un terminus de la ligne
+			for (String gareCourante : aTraiter) {
+				if (voisins.get(gareCourante).voisin2 == null) {
+					debut = gos.get(gareCourante);
 					break;
 				}
-			if (debut == null)
-				throw new Exception("Impossible de trouver un début de ligne");
+			}
 
+			// On ajoute dans l'ordre qui sont voisines
 			while (debut != null) {
 				gares.add(debut);
-				aTraiter.remove(debut);
-				if (gares.contains(gos.get(voisins.get(debut.getNom()).voisin1)))
+				aTraiter.remove(debut.getNom());
+				if (!gares.contains(gos.get(voisins.get(debut.getNom()).voisin1)))
+					debut = gos.get(voisins.get(debut.getNom()).voisin1);
+				else if (!gares.contains(gos.get(voisins.get(debut.getNom()).voisin2)))
 					debut = gos.get(voisins.get(debut.getNom()).voisin2);
 				else
-					debut = gos.get(voisins.get(debut.getNom()).voisin1);
+					debut = null;
 			}
 		}
 		return gares;

@@ -6,9 +6,11 @@ import java.util.List;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
+import com.google.appengine.api.datastore.Text;
 import com.upmc.transilien.algo.LigneOriente;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
+import com.upmc.transilien.v1.repository.GareRepository;
 import com.upmc.transilien.v1.repository.LigneRepository;
 
 /**
@@ -60,5 +62,18 @@ public class LignesEndPoint {
 	public Collection<Gare> ligneOriente(@Named("nom de la ligne") String nomLigne) throws Exception {
 		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
 		return LigneOriente.execute(ligne);
+	}
+
+	@ApiMethod(name = "lO", httpMethod = ApiMethod.HttpMethod.POST, path = "lO")
+	public Text ligneO(@Named("nom de la ligne") String nomLigne) throws Exception {
+		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
+		Collection<Gare> lo = LigneOriente.execute(ligne);
+		String s = "";
+		for (Integer code : ligne.getGares()) {
+			Gare g = GareRepository.getInstance().findGareByCode(code);
+			if (!lo.contains(g))
+				s += g.getNom();
+		}
+		return new Text("origine : " + ligne.getGares().size() + "         modif : " + lo.size() + (s.isEmpty() ? "" : "                          " + s));
 	}
 }

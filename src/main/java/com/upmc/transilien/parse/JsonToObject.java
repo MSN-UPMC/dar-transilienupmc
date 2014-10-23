@@ -1,17 +1,13 @@
 package com.upmc.transilien.parse;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import com.upmc.transilien.request.TransilienRequest;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
@@ -48,11 +44,11 @@ public class JsonToObject {
 
 			if (gares.containsKey(nom)) {
 				Gare gare = gares.get(nom);
-				if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.getCodesUIC()[0])).isEmpty()) {
-					gare.ajouteUIC(codeUIC, true);
-				} else {
-					gare.ajouteUIC(codeUIC, false);
-				}
+				// if (XMLToObject.parseTrain(TransilienRequest.prochainDepart(gare.getCodesUIC()[0])).isEmpty()) {
+				// gare.ajouteUIC(codeUIC, true);
+				// } else {
+				gare.ajouteUIC(codeUIC, false);
+				// }
 			} else
 				gares.put(nom, new Gare(nom, codeUIC, longitude, latitude));
 
@@ -70,11 +66,9 @@ public class JsonToObject {
 	 * 
 	 * @param filename
 	 *            le nom du fichier (sncf-lignes-par-gares-idf.json)
-	 * @throws FileNotFoundException
-	 * @throws IOException
-	 * @throws ParseException
+	 * @throws Exception
 	 */
-	public static void loadLigne(String filename) throws FileNotFoundException, IOException, ParseException {
+	public static void loadLigne(String filename) throws Exception {
 
 		String[] lTrain = { "h", "j", "k", "l", "n", "p", "r", "u" }, lRER = { "a", "b", "c", "d", "e" };
 		Map<String, Ligne> lignes = new HashMap<String, Ligne>();
