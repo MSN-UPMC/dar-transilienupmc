@@ -69,13 +69,12 @@ function initUIEvent(){
 		  e.stopPropagation();
 		  
 		  var codeUIC;
-		  
-  		for(i in environnement.gares){
-			if(environnement.gares[i].nom === $('#rechercherGare').text()){
+		  for(i in environnement.gares){
+			if(environnement.gares[i].nom === $('#rechercherGare').typeahead('val')){
 				codeUIC = environnement.gares[i].codeUIC;
 				break;
 			}
-		}
+		  }
 
 		  
 		  //codeUIC = $('#collapseTwo form option:selected').attr('data-uic');

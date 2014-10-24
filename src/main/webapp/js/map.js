@@ -34,6 +34,7 @@ function initMap() {
 	environnement.map.markers = new Array();
 	
 	initGareOnMap();
+	initLigneOnMap();
 	
 }
 
@@ -95,7 +96,7 @@ function getLignesOfAGare(codeUICInput){
 	}
 	
 	if( output.length == 0){
-		//lancerException("La gare avec le codeUIC "+codeUICInput+" n'est liée à aucune ligne dans la fonction getLignesOfAGare");
+		lancerException("La gare avec le codeUIC "+codeUICInput+" n'est liée à aucune ligne dans la fonction getLignesOfAGare");
 	}
 	
 	return output;
@@ -106,10 +107,10 @@ function getLignesOfAGare(codeUICInput){
 function getLignesOfAGareToHTML(lignesOfAGareArray){
 
 	if( !(lignesOfAGareArray instanceof Array) ){
-		//lancerException("Les paramètres ne correspondent pas au typage de la fonction getLignesOfAGare");
+		lancerException("Les paramètres ne correspondent pas au typage de la fonction getLignesOfAGare");
 	}
 	if( lignesOfAGareArray.length == 0){
-		//lancerException("Le paramètre de la fonction getLignesOfAGareToHTML ne contient aucun élement");
+		lancerException("Le paramètre de la fonction getLignesOfAGareToHTML ne contient aucun élement");
 	}
 
 	var output = '';
@@ -125,6 +126,29 @@ function getLignesOfAGareToHTML(lignesOfAGareArray){
 
 function initLigneOnMap(){
 
-// Faire tracage des lignes 
+	// Recup toutes les lignes
+	for(i in environnement.lignes){
+		
+		// recup la ligne i de la liste
+		ligne = environnement.lignes[i];
+		$.ajaxSetup({async: false});
+		// appell ajax vers les ligne oriente
+		$.get(environnement.routes["ligneOriente"]+"?nom+de+la+ligne="+ligne.nom, function(data) {
+			// Liste des points 2d quil faut relier par une ligne
+			polyline = [];
+			// pour toute les gare de la ligne
+			for(i in data.items){
+				gare = data.items[i];
+				// recuperation des coordone de la gare a relier par la ligne
+				polyline.push(L.latLng(gare.latitude,gare.longitude));		
+			}
+			// ajout à la map de la ligne
+			L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1'}).addTo(environnement.map.instance);
+		});		
+		$.ajaxSetup({async: true});
+		
+	}
+
+
 
 }
