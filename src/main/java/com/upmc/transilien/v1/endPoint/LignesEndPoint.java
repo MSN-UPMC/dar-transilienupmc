@@ -58,22 +58,30 @@ public class LignesEndPoint {
 		return LigneRepository.getInstance().findLignePerGare(codeUIC);
 	}
 
-	@ApiMethod(name = "ligneOriente", httpMethod = ApiMethod.HttpMethod.POST, path = "ligneOriente")
-	public Collection<Gare> ligneOriente(@Named("nom de la ligne") String nomLigne) throws Exception {
+	@ApiMethod(name = "ligneOriente", httpMethod = ApiMethod.HttpMethod.GET, path = "ligneOriente")
+	public List<List<Gare>> ligneOriente(@Named("nom de la ligne") String nomLigne) throws Exception {
 		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
 		return LigneOriente.execute(ligne);
 	}
 
-	@ApiMethod(name = "lO", httpMethod = ApiMethod.HttpMethod.POST, path = "lO")
+	@ApiMethod(name = "lO", httpMethod = ApiMethod.HttpMethod.GET, path = "lO")
 	public Text ligneO(@Named("nom de la ligne") String nomLigne) throws Exception {
 		Ligne ligne = LigneRepository.getInstance().findLigneByName(nomLigne);
-		Collection<Gare> lo = LigneOriente.execute(ligne);
+		List<List<Gare>> lo = LigneOriente.execute(ligne);
 		String s = "";
-		for (Integer code : ligne.getGares()) {
-			Gare g = GareRepository.getInstance().findGareByCode(code);
-			if (!lo.contains(g))
-				s += g.getNom();
-		}
+		for (List<Integer> lCode : ligne.getGares())
+			for (Integer code : lCode) {
+				Gare g = GareRepository.getInstance().findGareByCode(code);
+
+				boolean find = false;
+				for (List<Gare> lGare : lo)
+					if (lGare.contains(g)) {
+						find = true;
+						break;
+					}
+				if (!find)
+					s += g.getNom();
+			}
 		return new Text("origine : " + ligne.getGares().size() + "         modif : " + lo.size() + (s.isEmpty() ? "" : "                          " + s));
 	}
 }

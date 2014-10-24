@@ -1,7 +1,6 @@
 package com.upmc.transilien.algo;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -96,18 +95,19 @@ public class LigneOriente {
 	 * @param ligne
 	 * @throws Exception
 	 */
-	public static Collection<Gare> execute(Ligne ligne) throws Exception {
+	public static List<List<Gare>> execute(Ligne ligne) throws Exception {
 		Map<String, Gare> gos = new HashMap<String, Gare>();
 		/**
 		 * 1) On ajoute à une map toutes les gares de la ligne
 		 */
-		List<Integer> garesLigne = new ArrayList<Integer>(ligne.getGares());
+		List<List<Integer>> llCodeLigne = new ArrayList<List<Integer>>(ligne.getGares());
 		List<String> aTraiter = new ArrayList<String>();
-		for (Integer ite : garesLigne) {
-			Gare gare = GareRepository.getInstance().findGareByCode(ite);
-			aTraiter.add(gare.getNom());
-			gos.put(gare.getNom(), gare);
-		}
+		for (List<Integer> lCode : llCodeLigne)
+			for (Integer ite : lCode) {
+				Gare gare = GareRepository.getInstance().findGareByCode(ite);
+				aTraiter.add(gare.getNom());
+				gos.put(gare.getNom(), gare);
+			}
 
 		/**
 		 * 2) On associe a chaque gare un Voisin
@@ -187,12 +187,13 @@ public class LigneOriente {
 	 * @return les gares dans l'ordre de la ligne
 	 * @throws Exception
 	 */
-	private static Collection<Gare> goodOrder(Map<String, Gare> gos, Map<String, Voisin> voisins) throws Exception {
-		List<Gare> gares = new ArrayList<Gare>();
+	private static List<List<Gare>> goodOrder(Map<String, Gare> gos, Map<String, Voisin> voisins) throws Exception {
+		List<List<Gare>> lGares = new ArrayList<List<Gare>>();
 		List<String> aTraiter = new ArrayList<String>(gos.keySet());
 
 		// Tant qu'il y a des gares
 		while (!aTraiter.isEmpty()) {
+			List<Gare> gares = new ArrayList<Gare>();
 			Gare debut = gos.get(aTraiter.get(0));
 
 			// On recherche un terminus de la ligne
@@ -214,7 +215,8 @@ public class LigneOriente {
 				else
 					debut = null;
 			}
+			lGares.add(gares);
 		}
-		return gares;
+		return lGares;
 	}
 }

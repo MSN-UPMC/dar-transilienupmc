@@ -43,12 +43,16 @@ public class InitialisationEndPoint {
 
 		for (Ligne ligne : LigneRepository.getInstance().findLigne()) {
 			try {
-				Collection<Gare> gares;
+				List<List<Gare>> gares;
 				gares = LigneOriente.execute(ligne);
-				List<Integer> lCodeUIC = new ArrayList<Integer>();
-				for (Gare gare : gares)
-					lCodeUIC.add(gare.getCodeUIC());
-				ligne.setGares(lCodeUIC);
+				List<List<Integer>> llCode = new ArrayList<List<Integer>>();
+				for (List<Gare> lGare : gares) {
+					List<Integer> lCodeUIC = new ArrayList<Integer>();
+					for (Gare gare : lGare)
+						lCodeUIC.add(gare.getCodeUIC());
+					llCode.add(lCodeUIC);
+				}
+				ligne.setGares(llCode);
 				LigneRepository.getInstance().update(ligne);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block

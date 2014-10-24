@@ -1,5 +1,8 @@
 package com.upmc.transilien.v1.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
@@ -83,9 +86,13 @@ public class Gare implements Comparable<Gare> {
 	/**
 	 * @return ses codeUIC
 	 */
-	public Integer[] getCodesUIC() {
-		Integer[] tmp = { codeUIC, codeUIC2 };
-		return tmp;
+	public List<Integer> getCodesUIC() {
+		List<Integer> result = new ArrayList<Integer>();
+		if (codeUIC != null)
+			result.add(codeUIC);
+		if (codeUIC2 != null)
+			result.add(codeUIC2);
+		return result;
 	}
 
 	public void ajouteUIC(Integer codeUIC2, boolean swap) {
@@ -122,16 +129,6 @@ public class Gare implements Comparable<Gare> {
 		double latLongToMeters = 111319.49079327;
 		double deltaLat = (latitude - o.latitude) * latLongToMeters, deltaLong = (longitude - o.longitude) * latLongToMeters;
 		return Math.sqrt(Math.pow(deltaLat, 2) + Math.pow(deltaLong, 2));
-	}
-
-	@Override
-	public String toString() {
-		String s = "";
-		if (codeUIC2 != null) {
-			s = "Gare [nom=" + nom + ", codeUIC=[" + codeUIC + ", " + codeUIC2 + "], longitude=" + longitude + ", lattitude=" + latitude + "]\n";
-		} else
-			s = "Gare [nom=" + nom + ", codeUIC=" + codeUIC + ", longitude=" + longitude + ", lattitude=" + latitude + "]\n";
-		return s;
 	}
 
 	@Override

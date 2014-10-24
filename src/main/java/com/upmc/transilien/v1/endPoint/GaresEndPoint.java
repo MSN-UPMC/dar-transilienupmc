@@ -60,22 +60,4 @@ public class GaresEndPoint {
 	public List<String> getGareName() {
 		return GareRepository.getInstance().findGaresName();
 	}
-
-	// /**
-	// * @return les gares en double
-	// */
-	// @ApiMethod(name = "doublon", httpMethod = ApiMethod.HttpMethod.GET, path
-	// = "doublon")
-	// public Collection<Gare> doublon() {
-	// Collection<Gare> gares = GareRepository.getInstance().findGares();
-	// List<Gare> retour = new ArrayList<Gare>();
-	// List<String> vu = new ArrayList<String>();
-	// for (Gare g : gares) {
-	// if (vu.contains(g.getNom()))
-	// retour.add(g);
-	// else
-	// vu.add(g.getNom());
-	// }
-	// return retour;
-	// }
 }

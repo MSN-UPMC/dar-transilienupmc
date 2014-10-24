@@ -60,7 +60,7 @@ public class LigneRepository {
 	/**
 	 * Recherche les gares de la ligne
 	 * 
-	 * @param ligne
+	 * @param nomLigne
 	 *            le nom de la ligne.<br>
 	 *            <ul>
 	 *            <li><i>Train :</i>H / J / K / L / N / P / R / U</li>
@@ -68,19 +68,22 @@ public class LigneRepository {
 	 *            </ul>
 	 * @return les gares de la ligne choisie
 	 */
-	public List<Gare> findGarePerLigne(String ligne) {
+	public List<Gare> findGarePerLigne(String nomLigne) {
 		List<Gare> gares;
-		List<Ligne> lignes = ofy().load().type(Ligne.class).filter("nom = ", ligne).list();
-		if (ligne.isEmpty())
+		List<Ligne> lignes = ofy().load().type(Ligne.class).filter("nom = ", nomLigne).list();
+		Ligne ligne = (lignes.isEmpty() ? null : lignes.get(0));
+		if (ligne == null)
 			gares = null;
 		else {
 			gares = new ArrayList<Gare>();
-			for (Integer codeUIC : lignes.get(0).getGares()) {
-				Gare gare = GareRepository.getInstance().findGareByCode(codeUIC);
-				if (gare != null)
-					gares.add(gare);
-				else
-					throw new Error("La gare de code " + codeUIC + " n'existe pas ...");
+			for (List<Integer> lcodeUIC : ligne.getGares()) {
+				for (Integer codeUIC : lcodeUIC) {
+					Gare gare = GareRepository.getInstance().findGareByCode(codeUIC);
+					if (gare != null)
+						gares.add(gare);
+					else
+						throw new Error("La gare de code " + codeUIC + " n'existe pas ...");
+				}
 			}
 		}
 		return gares;
@@ -94,16 +97,24 @@ public class LigneRepository {
 	 * @return la liste des lignes qui passent par la gare
 	 */
 	public List<Ligne> findLignePerGare(int codeUIC) {
-		Integer[] tCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
+		List<Integer> tCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
 
 		List<Ligne> lignes = ofy().load().type(Ligne.class).list();
 		List<Ligne> returnList = new ArrayList<Ligne>();
 		for (Ligne l : lignes) {
-			List<Integer> lGares = l.getGares();
-			for (int i : tCode)
-				if (lGares.contains(i)) {
-					returnList.add(l);
+			boolean find = false;
+			for (List<Integer> lCodeUIC : l.getGares()) {
+				List<Integer> lGares = lCodeUIC;
+				for (int i : tCode) {
+					if (lGares.contains(i)) {
+						returnList.add(l);
+						find = true;
+						break;
+					}
 				}
+				if (find)
+					break;
+			}
 		}
 		return returnList;
 	}

@@ -23,7 +23,8 @@ public class Train {
 	private String codeMission;
 	private String date;
 	@Index
-	private EtatTrain etat;
+	// 0 : ok | 1 : retard | 2 : annulé
+	private Integer etat;
 
 	/**
 	 * nécessaire pour la conversion automatique JSON
@@ -54,74 +55,49 @@ public class Train {
 		this.numero = numero;
 		this.codeMission = codeMission;
 		this.date = date;
-		this.etat = EtatTrain.stringToEtat(etat);
+		this.etat = stringToEtat(etat);
 	}
 
 	/**
 	 * @return le codeUIC de la gare de départ
 	 */
-	public int depart() {
+	public int getDepart() {
 		return depart;
 	}
 
 	/**
 	 * @return le codeUIC du terminus
 	 */
-	public int terminus() {
+	public int getTerminus() {
 		return terminus;
 	}
 
 	/**
 	 * @return son numéro
 	 */
-	public String numero() {
+	public String getNumero() {
 		return numero;
 	}
 
 	/**
 	 * @return son code mission
 	 */
-	public String codeMission() {
+	public String getCodeMission() {
 		return codeMission;
 	}
 
 	/**
 	 * @return son horaire de départ
 	 */
-	public String date() {
+	public String getDate() {
 		return date;
 	}
 
 	/**
 	 * @return son état
 	 */
-	public EtatTrain etat() {
+	public Integer getEtat() {
 		return etat;
-	}
-
-	@Override
-	public String toString() {
-		String result = "";
-		// switch (etat) {
-		// case RAS:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " partira de "
-		// + getDepart().getNom() + " à " + date
-		// + ".";
-		// break;
-		// case RETARD:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ "
-		// + getDepart().getNom() + " à " + date
-		// + " est retardé.";
-		// break;
-		// case SUP:
-		// result = "Le train " + codeMission + "n°" + numero + " terminus : " + getTerminus().getNom() + " et départ "
-		// + getDepart().getNom() + " à " + date
-		// + " est supprimé.";
-		// break;
-		// }
-		result = "Le train " + codeMission + "n°" + numero + " terminus : " + terminus + " partira de " + depart
-				+ " à " + date + ".";
-		return result + "\n";
 	}
 
 	// TODO nécessaire plus tard dans le cas ou l'on suive l'avancement du train
@@ -140,4 +116,18 @@ public class Train {
 	// public void setEtat(EtatTrain etat) {
 	// this.etat = etat;
 	// }
+
+	private static Integer stringToEtat(String etat) {
+		Integer retour = 0;
+		if (etat != null)
+			switch (etat) {
+			case "R":
+				retour = 1;
+				break;
+			case "S":
+				retour = 2;
+				break;
+			}
+		return retour;
+	}
 }

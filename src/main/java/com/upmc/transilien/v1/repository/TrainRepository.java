@@ -56,7 +56,7 @@ public class TrainRepository {
 	 * @return les trains partant de la gare
 	 */
 	public Collection<Train> findTrainsByDepart(int depart) {
-		Integer[] tCode = GareRepository.getInstance().findGareByCode(depart).getCodesUIC();
+		List<Integer> tCode = GareRepository.getInstance().findGareByCode(depart).getCodesUIC();
 		List<Train> trains = new ArrayList<Train>();
 		for (int i : tCode) {
 			trains.addAll(ofy().load().type(Train.class).filter("depart = ", i).list());
@@ -73,7 +73,7 @@ public class TrainRepository {
 	 * @return
 	 */
 	public Collection<Train> findTrainsByTerminus(int terminus) {
-		Integer[] tCode = GareRepository.getInstance().findGareByCode(terminus).getCodesUIC();
+		List<Integer> tCode = GareRepository.getInstance().findGareByCode(terminus).getCodesUIC();
 		List<Train> trains = new ArrayList<Train>();
 		for (int i : tCode) {
 			trains.addAll(ofy().load().type(Train.class).filter("terminus = ", i).list());
@@ -125,7 +125,7 @@ public class TrainRepository {
 	 * @return le train
 	 */
 	public Train create(Train train) {
-		if (ofy().load().type(Train.class).filter("numero =", train.numero()).list().isEmpty())
+		if (ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
 			ofy().save().entity(train).now();
 		else
 			// TODO effectuer des opérations de mise à jour

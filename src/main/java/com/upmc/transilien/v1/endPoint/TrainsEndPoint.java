@@ -22,4 +22,37 @@ public class TrainsEndPoint {
 	public Collection<Train> getTrains() {
 		return TrainRepository.getInstance().findTrains();
 	}
+
+	/**
+	 * Calcule le taux de service des trains.<br>
+	 * Le dataStore limite le nombre d'appel, nous privilégions ici le calcule CPU dans le cas d'une vrai base de donnée ou d'une utilisation payante du
+	 * dataStore, le tout serait en appel à la BDD.
+	 * 
+	 * @return un tableau de pourcentage
+	 */
+	@ApiMethod(name = "serveLevel", httpMethod = ApiMethod.HttpMethod.GET, path = "serveLevel")
+	public double[] serveLevel() {
+		double[] etatDeService = new double[3];
+
+		Collection<Train> trains = TrainRepository.getInstance().findTrains();
+		double nbRetard = 0, nbAnnule = 0;
+		for (Train t : trains)
+			switch (t.getEtat()) {
+			case 1:
+				nbRetard++;
+				break;
+			case 2:
+				nbAnnule++;
+				break;
+
+			default:
+				break;
+			}
+
+		int nbTrains = trains.size();
+		etatDeService[0] = 100 - nbRetard - nbAnnule;
+		etatDeService[1] = nbRetard / nbTrains * 100;
+		etatDeService[2] = nbAnnule / nbTrains * 100;
+		return etatDeService;
+	}
 }

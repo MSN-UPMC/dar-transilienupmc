@@ -1,5 +1,4 @@
 Mag =>
-- Algo de stats
 
 
 
