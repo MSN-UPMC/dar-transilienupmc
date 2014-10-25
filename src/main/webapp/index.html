@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transilien </title>
+<title>Transilien</title>
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,55 +21,58 @@
 	<div id="dashboard" class="col-md-2">
 		<!-- Debut groupe de bloc collapsable -->
 		<div class="panel-group" id="accordion">
-			  <!-- Debut groupe de bloc calculer un intineraire -->		
-			  <div class="panel panel-default">
+			<!-- Debut groupe de bloc calculer un intineraire -->
+			<div class="panel panel-default">
 				<div class="panel-heading">
-				  <h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-					  Calculer un itinéraire
-					</a>
-				  </h4>
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseOne"> Calculer un itinéraire </a>
+					</h4>
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in">
-				  <div class="panel-body">
-				  <form role="form">
-					  <div class="form-group">
-						<label for="adresseDepart">Départ</label></br>
-						<input type="text" class="form-control" id="adresseDepart" placeholder="Entrer votre départ">
-					  </div>
-					  <div class="form-group">
-						<label for="adresseDestination">Destination</label></br>
-						<input type="text" class="form-control" id="adresseDestination" placeholder="Entrer votre destination">
-					  </div>
-					  <button type="submit" class="btn btn-primary">Chercher votre itinéraire</button>
-					</form>				  
-				  </div>
+					<div class="panel-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="adresseDepart">Départ</label><br /> <input
+									type="text" class="form-control" id="adresseDepart"
+									placeholder="Entrer votre départ">
+							</div>
+							<div class="form-group">
+								<label for="adresseDestination">Destination</label><br /> <input
+									type="text" class="form-control" id="adresseDestination"
+									placeholder="Entrer votre destination">
+							</div>
+							<button type="submit" class="btn btn-primary">Chercher
+								votre itinéraire</button>
+						</form>
+					</div>
 				</div>
-			  </div>
-			  <!-- Fin groupe de bloc calculer un intineraire -->
-			  <!-- Debut groupe de bloc information sur une gare -->
-			  <div class="panel panel-default">
+			</div>
+			<!-- Fin groupe de bloc calculer un intineraire -->
+			<!-- Debut groupe de bloc information sur une gare -->
+			<div class="panel panel-default">
 				<div class="panel-heading">
-				  <h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-					  Informations sur une gare
-					</a>
-				  </h4>
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion"
+							href="#collapseTwo"> Informations sur une gare </a>
+					</h4>
 				</div>
 				<div id="collapseTwo" class="panel-collapse collapse">
 					<div class="panel-body">
 						<form role="form">
-						  <div class="form-group">
-							<label for="selectionGare">Selectionner votre gare</label></br>
-							<input id="rechercherGare" type="text" class="form-control"  placeholder="Entrer votre gare">
-						  </div>
-						  <button type="submit" class="btn btn-primary">Afficher les informations</button>
-						</form>	
+							<div class="form-group">
+								<label for="selectionGare">Selectionner votre gare</label><br />
+								<input id="rechercherGare" type="text" class="form-control"
+									placeholder="Entrer votre gare">
+							</div>
+							<button type="submit" class="btn btn-primary">Afficher
+								les informations</button>
+						</form>
 
 					</div>
 				</div>
-			  </div>
-			  <!-- Fin groupe de bloc information sur une gare -->
+			</div>
+			<!-- Fin groupe de bloc information sur une gare -->
 		</div>
 		<!-- Fin groupe de bloc collapsable -->
 	</div>
@@ -84,7 +87,7 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<!-- Fin bouton utile lors du passage au mobile -->				
+				<!-- Fin bouton utile lors du passage au mobile -->
 				<a class="navbar-brand" href="#">Transilien</a>
 			</div>
 			<!-- Debut liste des liens du menu -->
@@ -104,8 +107,7 @@
 							<li class="dropdown-header">Sous titre</li>
 							<li><a href="#">Action 1</a></li>
 							<li><a href="#">Action 2</a></li>
-						</ul>
-					</li>
+						</ul></li>
 					<!-- Fin liste des liens du menu en version dropdown -->
 				</ul>
 			</div>
@@ -114,24 +116,23 @@
 	</div>
 	<!-- Fin contenu de la barre de menu -->
 	<!-- Debut du contenant de la map -->
-	<div id="map">
-	</div>
+	<div id="map"></div>
 	<!-- Fin du contenant de la map-->
-	
-	
+
+
 	<!-- Debut Alert pour affichage du chargement -->
-	<div class="modal fade" id="modalAlertDiv" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h4 class="modal-title" id="myModalLabel"></h4>
-		  </div>
-		  <div class="modal-body">
-		  </div>
+	<div class="modal fade" id="modalAlertDiv" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				</div>
+				<div class="modal-body"></div>
+			</div>
 		</div>
-	  </div>
-	</div>	
-	<!-- Fin Alert pour affichage du chargement -->	
+	</div>
+	<!-- Fin Alert pour affichage du chargement -->
 	<!-- jQuery  -->
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<!-- Bootstrap JS  -->
@@ -153,22 +154,22 @@
 <!--  PARTIE APPEL API (KEVIN) -->
 <!-- Tout à la fin de la page html: -->
 <script>
-// Affichage message de chargement
-$("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
-$("#modalAlertDiv").modal("show");
-	
-// Initialise l'environnement et modele de donnees
-initDataModel();
-// Initialisation des données
-initGare();
-initLigne();
-// Initialise la carte
-initMap();
-// Initialise les evenements et injection de donnée
-initUIEvent();
+	// Affichage message de chargement
+	$("#modalAlertDiv h4[class='modal-title']").text("Chargement en cours ...");
+	$("#modalAlertDiv").modal("show");
 
-// Enlever message d'attente
-$("#modalAlertDiv").modal("hide");		
+	// Initialise l'environnement et modele de donnees
+	initDataModel();
+	// Initialisation des données
+	initGare();
+	initLigne();
+	// Initialise la carte
+	initMap();
+	// Initialise les evenements et injection de donnée
+	initUIEvent();
+
+	// Enlever message d'attente
+	$("#modalAlertDiv").modal("hide");
 </script>
 <!--<script src="https://apis.google.com/js/client.js?onload=init"></script>-->
 </html>

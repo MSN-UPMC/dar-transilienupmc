@@ -13,6 +13,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
  * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
+@SuppressWarnings({ "deprecation", "resource" })
 public class TransilienRequest {
 	private final static String USER_AGENT = "Mozilla/5.0";
 	private static String urlBase = "http://tnhtn175:cgP479kW@api.transilien.com/gare/";
