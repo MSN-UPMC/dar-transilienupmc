@@ -27,13 +27,11 @@ public class Vecteur {
 	 * 
 	 * @param v2
 	 *            le 2 ème vecteur
-	 * @return l'angle en degrè qui separé le vecteur courant de celui donné en
-	 *         argument
+	 * @return l'angle en degrè qui separé le vecteur courant de celui donné en argument
 	 */
 	public double angle(Vecteur v2) {
 		double div = (norme() * v2.norme());
-		return div == 0 ? 0 : Math.acos(produitScalaire(v2) / div) * 180
-				/ Math.PI;
+		return div == 0 ? 0 : Math.acos(produitScalaire(v2) / div) * 180 / Math.PI;
 	}
 
 	/**
@@ -55,13 +53,4 @@ public class Vecteur {
 	public double norme() {
 		return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 	}
-
-	// TODO effacer test
-	// public static void main(String[] args) {
-	// Vecteur v1 = new Vecteur(0, 0, 1, 0), v2 = new Vecteur(1, 1, 2, 2);
-	// System.out.println(v1.norme());
-	// System.out.println(v2.norme());
-	// System.out.println(v1.angle(v1));
-	// System.out.println(v1.angle(v2));
-	// }
 }

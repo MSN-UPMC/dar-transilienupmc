@@ -19,7 +19,7 @@ public class Ligne {
 	private Long id;
 	@Index
 	private String nom;
-	private List<List<Integer>> gares;
+	private List<Integer> gares;
 
 	/**
 	 * nécessaire pour la conversion automatique JSON
@@ -36,8 +36,7 @@ public class Ligne {
 	public Ligne(String nom) {
 		super();
 		this.nom = nom;
-		gares = new ArrayList<List<Integer>>();
-		gares.add(new ArrayList<Integer>());
+		gares = new ArrayList<Integer>();
 	}
 
 	/**
@@ -57,7 +56,7 @@ public class Ligne {
 	/**
 	 * @return les codeUIC des gares qui composent la ligne
 	 */
-	public List<List<Integer>> getGares() {
+	public List<Integer> getGares() {
 		return gares;
 	}
 
@@ -69,7 +68,7 @@ public class Ligne {
 	 */
 	public void addGares(int gare) {
 		if (!gares.contains(gare))
-			gares.get(0).add(gare);
+			gares.add(gare);
 	}
 
 	/**
@@ -78,7 +77,7 @@ public class Ligne {
 	 * @param newGares
 	 *            la nouvelle liste de gares
 	 */
-	public void setGares(List<List<Integer>> newGares) {
+	public void setGares(List<Integer> newGares) {
 		gares = newGares;
 	}
 }

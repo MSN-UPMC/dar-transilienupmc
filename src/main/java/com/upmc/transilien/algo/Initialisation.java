@@ -26,8 +26,7 @@ public class Initialisation {
 
 		List<Integer> existInLine = new ArrayList<Integer>();
 		for (Ligne ligne : lignes)
-			for (List<Integer> lCode : ligne.getGares())
-				existInLine.addAll(lCode);
+			existInLine.addAll(ligne.getGares());
 
 		for (Gare gare : gares)
 			if (!existInLine.contains(gare.getCodeUIC()))

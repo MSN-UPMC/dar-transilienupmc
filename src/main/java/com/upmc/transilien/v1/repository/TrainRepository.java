@@ -125,11 +125,10 @@ public class TrainRepository {
 	 * @return le train
 	 */
 	public Train create(Train train) {
-		if (ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
-			ofy().save().entity(train).now();
-		else
-			// TODO effectuer des opérations de mise à jour
-			;
+		if (!ofy().load().type(Train.class).filter("numero =", train.getNumero()).list().isEmpty())
+			ofy().delete().entity(train).now();
+
+		ofy().save().entity(train).now();
 		return train;
 	}
 }

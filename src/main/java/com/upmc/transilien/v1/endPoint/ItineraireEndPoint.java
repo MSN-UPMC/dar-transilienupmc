@@ -31,8 +31,7 @@ public class ItineraireEndPoint {
 	}
 
 	/**
-	 * Recherche les trains au prochain départ de la gare et qui passe par la destination.<br>
-	 * Pour recherche un itinéraire qui utilisent différentes lignes, il va nous falloir le réaliser.
+	 * Recherche les trains au prochain départ de la gare et qui passe par la destination.
 	 * 
 	 * @param departUIC
 	 *            le codeUIC de la gare de départ
@@ -41,8 +40,8 @@ public class ItineraireEndPoint {
 	 * @return la liste des trains au départ de gare donné et à la destination voulue
 	 * @throws Exception
 	 */
-	@ApiMethod(name = "itineraire", httpMethod = ApiMethod.HttpMethod.GET, path = "itineraire")
-	public Collection<Train> itineraire(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
+	@ApiMethod(name = "prochainDepartVers", httpMethod = ApiMethod.HttpMethod.GET, path = "prochainDepartVers")
+	public Collection<Train> prochainDepartVers(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
 		return ItineraireRepository.getInstance().prochainDepart(departUIC, destinationUIC);
 	}
 
@@ -56,8 +55,8 @@ public class ItineraireEndPoint {
 	 * @return la liste des gares à parcourir pour atteindre la destination depuis la gare de départ
 	 * @throws Exception
 	 */
-	@ApiMethod(name = "itineraireFull", httpMethod = ApiMethod.HttpMethod.GET, path = "itineraireFull")
-	public Collection<Gare> itineraireFull(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
+	@ApiMethod(name = "itineraire", httpMethod = ApiMethod.HttpMethod.GET, path = "itineraire")
+	public Collection<Gare> itineraire(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
 		return ItineraireRepository.getInstance().itineraire(departUIC, destinationUIC);
 	}
 }

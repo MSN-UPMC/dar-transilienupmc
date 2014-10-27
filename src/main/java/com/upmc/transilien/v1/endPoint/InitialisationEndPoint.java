@@ -34,29 +34,42 @@ public class InitialisationEndPoint {
 	 * Initialise le systèmes
 	 */
 	@ApiMethod(name = "init", httpMethod = ApiMethod.HttpMethod.GET, path = "init")
-	public void init() {
+	public Text init() {
 		// TODO intégré le comportement directement une fois uniformisé et fini
-		loadGare();
-		loadLigne();
-		filtreGareNonTransilien();
+		try {
+			if (GareRepository.getInstance().findGares().isEmpty()) {
+				// Load Gare
+				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
 
-		for (Ligne ligne : LigneRepository.getInstance().findLigne()) {
-			try {
-				List<List<Gare>> gares;
-				gares = LigneOriente.execute(ligne);
-				List<List<Integer>> llCode = new ArrayList<List<Integer>>();
-				for (List<Gare> lGare : gares) {
-					List<Integer> lCodeUIC = new ArrayList<Integer>();
-					for (Gare gare : lGare)
-						lCodeUIC.add(gare.getCodeUIC());
-					llCode.add(lCodeUIC);
+				// Load ligne
+				JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
+
+				// Filtre gare
+				Initialisation.filtreGareNonTransilien();
+
+				// Oriente les gares
+				for (Ligne ligne : LigneRepository.getInstance().findLigne()) {
+					try {
+						List<Gare> gares;
+						gares = LigneOriente.execute(ligne);
+						List<Integer> lCodeUIC = new ArrayList<Integer>();
+						for (Gare gare : gares)
+							lCodeUIC.add(gare != null ? gare.getCodeUIC() : null);
+
+						LigneRepository.getInstance().updateGare(ligne, lCodeUIC);
+					} catch (Exception e) {
+						e.printStackTrace();
+						return new Text(e.getMessage());
+					}
 				}
-				ligne.setGares(llCode);
-				LigneRepository.getInstance().update(ligne);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				// e.printStackTrace();
+				return new Text("OK");
+			} else {
+				return new Text("Deja fait.");
 			}
+		} catch (IOException | ParseException e) {
+			return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+		} catch (Exception e) {
+			return new Text(System.getProperties().get("user.dir") + "     ->     " + e);
 		}
 	}
 
@@ -74,53 +87,54 @@ public class InitialisationEndPoint {
 		}
 	}
 
-	/**
-	 * Charge les gares depuis un fichier statique présent sur le serveur.<br>
-	 * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
-	 * 
-	 * @return OK si cela c'est bien passé, le message d'erreur sinon
-	 * @throws Exception
-	 */
-	@ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.GET, path = "loadGare")
-	public Text loadGare() {
-		if (GareRepository.getInstance().findGares().isEmpty())
-			try {
-				JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
-				return new Text("OK");
-			} catch (Exception e) {
-				return new Text(System.getProperties().get("user.dir") + "     ->     " + e);
-			}
-		else
-			return new Text("Deja fait.");
-	}
+	// TODO effacer après validation d'init
+	// /**
+	// * Charge les gares depuis un fichier statique présent sur le serveur.<br>
+	// * La fonction est voué à disparaître pour fonctionner de manière transparente à l'initialisation du serveur.
+	// *
+	// * @return OK si cela c'est bien passé, le message d'erreur sinon
+	// * @throws Exception
+	// */
+	// @ApiMethod(name = "loadGare", httpMethod = ApiMethod.HttpMethod.GET, path = "loadGare")
+	// public Text loadGare() {
+	// if (GareRepository.getInstance().findGares().isEmpty())
+	// try {
+	// JsonToObject.loadGare("ressources/sncf-gares-et-arrets-transilien-ile-de-france.json");
+	// return new Text("OK");
+	// } catch (Exception e) {
+	// return new Text(System.getProperties().get("user.dir") + "     ->     " + e);
+	// }
+	// else
+	// return new Text("Deja fait.");
+	// }
 
-	/**
-	 * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
-	 * 
-	 * @return OK ou un message d'erreur
-	 */
-	@ApiMethod(name = "loadLigne", httpMethod = ApiMethod.HttpMethod.GET, path = "loadLigne")
-	public Text loadLigne() {
-		if (LigneRepository.getInstance().findLigne().isEmpty())
-			try {
-				JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
-				return new Text("OK");
-			} catch (IOException | ParseException e) {
-				return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
-			} catch (Exception e) {
-				return new Text("Erreur surement dut à l'orientation des lignes.");
-			}
-		else
-			return new Text("Deja fait.");
-	}
+	// TODO effacer après validation d'init
+	// /**
+	// * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
+	// *
+	// * @return OK ou un message d'erreur
+	// */
+	// @ApiMethod(name = "loadLigne", httpMethod = ApiMethod.HttpMethod.GET, path = "loadLigne")
+	// public Text loadLigne() {
+	// if (LigneRepository.getInstance().findLigne().isEmpty()) {
+	// try {
+	// JsonToObject.loadLigne("ressources/sncf-lignes-par-gares-idf.json");
+	// return new Text("OK");
+	// } catch (IOException | ParseException e) {
+	// return new Text(System.getProperties().get("user.dir") + "\n" + e.getMessage());
+	// }
+	// } else
+	// return new Text("Deja fait.");
+	// }
 
-	/**
-	 * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
-	 * 
-	 * @return OK ou un message d'erreur
-	 */
-	@ApiMethod(name = "filtreGareNonTransilien", httpMethod = ApiMethod.HttpMethod.GET, path = "filtreGareNonTransilien")
-	public void filtreGareNonTransilien() {
-		Initialisation.filtreGareNonTransilien();
-	}
+	// TODO effacer après validation d'init
+	// /**
+	// * Charge les lignes existantes depuis un fichier JSON statique présent sur le serveur
+	// *
+	// * @return OK ou un message d'erreur
+	// */
+	// @ApiMethod(name = "filtreGareNonTransilien", httpMethod = ApiMethod.HttpMethod.GET, path = "filtreGareNonTransilien")
+	// public void filtreGareNonTransilien() {
+	// Initialisation.filtreGareNonTransilien();
+	// }
 }

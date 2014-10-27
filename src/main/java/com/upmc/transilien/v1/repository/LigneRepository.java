@@ -5,7 +5,6 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
@@ -76,14 +75,14 @@ public class LigneRepository {
 			gares = null;
 		else {
 			gares = new ArrayList<Gare>();
-			for (List<Integer> lcodeUIC : ligne.getGares()) {
-				for (Integer codeUIC : lcodeUIC) {
-					Gare gare = GareRepository.getInstance().findGareByCode(codeUIC);
-					if (gare != null)
-						gares.add(gare);
-					else
-						throw new Error("La gare de code " + codeUIC + " n'existe pas ...");
-				}
+			for (Integer codeUIC : ligne.getGares()) {
+				if (codeUIC == null)
+					continue;
+				Gare gare = GareRepository.getInstance().findGareByCode(codeUIC);
+				if (gare != null)
+					gares.add(gare);
+				else
+					throw new Error("La gare de code " + codeUIC + " n'existe pas ...");
 			}
 		}
 		return gares;
@@ -102,19 +101,11 @@ public class LigneRepository {
 		List<Ligne> lignes = ofy().load().type(Ligne.class).list();
 		List<Ligne> returnList = new ArrayList<Ligne>();
 		for (Ligne l : lignes) {
-			boolean find = false;
-			for (List<Integer> lCodeUIC : l.getGares()) {
-				List<Integer> lGares = lCodeUIC;
-				for (int i : tCode) {
-					if (lGares.contains(i)) {
-						returnList.add(l);
-						find = true;
-						break;
-					}
+			List<Integer> lGares = l.getGares();
+			for (int i : tCode)
+				if (lGares.contains(i)) {
+					returnList.add(l);
 				}
-				if (find)
-					break;
-			}
 		}
 		return returnList;
 	}
@@ -141,15 +132,9 @@ public class LigneRepository {
 	 *            la ligne modifié
 	 * @return la ligne original modifié
 	 */
-	public Ligne update(Ligne editedLigne) {
-		if (editedLigne.getNom() == null) {
-			return null;
-		}
-
-		Ligne ligne = ofy().load().key(Key.create(Ligne.class, editedLigne.getId())).now();
-		ligne.setGares(editedLigne.getGares());
+	public Ligne updateGare(Ligne ligne, List<Integer> gares) {
+		ligne.setGares(gares);
 		ofy().save().entity(ligne).now();
-
 		return ligne;
 	}
 }

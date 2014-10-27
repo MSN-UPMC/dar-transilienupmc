@@ -12,7 +12,6 @@ import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
 import com.upmc.transilien.v1.repository.GareRepository;
 
-// TODO attention au textes des messages d'erreurs
 /**
  * Calcule les lignes et les gares sous forme de graphe orienté dans le but de tracer les lignes sur la carte et d'optimisé notre calcule d'itinéaire.
  * 
@@ -81,7 +80,7 @@ public class LigneOriente {
 			gC.voisin2 = voisine;
 			result = true;
 		} else
-			throw new Exception("Les 2 voisins sont déjà rempli, qu'est ce que t'as foutu sur l'algo ...");
+			throw new Exception("Les 2 voisins sont déjà rempli ...");
 
 		if (recursion) {
 			result = ajoute(voisins, voisine, courante, false);
@@ -95,19 +94,18 @@ public class LigneOriente {
 	 * @param ligne
 	 * @throws Exception
 	 */
-	public static List<List<Gare>> execute(Ligne ligne) throws Exception {
+	public static List<Gare> execute(Ligne ligne) throws Exception {
 		Map<String, Gare> gos = new HashMap<String, Gare>();
 		/**
 		 * 1) On ajoute à une map toutes les gares de la ligne
 		 */
-		List<List<Integer>> llCodeLigne = new ArrayList<List<Integer>>(ligne.getGares());
+		List<Integer> lCode = new ArrayList<Integer>(ligne.getGares());
 		List<String> aTraiter = new ArrayList<String>();
-		for (List<Integer> lCode : llCodeLigne)
-			for (Integer ite : lCode) {
-				Gare gare = GareRepository.getInstance().findGareByCode(ite);
-				aTraiter.add(gare.getNom());
-				gos.put(gare.getNom(), gare);
-			}
+		for (Integer ite : lCode) {
+			Gare gare = GareRepository.getInstance().findGareByCode(ite);
+			aTraiter.add(gare.getNom());
+			gos.put(gare.getNom(), gare);
+		}
 
 		/**
 		 * 2) On associe a chaque gare un Voisin
@@ -157,7 +155,7 @@ public class LigneOriente {
 						aTraiter.remove(voisinPotentielle.getNom());
 				} else {
 					if (voisin.voisin2 != null)
-						throw new Exception("Il y a une couille dans l'algo.");
+						throw new Exception("Ceci ne correspond pas au fonctionnement normal de l'algo.");
 					/**
 					 * 5.2) Le voisin2 est null, sinon c'est qu'il y a un soucis de construction.<br>
 					 * On calcul l'angle entre le voisin1 et le potentiel voisin2.<br>
@@ -187,13 +185,12 @@ public class LigneOriente {
 	 * @return les gares dans l'ordre de la ligne
 	 * @throws Exception
 	 */
-	private static List<List<Gare>> goodOrder(Map<String, Gare> gos, Map<String, Voisin> voisins) throws Exception {
-		List<List<Gare>> lGares = new ArrayList<List<Gare>>();
+	private static List<Gare> goodOrder(Map<String, Gare> gos, Map<String, Voisin> voisins) throws Exception {
+		List<Gare> gares = new ArrayList<Gare>();
 		List<String> aTraiter = new ArrayList<String>(gos.keySet());
 
 		// Tant qu'il y a des gares
 		while (!aTraiter.isEmpty()) {
-			List<Gare> gares = new ArrayList<Gare>();
 			Gare debut = gos.get(aTraiter.get(0));
 
 			// On recherche un terminus de la ligne
@@ -215,8 +212,8 @@ public class LigneOriente {
 				else
 					debut = null;
 			}
-			lGares.add(gares);
+			gares.add(null);
 		}
-		return lGares;
+		return gares;
 	}
 }
