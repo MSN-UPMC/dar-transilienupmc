@@ -53,12 +53,12 @@ function initGareOnMap(){
 		// On crée un point sur la carte
 		// Si il y a plusieurs lignes sur une gare => rond noir
 		if(lignes.length>1){
-			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1',color: '#000000', fillColor :'#000000'}).setRadius(8).addTo(environnement.map.instance);
+			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1',color: '#000000', fillColor :'#000000'}).setRadius(8).bindLabel(gare.nom, {direction :'auto'}).addTo(environnement.map.instance);
 		}
 		// Si il y a qu'une seule ligne => couleur de la ligne 
 		else{
 			couleur = environnement.lignes.couleurs[lignes[0]];
-			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1', fillOpacity:'0.5',color: couleur, fillColor :couleur}).setRadius(8).addTo(environnement.map.instance);		
+			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1', fillOpacity:'0.5',color: couleur, fillColor :couleur}).setRadius(8).bindLabel(gare.nom, {direction :'auto'} ).addTo(environnement.map.instance);		
 		}
 
 		
@@ -131,11 +131,14 @@ function initLigneOnMap(){
 		
 		// recup la ligne i de la liste
 		ligne = environnement.lignes[i];
-		$.ajaxSetup({async: false});
+
 		// appell ajax vers les ligne oriente
 		$.get(environnement.routes["ligneOriente"]+"?nom+de+la+ligne="+ligne.nom, function(data) {
+		
+		
 			// Liste des points 2d quil faut relier par une ligne
 			polyline = [];
+
 			// pour toute les gare de la ligne
 			for(i in data.items){
 				gare = data.items[i];
@@ -143,9 +146,8 @@ function initLigneOnMap(){
 				polyline.push(L.latLng(gare.latitude,gare.longitude));		
 			}
 			// ajout à la map de la ligne
-			L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1'}).addTo(environnement.map.instance);
+			L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1',weight: '2'}).addTo(environnement.map.instance);
 		});		
-		$.ajaxSetup({async: true});
 		
 	}
 
