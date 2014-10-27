@@ -23,18 +23,21 @@ function initMap() {
 
 	// Utilisation dun title(cartographie) mapbox avec ma cle session 
 	// Zoom de niveau 18 maximum autoriser
-	L.tileLayer('https://{s}.tiles.mapbox.com/v3/magstellon.joaljn60/{z}/{x}/{y}.png', {
+	var baseMap = L.tileLayer('https://{s}.tiles.mapbox.com/v3/magstellon.joaljn60/{z}/{x}/{y}.png', {
 		maxZoom: 18,
 		minZoom: 9
 	}).addTo(map);
 	
+	var baseMapControl = {
+		"Map": baseMap
+	};
 
 	environnement.map = {};
 	environnement.map.instance = map;
 	environnement.map.markers = new Array();
 	
 	initGareOnMap();
-	initLigneOnMap();
+	initLigneOnMap(baseMapControl);
 	
 }
 
@@ -124,8 +127,9 @@ function getLignesOfAGareToHTML(lignesOfAGareArray){
 }
 
 
-function initLigneOnMap(){
+function initLigneOnMap(baseMapControl){
 
+	/*
 	// Recup toutes les lignes
 	for(i in environnement.lignes){
 		
@@ -133,7 +137,7 @@ function initLigneOnMap(){
 		ligne = environnement.lignes[i];
 
 		// appell ajax vers les ligne oriente
-		$.get(environnement.routes["ligneOriente"]+"?nom+de+la+ligne="+ligne.nom, function(data) {
+		$.get(environnement.routes["getLignes"]+"?nom+de+la+ligne="+ligne.nom, function(data) {
 		
 		
 			// Liste des points 2d quil faut relier par une ligne
@@ -151,6 +155,56 @@ function initLigneOnMap(){
 		
 	}
 
+	*/
+	
+	$.get(environnement.routes["getLignes"], function(data) {
+	
+		// ensemble du layer qui sera affiche au dessus de la map
+		var overlayMaps = {};
+		
+		// fetch de la ligne de la req. ajax
+		for(i in data.items){
+		
+			// ligne courante
+			ligne = data.items[i];
+			// objet qui simule un ensemble de point
+			polyline = [];
+			// objet qui simule le layer ligne 
+			layerGroup = [];
+			
+			for( j in ligne.gares){
+				
+				codeUIC = ligne.gares[j];
+				
+				// Si jarrive a la fin du tracer de la ligne en cours
+				if(codeUIC === null){
+					// je creer un ligne en reliant tout les points
+					var ligneTracer = L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1',weight: '2'});
+					// enregistrement de cette ligne dans le layer au dessus de la map
+					layerGroup.push(ligneTracer);
+					// reset de la liste de point
+					polyline = [];
+					continue;
+				}
+				else{
+					// recupere la structure de gare egal a UIC
+					gare = environnement.gares[codeUIC];
+					// on rajoute la gare dans la liste de point a relier
+					polyline.push(L.latLng(gare.latitude,gare.longitude));						
+				}
+			}
+			
+			// On regroupe toutes les lignes créer dans un objet regroupe la ligne courante
+			var ligneLayer = L.layerGroup(layerGroup);
+			// on créer un controler sur la map
+			overlayMaps["Ligne "+ligne.nom.toUpperCase()] = ligneLayer ;
 
+		}
+
+		// on rajouter tout les controller des ligne sur la map
+		L.control.layers(baseMapControl,overlayMaps).setPosition('bottomleft').addTo(environnement.map.instance);
+
+		
+		});
 
 }

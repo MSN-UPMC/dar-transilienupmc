@@ -49,6 +49,7 @@ function initLigne(){
 	$.get(environnement.routes["getLignes"], function(data) {
 		for(i in data.items){
 			ligne = data.items[i];
+			// Ajoute les gares null - A verifier
 			environnement.lignes[ligne.nom] = new Ligne(ligne.nom,ligne.gares);			
 		}
 	});
