@@ -59,6 +59,13 @@ public class Train {
 	}
 
 	/**
+	 * @return l'id de l'entité
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
 	 * @return le codeUIC de la gare de départ
 	 */
 	public int getDepart() {

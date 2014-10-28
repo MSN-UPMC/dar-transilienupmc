@@ -6,7 +6,6 @@ import java.util.List;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.algo.ItineraireDijkstra;
-import com.upmc.transilien.parse.XMLToObject;
 import com.upmc.transilien.request.TransilienRequest;
 import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Ligne;
@@ -54,8 +53,11 @@ public class ItineraireRepository {
 		List<Integer> tabCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
 
 		List<Train> trains = new ArrayList<Train>();
-		for (int i : tabCode)
-			trains.addAll(XMLToObject.parseTrain(TransilienRequest.prochainDepart(i)));
+		for (int i : tabCode) {
+			List<Train> tmp = TransilienRequest.prochainDepart(i);
+			if (tmp != null && !tmp.isEmpty())
+				trains.addAll(tmp);
+		}
 
 		return trains;
 	}
@@ -78,8 +80,11 @@ public class ItineraireRepository {
 
 		List<Train> trains = new ArrayList<Train>();
 		for (int i : tDepartCode)
-			for (int j : tDestCode)
-				trains.addAll(XMLToObject.parseTrain(TransilienRequest.prochainDepart(i, j)));
+			for (int j : tDestCode) {
+				List<Train> tmp = TransilienRequest.prochainDepart(i, j);
+				if (tmp != null && !tmp.isEmpty())
+					trains.addAll(tmp);
+			}
 		return trains;
 	}
 

@@ -1,11 +1,12 @@
 package com.upmc.transilien.request;
 
-import java.io.InputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.List;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import com.upmc.transilien.parse.XMLToObject;
+import com.upmc.transilien.v1.model.Train;
 
 /**
  * Requête sur l'API transilien prochainDepart
@@ -13,10 +14,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
  * @author Kevin Coquart &amp; Mag-Stellon Nadarajah
  *
  */
-@SuppressWarnings({ "deprecation", "resource" })
 public class TransilienRequest {
-	private final static String USER_AGENT = "Mozilla/5.0";
-	private static String urlBase = "http://tnhtn175:cgP479kW@api.transilien.com/gare/";
+	private static String urlBase = "http://api.transilien.com/gare/";
+	private static String userpass = "tnhtn175:cgP479kW";
 
 	/**
 	 * Récupère le retour d'une demande à l'API prochain départ
@@ -24,19 +24,17 @@ public class TransilienRequest {
 	 * @param codeUIC
 	 *            le codeUIC de la gare de départ
 	 * @return le flux renvoyé par l'API transilien (du xml)
+	 * @throws IOException
 	 * @throws Exception
 	 */
-	public static InputStream prochainDepart(int codeUIC) throws Exception {
-		String url = urlBase + codeUIC + "/depart/";
+	public static List<Train> prochainDepart(int codeUIC) throws IOException {
+		URL url = new URL(urlBase + codeUIC + "/depart/");
 
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet(url);
+		URLConnection uc = url.openConnection();
+		String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
+		uc.setRequestProperty("Authorization", basicAuth);
 
-		// add request header
-		request.addHeader("User-Agent", USER_AGENT);
-
-		HttpResponse response = client.execute(request);
-		return response.getEntity().getContent();
+		return XMLToObject.parseTrain(uc.getInputStream());
 	}
 
 	/**
@@ -49,16 +47,13 @@ public class TransilienRequest {
 	 * @return le flux renvoyé par l'API transilien (du xml)
 	 * @throws Exception
 	 */
-	public static InputStream prochainDepart(int departcodeUIC, int destinatationCodeUIC) throws Exception {
-		String url = urlBase + departcodeUIC + "/depart/" + destinatationCodeUIC + "/";
+	public static List<Train> prochainDepart(int departcodeUIC, int destinatationCodeUIC) throws Exception {
+		URL url = new URL(urlBase + departcodeUIC + "/depart/" + destinatationCodeUIC + "/");
 
-		HttpClient client = new DefaultHttpClient();
-		HttpGet request = new HttpGet(url);
+		URLConnection uc = url.openConnection();
+		String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());
+		uc.setRequestProperty("Authorization", basicAuth);
 
-		// add request header
-		request.addHeader("User-Agent", USER_AGENT);
-
-		HttpResponse response = client.execute(request);
-		return response.getEntity().getContent();
+		return XMLToObject.parseTrain(uc.getInputStream());
 	}
 }
