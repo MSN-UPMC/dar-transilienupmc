@@ -129,38 +129,12 @@ function getLignesOfAGareToHTML(lignesOfAGareArray){
 
 function initLigneOnMap(baseMapControl){
 
-	/*
-	// Recup toutes les lignes
-	for(i in environnement.lignes){
-		
-		// recup la ligne i de la liste
-		ligne = environnement.lignes[i];
-
-		// appell ajax vers les ligne oriente
-		$.get(environnement.routes["getLignes"]+"?nom+de+la+ligne="+ligne.nom, function(data) {
-		
-		
-			// Liste des points 2d quil faut relier par une ligne
-			polyline = [];
-
-			// pour toute les gare de la ligne
-			for(i in data.items){
-				gare = data.items[i];
-				// recuperation des coordone de la gare a relier par la ligne
-				polyline.push(L.latLng(gare.latitude,gare.longitude));		
-			}
-			// ajout à la map de la ligne
-			L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1',weight: '2'}).addTo(environnement.map.instance);
-		});		
-		
-	}
-
-	*/
-	
+	// ajax pour recuperer les lignes
 	$.get(environnement.routes["getLignes"], function(data) {
 	
 		// ensemble du layer qui sera affiche au dessus de la map
 		var overlayMaps = {};
+		var ligneLayerAll = [];
 		
 		// fetch de la ligne de la req. ajax
 		for(i in data.items){
@@ -182,6 +156,8 @@ function initLigneOnMap(baseMapControl){
 					var ligneTracer = L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1',weight: '2'});
 					// enregistrement de cette ligne dans le layer au dessus de la map
 					layerGroup.push(ligneTracer);
+					// enregistrement pour un layer qui prend toute les lignes
+					ligneLayerAll.push(L.polyline(polyline, {color: environnement.lignes.couleurs[ligne.nom], opacity : '1',weight: '2'}));
 					// reset de la liste de point
 					polyline = [];
 					continue;
@@ -198,12 +174,17 @@ function initLigneOnMap(baseMapControl){
 			var ligneLayer = L.layerGroup(layerGroup);
 			// on créer un controler sur la map
 			overlayMaps["Ligne "+ligne.nom.toUpperCase()] = ligneLayer ;
+			
 
 		}
 
+		// layer pour toutes les tracer de ligne
+		overlayMaps["Toutes les lignes"] = L.layerGroup(ligneLayerAll);
+		
 		// on rajouter tout les controller des ligne sur la map
 		L.control.layers(baseMapControl,overlayMaps).setPosition('bottomleft').addTo(environnement.map.instance);
 
+		
 		
 		});
 
