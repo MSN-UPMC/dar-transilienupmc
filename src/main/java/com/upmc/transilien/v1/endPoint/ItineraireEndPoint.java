@@ -1,6 +1,16 @@
 package com.upmc.transilien.v1.endPoint;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Collection;
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
@@ -58,5 +68,29 @@ public class ItineraireEndPoint {
 	@ApiMethod(name = "itineraire", httpMethod = ApiMethod.HttpMethod.GET, path = "itineraire")
 	public Collection<Gare> itineraire(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
 		return ItineraireRepository.getInstance().itineraire(departUIC, destinationUIC);
+	}
+
+	@ApiMethod(name = "envoyerMail", httpMethod = ApiMethod.HttpMethod.GET, path = "envoyerMail")
+	public void envoyerMail(/* Map<String, Object> map */) {
+		Properties props = new Properties();
+		Session session = Session.getDefaultInstance(props, null);
+
+		String msgBody = "...";
+
+		try {
+			Message msg = new MimeMessage(session);
+			msg.setFrom(new InternetAddress("kevin.coquart@etu.upmc.fr", "K.Coquart"));
+			msg.addRecipient(Message.RecipientType.TO, new InternetAddress("kevcoqs@gmail.com", "Kevin"));
+			msg.setSubject("[Transilien-UPMC] Récap trajet");
+			msg.setText(msgBody);
+			Transport.send(msg);
+
+		} catch (AddressException e) {
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 }
