@@ -5,6 +5,7 @@ import java.util.Collection;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.upmc.transilien.v1.model.Train;
+import com.upmc.transilien.v1.repository.ItineraireRepository;
 import com.upmc.transilien.v1.repository.TrainRepository;
 
 /**
@@ -54,5 +55,23 @@ public class TrainsEndPoint {
 		etatDeService[1] = nbRetard / nbTrains * 100;
 		etatDeService[2] = nbAnnule / nbTrains * 100;
 		return etatDeService;
+	}
+
+	/**
+	 * Ajoute des trains dans la base<br>
+	 * URL faite pour le cron.
+	 * 
+	 * @param password
+	 *            un mot de passe pour limiter l'accès
+	 * @throws Exception
+	 */
+	@ApiMethod(name = "addTrainInDB", httpMethod = ApiMethod.HttpMethod.GET, path = "addTrainInDB")
+	public void addTrainInDB() throws Exception {
+		// Chatelet
+		ItineraireRepository.getInstance().prochainDepart(87758607);
+		// Gare de lyon
+		ItineraireRepository.getInstance().prochainDepart(87686030);
+		// La défense
+		ItineraireRepository.getInstance().prochainDepart(87382218);
 	}
 }

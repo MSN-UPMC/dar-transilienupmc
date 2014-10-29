@@ -1,7 +1,0 @@
-Mag =>
-
-
-
-Kevin =>
-- voisin d'une gare (à continuer) | correction d'erreur
-- création d'un train déjà existant, changement de modele ?

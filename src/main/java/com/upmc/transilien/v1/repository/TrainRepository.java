@@ -2,7 +2,6 @@ package com.upmc.transilien.v1.repository;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -43,41 +42,6 @@ public class TrainRepository {
 	 */
 	public Collection<Train> findTrains() {
 		List<Train> trains = ofy().load().type(Train.class).list();
-		return trains;
-	}
-
-	// TODO sachant que le train bouge, les 2 fonctions suivantes n'ont pas trop d'interet
-	// Par contre réussir à associer le train à une ligne serait plus intéressant pour les stats.
-	/**
-	 * Recherche un train par gare de départ
-	 * 
-	 * @param depart
-	 *            le codeUIC de la gare de départ
-	 * @return les trains partant de la gare
-	 */
-	public Collection<Train> findTrainsByDepart(int depart) {
-		List<Integer> tCode = GareRepository.getInstance().findGareByCode(depart).getCodesUIC();
-		List<Train> trains = new ArrayList<Train>();
-		for (int i : tCode) {
-			trains.addAll(ofy().load().type(Train.class).filter("depart = ", i).list());
-		}
-		return trains;
-	}
-
-	// TODO voir au dessus
-	/**
-	 * Recherche un train par son terminus
-	 * 
-	 * @param terminus
-	 *            codeUIC du terminus
-	 * @return
-	 */
-	public Collection<Train> findTrainsByTerminus(int terminus) {
-		List<Integer> tCode = GareRepository.getInstance().findGareByCode(terminus).getCodesUIC();
-		List<Train> trains = new ArrayList<Train>();
-		for (int i : tCode) {
-			trains.addAll(ofy().load().type(Train.class).filter("terminus = ", i).list());
-		}
 		return trains;
 	}
 

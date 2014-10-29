@@ -107,23 +107,6 @@ public class Train {
 		return etat;
 	}
 
-	// TODO nécessaire plus tard dans le cas ou l'on suive l'avancement du train
-	// public void setDepart(int depart) {
-	// this.depart = depart;
-	// }
-	//
-	// public void setTerminus(int terminus) {
-	// this.terminus = terminus;
-	// }
-	//
-	// public void setDate(String date) {
-	// this.date = date;
-	// }
-	//
-	// public void setEtat(EtatTrain etat) {
-	// this.etat = etat;
-	// }
-
 	private static Integer stringToEtat(String etat) {
 		Integer retour = 0;
 		if (etat != null)

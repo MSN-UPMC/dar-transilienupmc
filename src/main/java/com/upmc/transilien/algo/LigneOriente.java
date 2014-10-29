@@ -117,8 +117,7 @@ public class LigneOriente {
 		/**
 		 * On traite chaque gare de la ligne
 		 */
-		int i = 100;
-		while (!aTraiter.isEmpty() && i-- > 0) {
+		while (!aTraiter.isEmpty()) {
 			Gare gareElt = gos.get(aTraiter.remove(0));
 
 			/**

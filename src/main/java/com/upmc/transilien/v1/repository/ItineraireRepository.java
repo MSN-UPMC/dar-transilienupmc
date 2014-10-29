@@ -50,7 +50,8 @@ public class ItineraireRepository {
 	 * @throws Exception
 	 */
 	public Collection<Train> prochainDepart(int codeUIC) throws Exception {
-		List<Integer> tabCode = GareRepository.getInstance().findGareByCode(codeUIC).getCodesUIC();
+		Gare g = GareRepository.getInstance().findGareByCode(codeUIC);
+		List<Integer> tabCode = g != null ? g.getCodesUIC() : null;
 
 		List<Train> trains = new ArrayList<Train>();
 		for (int i : tabCode) {
@@ -75,8 +76,10 @@ public class ItineraireRepository {
 	 * @throws Exception
 	 */
 	public Collection<Train> prochainDepart(int departUIC, int destinationUIC) throws Exception {
-		List<Integer> tDepartCode = GareRepository.getInstance().findGareByCode(departUIC).getCodesUIC();
-		List<Integer> tDestCode = GareRepository.getInstance().findGareByCode(departUIC).getCodesUIC();
+		Gare gD = GareRepository.getInstance().findGareByCode(departUIC);
+		Gare gA = GareRepository.getInstance().findGareByCode(destinationUIC);
+		List<Integer> tDepartCode = gD != null ? gD.getCodesUIC() : null;
+		List<Integer> tDestCode = gA != null ? gA.getCodesUIC() : null;
 
 		List<Train> trains = new ArrayList<Train>();
 		for (int i : tDepartCode)
@@ -95,11 +98,17 @@ public class ItineraireRepository {
 	 *            le codeUIC de la gare de départ
 	 * @param destinationUIC
 	 *            le codeUIC de la gare de destination
-	 * @return TODO à faire
+	 * @return la liste des gares à parcourir pour arriver à bon port
 	 */
 	public List<Gare> itineraire(int departUIC, int destinationUIC) {
-		ItineraireDijkstra itiDijk = new ItineraireDijkstra(departUIC, destinationUIC);
-		itiDijk.execute();
-		return itiDijk.getPredecesseur();
+		List<Gare> result = null;
+		Gare gD = GareRepository.getInstance().findGareByCode(departUIC);
+		Gare gA = GareRepository.getInstance().findGareByCode(destinationUIC);
+		if (gD != null && gA != null) {
+			ItineraireDijkstra itiDijk = new ItineraireDijkstra(departUIC, destinationUIC);
+			itiDijk.execute();
+			result = itiDijk.getPredecesseur();
+		}
+		return result;
 	}
 }
