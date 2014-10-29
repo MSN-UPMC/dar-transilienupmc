@@ -64,18 +64,152 @@ function initGareOnMap(){
 			marker = L.circleMarker([gare.latitude,gare.longitude],{opacity :'1', fillOpacity:'0.5',color: couleur, fillColor :couleur}).setRadius(8).bindLabel(gare.nom, {direction :'auto'} ).addTo(environnement.map.instance);		
 		}
 
-		
 		// on ajouter notre objet de point dans lenvironnement
-		environnement.map.markers[gare.codeUIC] = marker; 
-		// On ajoute les informations info bulle à cette gare
-		marker.bindPopup("<b>"+gare.nom+"</b>\
-						  </br></br>\
-						  <div style='text-align:center;'>\
-							"+getLignesOfAGareToHTML(lignes)+"\
-						  </div>\
-						");
+		environnement.map.markers[gare.codeUIC] = marker;	
+		
+		// Evenement pour affichage de linfo bulle
+		marker.on('click', function(e){
+
+			// recuperation de la gare sur laquelle on a cliquer
+			gare=null;	
+			for(j in environnement.gares){
+				gare = environnement.gares[j];
+				if(gare.nom === e.target.label._content){
+					break;
+				}
+			}
+			
+			// ouverture de la popup pour chargement user
+			environnement.map.markers[gare.codeUIC].bindPopup('<b>Chargement des informations ...</b>').openPopup();
+			
+			//Creation du html a injecter dans l'info bulle
+			$.get(environnement.routes["prochainDepart"]+"?codeUIC="+gare.codeUIC, function(data) {
+
+			// creation du msg a afficher dans linfo bulle
+			var htmlGareInfoBulle = "";		
+			htmlGareInfoBulle += "<b>Information sur "+gare.nom+"</b>\
+									</br></br>\
+								  <table class='table table-striped'>\
+									  <tbody>\
+										<tr>\
+											<td>Correspondance(s)</td>\
+											<td>"+getLignesOfAGareToHTML(getLignesOfAGare(gare.codeUIC))+"</td>\
+										</tr>\
+										</tbody>\
+									</table>\
+									<b>Prochain départs</b>";
+							
+			// Si présence des prochains depart
+			if(data.items && data.items.length > 0){					
+														
+				htmlGareInfoBulle += "</br></br>\
+										<table class='table table-striped'>\
+										  <thead>\
+											<tr>\
+											  <th>Horaire</th>\
+											  <th>Direction</th>\
+											  <th>Train</th>\
+											  <th>Etat</th>\
+											</tr>\
+										  </thead>\
+										  <tbody>";	
+
+				for(i in data.items){
+					item = data.items[i];
+					console.log(item.terminus);
+					htmlGareInfoBulle += "<tr>\
+											<td>"+item.date.split(" ")[1]+"</td>\
+											<td>"+environnement.gares[item.terminus].nom+"</td>\
+											<td>"+item.codeMission+"</td>";
+											if(item.etat==0){ htmlGareInfoBulle += "<td>A l'heure</td>"; }
+											else{  htmlGareInfoBulle += "<td>"+item.etat+"</td>"; }
+											
+					htmlGareInfoBulle += "</tr>"
+					if(i==5){
+						break;
+					}
+				
+				}
+				
+				htmlGareInfoBulle += "</tbody>\
+									</table>";
+			}
+			else{
+				htmlGareInfoBulle += "<p>Aucune information disponible</p>";
+			}
+
+			// ouverture de la popup avec htmlgareinfobulle
+			environnement.map.markers[gare.codeUIC].bindPopup(htmlGareInfoBulle).openPopup();
+
+						
+			});
+
+		});
+			
 			
 	}
+/*
+	for(j in environnement.map.markers){
+	
+		marker = environnement.map.markers[j];
+		console.log(marker);
+	
+		marker.on('click', function(e){
+
+			gare=null;
+			
+			for(j in environnement.gares){
+				gare = environnement.gares[j];
+				if(gare.nom === e.target.label._content){
+					break;
+				}
+			}
+			
+			//Creation du html a injecter dans l'info bulle
+			$.get(environnement.routes["prochainDepart"]+"?codeUIC="+gare.codeUIC, function(data) {
+
+			var htmlGareInfoBulle = "";		
+			htmlGareInfoBulle += "<b>Information sur "+gare.nom+"</b>\
+								  </br></br>\
+									"+getLignesOfAGareToHTML(lignes)+"</br></br>\
+									<b>Prochain départs</b>\
+									<table class='table table-striped'>\
+									  <thead>\
+										<tr>\
+										  <th>Horaire</th>\
+										  <th>Direction</th>\
+										  <th>Train</th>\
+										  <th>Etat</th>\
+										</tr>\
+									  </thead>\
+									  <tbody>";	
+
+			for(i in data.items){
+				item = data.items[i];
+				htmlGareInfoBulle += "<tr>\
+										<td>"+item.date+"</td>\
+										<td>"+environnement.gares[item.terminus].nom+"</td>\
+										<td>"+item.codeMission+"</td>\
+										<td>"+item.etat+"</td>\
+									  </tr>"
+				if(i==5){
+					break;
+				}
+			
+			}
+			
+			htmlGareInfoBulle += "</tbody>\
+								</table>";
+
+			marker.bindPopup(htmlGareInfoBulle).openPopup();
+
+						
+			});
+
+		});
+		
+	}*/
+	
 
 
 }

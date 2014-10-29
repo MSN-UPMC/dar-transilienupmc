@@ -17,6 +17,8 @@ function initDataModel() {
 	environnement.routes["getGaresList"] = environnement.host+"/gares/v1/getGares";
 	environnement.routes["getLignes"] = environnement.host+"/lignes/v1/getLignes";
 	environnement.routes["ligneOriente"] = environnement.host+"/lignes/v1/ligneOriente";
+	environnement.routes["prochainDepart"] = environnement.host+"/itineraire/v1/prochainDepart";
+
 
 	
 }
