@@ -77,10 +77,9 @@ function initUIEvent(){
 		  }
 
 		  
-		  //codeUIC = $('#collapseTwo form option:selected').attr('data-uic');
 		  environnement.map.instance.setView(environnement.map.markers[codeUIC].getLatLng());
 		  environnement.map.instance.setZoom(15);
-		  environnement.map.markers[codeUIC].trigger('click');
+		  environnement.map.markers[codeUIC].fire('click');
 		});			
 	});
 

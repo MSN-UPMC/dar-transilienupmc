@@ -114,18 +114,21 @@ function initGareOnMap(){
 										  </thead>\
 										  <tbody>";	
 
+				var cpt=0;
 				for(i in data.items){
 					item = data.items[i];
-					console.log(item.terminus);
-					htmlGareInfoBulle += "<tr>\
-											<td>"+item.date.split(" ")[1]+"</td>\
-											<td>"+environnement.gares[item.terminus].nom+"</td>\
-											<td>"+item.codeMission+"</td>";
-											if(item.etat==0){ htmlGareInfoBulle += "<td>A l'heure</td>"; }
-											else{  htmlGareInfoBulle += "<td>"+item.etat+"</td>"; }
-											
-					htmlGareInfoBulle += "</tr>"
-					if(i==5){
+					if(environnement.gares[item.terminus]){
+						htmlGareInfoBulle += "<tr>\
+												<td>"+item.date.split(" ")[1]+"</td>\
+												<td>"+environnement.gares[item.terminus].nom+"</td>\
+												<td>"+item.codeMission+"</td>";
+												if(item.etat==0){ htmlGareInfoBulle += "<td>A l'heure</td>"; }
+												else{  htmlGareInfoBulle += "<td>"+item.etat+"</td>"; }
+												
+						htmlGareInfoBulle += "</tr>";
+						cpt++;
+					}
+					if(cpt==5){
 						break;
 					}
 				

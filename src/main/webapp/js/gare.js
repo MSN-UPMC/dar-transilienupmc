@@ -14,9 +14,6 @@ function initGare(){
 		for(i in data.items){	
 			gare = data.items[i];
 			
-			if(gare.nom == "PARIS MONTPARNASSE"){
-				console.log(gare.codeUIC);
-			}
 			environnement.gares[gare.codeUIC]= new Gare(gare.nom,parseInt(gare.codeUIC),parseFloat(gare.longitude),parseFloat(gare.latitude));			
 		}
 	});
