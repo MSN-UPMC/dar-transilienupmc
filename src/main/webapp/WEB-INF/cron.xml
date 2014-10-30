@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cronentries>
 	<cron>
-		<url>/_ah/api#p/trains/v1/trains.addTrainInDB</url>
+		<url>/_ah/api/trains/v1/addTrainInDB</url>
 		<description>Ajoute des trains dans la BD</description>
-		<schedule>every 30 minutes</schedule>
+		<schedule>every 120 minutes</schedule>
 	</cron>
 </cronentries>
