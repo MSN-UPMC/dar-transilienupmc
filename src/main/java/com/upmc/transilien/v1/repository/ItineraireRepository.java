@@ -2,7 +2,9 @@ package com.upmc.transilien.v1.repository;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.googlecode.objectify.ObjectifyService;
 import com.upmc.transilien.algo.ItineraireDijkstra;
@@ -100,15 +102,38 @@ public class ItineraireRepository {
 	 *            le codeUIC de la gare de destination
 	 * @return la liste des gares à parcourir pour arriver à bon port
 	 */
-	public List<Gare> itineraire(int departUIC, int destinationUIC) {
-		List<Gare> result = null;
+	public Map<String, Object> itineraire(int departUIC, int destinationUIC) {
+		/* Init */
+		Map<String, Object> retour = new HashMap<String, Object>();
+		List<Gare> gares = null;
+		List<String> lignes = null;
+
+		/* Recuperation des gares */
 		Gare gD = GareRepository.getInstance().findGareByCode(departUIC);
 		Gare gA = GareRepository.getInstance().findGareByCode(destinationUIC);
 		if (gD != null && gA != null) {
+			/* On calcul puis recupere les gares */
 			ItineraireDijkstra itiDijk = new ItineraireDijkstra(departUIC, destinationUIC);
 			itiDijk.execute();
-			result = itiDijk.getPredecesseur();
+			gares = itiDijk.getPredecesseur();
+
+			/* On associe chaque correspondance à une ligne */
+			lignes = new ArrayList<String>();
+			for (int i = 0; i < gares.size() - 1; i++) {
+				List<Ligne> tmp = LigneRepository.getInstance().findLignePerGare(gares.get(i).getCodeUIC());
+				for (Ligne l : tmp) {
+					Gare g2 = gares.get(i + 1);
+					List<Integer> lCodes = l.getGares();
+					if (lCodes.contains(g2.getCodeUIC()) || lCodes.contains(g2.getCodeUIC2())) {
+						lignes.add(l.getNom());
+						break;
+					}
+				}
+			}
 		}
-		return result;
+
+		retour.put("gares", gares);
+		retour.put("lignes", lignes);
+		return retour;
 	}
 }

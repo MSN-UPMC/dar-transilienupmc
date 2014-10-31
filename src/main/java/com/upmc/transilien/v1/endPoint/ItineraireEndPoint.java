@@ -2,6 +2,7 @@ package com.upmc.transilien.v1.endPoint;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -15,7 +16,6 @@ import javax.mail.internet.MimeMessage;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.Named;
-import com.upmc.transilien.v1.model.Gare;
 import com.upmc.transilien.v1.model.Train;
 import com.upmc.transilien.v1.repository.ItineraireRepository;
 
@@ -66,7 +66,7 @@ public class ItineraireEndPoint {
 	 * @throws Exception
 	 */
 	@ApiMethod(name = "itineraire", httpMethod = ApiMethod.HttpMethod.GET, path = "itineraire")
-	public Collection<Gare> itineraire(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
+	public Map<String, Object> itineraire(@Named("departCodeUIC") int departUIC, @Named("destinationCodeUIC") int destinationUIC) throws Exception {
 		return ItineraireRepository.getInstance().itineraire(departUIC, destinationUIC);
 	}
 
