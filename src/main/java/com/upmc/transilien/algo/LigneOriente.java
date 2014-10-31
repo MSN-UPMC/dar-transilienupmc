@@ -1,4 +1,4 @@
-package com.upmc.transilien.algo;
+	package com.upmc.transilien.algo;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -158,7 +158,7 @@ public class LigneOriente {
 					/**
 					 * 5.2) Le voisin2 est null, sinon c'est qu'il y a un soucis de construction.<br>
 					 * On calcul l'angle entre le voisin1 et le potentiel voisin2.<br>
-					 * Si la valeur absolu de l'angle est > à 45° alors le voisin doit bien appartenir à le côté opposé de la ligne et on indique aux gares
+					 * Si la valeur absolu de l'angle est > à 45° alors le voisin doit bien appartenir au côté opposé de la ligne et on indique aux gares
 					 * qu'elles sont voisines.
 					 */
 					Gare gareVoisine = gos.get(voisin.voisin1);
