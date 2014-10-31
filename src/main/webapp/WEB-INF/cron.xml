@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cronentries>
 	<cron>
-		<url>https://transilien-upmc.appspot.com/_ah/api/trains/v1/addTrainInDB</url>
+		<url>/trains/v1/addTrainInDB</url>
 		<description>Ajoute des trains dans la BD</description>
 		<schedule>every 120 minutes</schedule>
 	</cron>
