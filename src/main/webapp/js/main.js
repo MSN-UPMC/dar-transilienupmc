@@ -18,6 +18,7 @@ function initDataModel() {
 	environnement.routes["getLignes"] = environnement.host+"/lignes/v1/getLignes";
 	environnement.routes["ligneOriente"] = environnement.host+"/lignes/v1/ligneOriente";
 	environnement.routes["prochainDepart"] = environnement.host+"/itineraire/v1/prochainDepart";
+	environnement.routes["itineraire"] = environnement.host+"/itineraire/v1/itineraire";
 
 
 	

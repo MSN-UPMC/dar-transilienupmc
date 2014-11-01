@@ -36,6 +36,10 @@ function initMap() {
 	environnement.map.instance = map;
 	environnement.map.markers = new Array();
 	
+	environnement.map.itineraire = {}
+	environnement.map.itineraire.isDisplay = false;
+	
+	
 	initGareOnMap();
 	initLigneOnMap(baseMapControl);
 	
