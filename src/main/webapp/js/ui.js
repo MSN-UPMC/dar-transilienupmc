@@ -67,11 +67,15 @@ function initUIEvent(){
 		$('#collapseOne form button[type="submit"]').click(function(e) {
 		  e.preventDefault();
 		  e.stopPropagation();
+		  $('.alert').remove();
+		  
+		  
+		  
 		  
 		  
 		  if($('#adresseDepart').typeahead('val')=="" || $('#adresseDestination').typeahead('val')==""){
-				$('div[class="alert"]').remove();
-				$('#collapseOne form').after('<div class="alert alert-danger" role="alert">La gare départ ou de destination n\'est pas renseignée.</div>');		
+				$('#collapseOne form').after('<div class="alert alert-danger" style="margin-top:40px" role="alert">La gare départ ou de destination n\'est pas renseignée.</div>');	
+				return;
 		  }
 		  
 		  
@@ -101,12 +105,19 @@ function initUIEvent(){
 
 		  
 		  if(codeUICDepart==-1 || codeUICDestination==-1){
-				$('div[class="alert"]').remove();
-				$('#collapseOne form').after('<div class="alert alert-danger" role="alert">La gare de départ ou de detination n\'est pas connue.</div>');		
+				$('#collapseOne form').after('<div class="alert alert-danger" style="margin-top:40px" role="alert">La gare de départ ou de destination n\'est pas connue.</div>');	
+				return;
 		  }
+		  
+		  
+		  $('#collapseOne form').after('<div class="alert alert-info" style="margin-top:40px" role="alert">Calcul de l\'itinéraire en cours.</div>');	
+
 			
 			$.get(environnement.routes["itineraire"]+"?departCodeUIC="+codeUICDepart+"&destinationCodeUIC="+codeUICDestination, function(data) {
 				if(data.lignes){
+				
+
+				
 					// objet qui simule le layer ligne 
 					polylineTab = [];
 					// objet qui simule un ensemble de point
@@ -132,17 +143,22 @@ function initUIEvent(){
 					}
 					
 					
+					
+					
 					environnement.map.itineraire.isDisplay=true;
 					environnement.map.itineraire.polylineArray = polylineTab;
 					
 					for(j in polylineTab){
 						polylineTab[j].addTo(environnement.map.instance);
 					}
-							
+					
+					
+					$('.alert').remove();
+					$('#collapseOne form').after('<div class="alert alert-success" style="margin-top:40px" role="alert">Calcul de l\'itinéraire terminé.</div>')							
 				}
 				else{
-					$('div[class="alert"]').remove();
-					$('#collapseOne form').after('<div class="alert alert-danger" role="alert">Aucun itinéraire est disponible de '+$('#adresseDepart').typeahead('val')+' à '+$('#adresseDestination').typeahead('val')+'</div>');
+					$('#collapseOne form').after('<div class="alert alert-danger" style="margin-top:40px" role="alert">Aucun itinéraire est disponible de '+$('#adresseDepart').typeahead('val')+' à '+$('#adresseDestination').typeahead('val')+'</div>');
+					return;
 				}
 			
 			
@@ -155,6 +171,7 @@ function initUIEvent(){
 		$('#collapseTwo form button[type="submit"]').click(function(e) {
 		  e.preventDefault();
 		  e.stopPropagation();
+		  $('.alert').remove();
 		  
 		  
 		  if(environnement.map.itineraire.isDisplay){
@@ -165,12 +182,23 @@ function initUIEvent(){
 		  }
 		  
 		  
-		  var codeUIC;
+		  
+		  
+		  
+		  var codeUIC=-1;
 		  for(i in environnement.gares){
 			if(environnement.gares[i].nom === $('#rechercherGare').typeahead('val')){
 				codeUIC = environnement.gares[i].codeUIC;
 				break;
 			}
+		  }
+		  
+		  
+		  
+		  
+		  if(codeUIC==-1){
+				$('#collapseTwo form').after('<div class="alert alert-danger" style="margin-top:10px" role="alert">La gare n\'est pas connue.</div>');	
+				return;
 		  }
 
 		  
