@@ -116,11 +116,6 @@ function initUIEvent(){
 			
 					// objet qui simule le layer ligne 
 					polylineTab = [];
-					// objet qui simule un ensemble de point
-					//polyline = [];
-					// Tracer de la ligne
-					//var ligneTracer;
-
 					
 					var gareFirst = environnement.gares[data.gares[0].codeUIC];
 					var gareLast;
@@ -138,8 +133,7 @@ function initUIEvent(){
 						// je creer un ligne en reliant tout les points
 						var ligneTracer = L.polyline(polyline, {color: environnement.lignes.couleurs[data.lignes[i]], opacity : '1',weight: '2'}).addTo(environnement.map.instance);						
 						
-						console.log(data.lignes[i]+"|"+environnement.lignes.couleurs[data.lignes[i]]);
-						console.log(ligneTracer);
+						
 						
 						polylineTab.push(ligneTracer);
 						
@@ -154,17 +148,17 @@ function initUIEvent(){
 					
 					environnement.map.itineraire.isDisplay=true;
 					environnement.map.itineraire.polylineArray = polylineTab;
-					/*console.log(polylineTab);
-					for(j in polylineTab){
-						polylineTab[j].addTo(environnement.map.instance);
-					}*/
+					
 					
 					
 					$('.alert').remove();
 					
 					var htmlGareAPrendre="";
 					for(i in data.gares){
-						htmlGareAPrendre += "<strong> "+data.gares[i].nom+"</strong></br></br>" ;
+						htmlGareAPrendre += "<strong> "+data.gares[i].nom+"</strong></br>" ;
+						if(i < (parseInt(data.gares.length)-1)){
+							htmlGareAPrendre += "&#9660;</br>";
+						}
 					}
 					
 					
@@ -176,10 +170,14 @@ function initUIEvent(){
 											  <tbody>\
 												<tr>\
 													<td>Ligne(s)</td>\
+												</tr>\
+												<tr>\
 													<td>"+getLignesOfAGareToHTML(data.lignes)+"</td>\
 												</tr>\
 												<tr>\
 													<td>Correspondance(s)</td>\
+												</tr>\
+												<tr>\
 													<td>"+htmlGareAPrendre+"</td>\
 												</tr>\
 												</tbody>\
