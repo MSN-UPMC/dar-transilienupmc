@@ -53,6 +53,17 @@ function initLigne(){
 			environnement.lignes[ligne.nom] = new Ligne(ligne.nom,ligne.gares);			
 		}
 	});
+	
+	$.get(environnement.routes["statistique"], function(data) {
+
+		environnement.statistique = {}
+
+		environnement.statistique.alheure = parseFloat(data.items[0]);
+		environnement.statistique.retard = parseFloat(data.items[1]);
+		environnement.statistique.annule = parseFloat(data.items[2]);
+
+	});	
+	
 	$.ajaxSetup({async: true});
 
 
