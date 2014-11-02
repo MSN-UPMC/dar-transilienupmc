@@ -68,6 +68,8 @@ function initUIEvent(){
 		  e.preventDefault();
 		  e.stopPropagation();
 		  $('.alert').remove();
+		  $('#collapseFeuille').parent().remove();
+
 		  
 		  
 		  
@@ -185,9 +187,28 @@ function initUIEvent(){
 					
 					
 					
-					$('#collapseOne form').after('<div class="alert alert-success" style="margin-top:40px" role="alert">'+htmlGareInfoBulle+'</div>');
+					//$('#collapseOne form').after('<div class="alert alert-success" style="margin-top:40px" role="alert">'+htmlGareInfoBulle+'</div>');
 
+					var htmlFeuilleDeRoute = "";
 					
+					htmlFeuilleDeRoute += '<div class="panel panel-default" id="feuilleDeRoute">\
+						<div class="panel-heading">\
+							<h4 class="panel-title">\
+								<a data-toggle="collapse" data-parent="#accordion"\
+									href="#collapseFeuille"> Feuille de route </a>\
+							</h4>\
+						</div>\
+						<div id="collapseFeuille" class="panel-collapse collapse">\
+							<div class="panel-body">';
+							
+					htmlFeuilleDeRoute += htmlGareInfoBulle;
+					
+					htmlFeuilleDeRoute += '</div>\
+						</div>\
+					</div>';
+					
+					$('.panel:first').after(htmlFeuilleDeRoute);
+					$('a[href="#collapseFeuille"]').trigger('click');
 					
 				}
 				else{
