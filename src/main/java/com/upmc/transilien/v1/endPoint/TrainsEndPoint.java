@@ -26,8 +26,8 @@ public class TrainsEndPoint {
 
 	/**
 	 * Calcule le taux de service des trains.<br>
-	 * Le dataStore limite le nombre d'appel, nous privilégions ici le calcule CPU dans le cas d'une vrai base de donnée ou d'une utilisation payante du
-	 * dataStore, le tout serait en appel à la BDD.
+	 * Le dataStore limite le nombre d'appel, nous privilégions ici le calcule CPU dans le cas d'une vrai base de donnée
+	 * ou d'une utilisation payante du dataStore, le tout serait en appel à la BDD.
 	 * 
 	 * @return un tableau de pourcentage
 	 */
@@ -52,8 +52,8 @@ public class TrainsEndPoint {
 
 		int nbTrains = trains.size();
 		etatDeService[0] = 100 - nbRetard - nbAnnule;
-		etatDeService[1] = nbRetard / nbTrains * 100;
-		etatDeService[2] = nbAnnule / nbTrains * 100;
+		etatDeService[1] = (nbTrains != 0 ? nbRetard / nbTrains * 100 : 0);
+		etatDeService[2] = (nbTrains != 0 ? nbAnnule / nbTrains * 100 : 0);
 		return etatDeService;
 	}
 
