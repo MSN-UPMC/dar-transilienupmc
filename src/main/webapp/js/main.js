@@ -12,9 +12,9 @@ function initDataModel() {
 	environnement.gares = new Array();
 	environnement.lignes = new Array();
 	
-	//environnement.host = "https://transilien-upmc.appspot.com/_ah/api";
+	environnement.host = "https://transilien-upmc.appspot.com/_ah/api";
 	
-	environnement.host = "http://localhost:8080/_ah/api";	
+	//environnement.host = "http://localhost:8080/_ah/api";	
 	environnement.routes = new Array();
 	environnement.routes["getGaresList"] = environnement.host+"/gares/v1/getGares";
 	environnement.routes["getLignes"] = environnement.host+"/lignes/v1/getLignes";
